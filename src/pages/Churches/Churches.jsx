@@ -6,6 +6,7 @@ import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
+import Footer from "../../components/footer/Footer";
 
 export default function Churches() {
   const [churches, setChurches] = useState([
@@ -115,6 +116,7 @@ export default function Churches() {
       <span className="text-red-600 ">
         NB: All churches are located in Nasarawa State{" "}
       </span>
+      <Footer />
     </div>
   );
 }
