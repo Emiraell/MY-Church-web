@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Template({ details }) {
   return (
     <div className="mt-14 text-center text-textCol-secondary mb-10">
@@ -10,7 +8,7 @@ export default function Template({ details }) {
         <p className="py-10  uppercase font-bold tracking-wider">
           {details.title}
         </p>
-        <p className="py-2 w-[70%] m-auto bg-orange-800 rounded-tl-full rounded-br-full">
+        <p className="py-2 w-[80%] m-auto bg-orange-800 rounded-tl-full rounded-br-full">
           {details.slogan}
         </p>
       </div>

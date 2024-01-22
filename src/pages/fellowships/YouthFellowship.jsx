@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../../components/Header/Header";
 import theChurch from "./assests/theChurch.png";
 import Template from "./Template";
+import Footer from "../../components/footer/Footer";
 
 export default function YouthFellowship() {
   const [details, setDetails] = useState({
@@ -32,6 +33,10 @@ export default function YouthFellowship() {
         <Header page={"YOUTH FELLOWSHIP"} />
       </>
       <Template details={details} />
+      <div className="w-[90%] lg:w-[70%] m-auto mt-16 text-lg">
+        <p>connect with us</p>
+      </div>
+      <Footer />
     </div>
   );
 }
