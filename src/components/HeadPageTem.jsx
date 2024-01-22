@@ -5,10 +5,10 @@ export default function HeadPageTem({ contents }) {
   const goTo = (link) => navigate(`/${link}`);
   return (
     <div>
-      <div className="lg:grid lg:grid-cols-2 py-10  w-[90%] m-auto gap-10 text-center">
+      <div className="lg:grid lg:grid-cols-2 py-10  w-[90%] lg:w-[75%] m-auto gap-10 text-center">
         {contents.map((content) => (
           <div
-            className=" text-textCol-secondarycol-span-1 gap-2"
+            className={` text-textCol-secondary gap-2`}
             onClick={() => goTo(content.link)}
           >
             <div

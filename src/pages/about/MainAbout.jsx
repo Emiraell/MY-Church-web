@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import HeadPageTem from "../../components/HeadPageTem";
 import Header from "../../components/Header/Header";
 import { useState } from "react";
+import Footer from "../../components/footer/Footer";
 
 export default function MainAbout() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function MainAbout() {
     <div className="bg-gray-300">
       <Header page={"ABOUT ST PETER'S ANGLICAN CHURCH"} />
       <HeadPageTem contents={contents} />
+      <Footer />
     </div>
   );
 }

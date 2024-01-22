@@ -10,10 +10,11 @@ import Churches from "./pages/Churches/Churches";
 import PastPriest from "./pages/pastPriest/PastPriest";
 import Main from "./pages/fellowships/Main";
 import MainAbout from "./pages/about/MainAbout";
+import MenFellowship from "./pages/fellowships/MenFellowship";
 
 function App() {
   return (
-    <>
+    <div className=" transition-all">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,9 +27,10 @@ function App() {
           <Route path="/churches" element={<Churches />} />
           <Route path="/past_priest" element={<PastPriest />} />
           <Route path="ministries" element={<Main />} />
+          <Route path="men_fellowship" element={<MenFellowship />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
