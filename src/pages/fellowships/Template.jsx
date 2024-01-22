@@ -39,7 +39,7 @@ export default function Template({ details }) {
               className="rounded-full h-32 w-32"
             />
           </div>
-          <div>
+          <div className="">
             <p className="font-semibold">{details.president.name}</p>
             <p className="py-1">{details.president.position}</p>
             <p>{details.president.contact}</p>
