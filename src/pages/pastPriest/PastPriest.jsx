@@ -12,12 +12,12 @@ import Footer from "../../components/footer/Footer";
 export default function PastPriest() {
   const [priests, setPriests] = useState([
     {
-      name: "Rt. Rev Henry Okeke",
+      name: "Rt. Rev Henry Okeke Samuel",
       duration: "late 90s - early 2000",
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] lg:h-[45vh] w-[100%] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -27,7 +27,7 @@ export default function PastPriest() {
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] w-[100%] lg:h-[45vh] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -37,7 +37,7 @@ export default function PastPriest() {
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] w-[100%] lg:h-[45vh] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -47,7 +47,7 @@ export default function PastPriest() {
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] w-[100%] lg:h-[45vh] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -57,7 +57,7 @@ export default function PastPriest() {
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] w-[100%] lg:h-[45vh] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -67,7 +67,7 @@ export default function PastPriest() {
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] w-[100%] lg:h-[45vh] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -77,7 +77,7 @@ export default function PastPriest() {
       image: (
         <FontAwesomeIcon
           icon={faUser}
-          className="h-[30vh] w-[100%] object-cover mt-10 text-gray-400"
+          className="h-[30vh] w-[100%] lg:h-[45vh] object-cover mt-10 text-gray-400"
         />
       ),
     },
@@ -85,19 +85,19 @@ export default function PastPriest() {
   return (
     <div className="bg-gray-300 text-gray-200">
       <Header page={"Past Priest"} />
-      <div className="text-textCol-secondary w-[90%] lg:w-[80%] m-auto mt-32">
+      <div className="text-textCol-secondary w-[90%] lg:w-[80%] m-auto mt-32 lg:grid gap-6 lg:grid-cols-2">
         {priests.map((priest) => (
-          <div className=" shadow-2xl bg-gray-950 rounded-t-3xl mb-16">
+          <div className=" shadow-2xl bg-gray-950 rounded-t-3xl mb-16 col-span-1">
             {priest.image}
             <div className="mt-9 bg-gray-800 text-gray-300 text-lg py-5">
-              <div className="flex px-7 items-center py-3">
+              <div className="flex justify-center items-center py-3">
                 <FontAwesomeIcon
                   icon={faUserTie}
                   className="mr-5 text-orange-400 text-lg"
                 />
                 <p className="font-semibold">{priest.name}</p>
               </div>
-              <div className="flex items-center px-7">
+              <div className="flex items-center justify-center">
                 <FontAwesomeIcon
                   icon={faCalendar}
                   className="mr-5 text-orange-400 text-lg"

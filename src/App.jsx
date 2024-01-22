@@ -8,6 +8,7 @@ import VisionMission from "./pages/visionMission/VisionMission";
 import History from "./pages/History/History";
 import Churches from "./pages/Churches/Churches";
 import PastPriest from "./pages/pastPriest/PastPriest";
+import Main from "./pages/fellowships/Main";
 
 function App() {
   return (
@@ -15,13 +16,14 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
+          <Route path="/about_us" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/prayer" element={<PrayerRequest />} />
           <Route path="/vision_mission" element={<VisionMission />} />
           <Route path="/history" element={<History />} />
           <Route path="/churches" element={<Churches />} />
           <Route path="/past_priest" element={<PastPriest />} />
+          <Route path="ministries" element={<Main />} />
         </Routes>
       </Router>
     </>
