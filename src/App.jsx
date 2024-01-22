@@ -9,6 +9,7 @@ import History from "./pages/History/History";
 import Churches from "./pages/Churches/Churches";
 import PastPriest from "./pages/pastPriest/PastPriest";
 import Main from "./pages/fellowships/Main";
+import MainAbout from "./pages/about/MainAbout";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<MainAbout />} />
           <Route path="/about_us" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/prayer" element={<PrayerRequest />} />

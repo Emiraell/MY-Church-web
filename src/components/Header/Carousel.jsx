@@ -64,7 +64,7 @@ export default function Carousel({ isHomePage, setIsHomePage, page, setPage }) {
         <div
           className={`text-center bg-cover bg-center bg-blend-multiply bg-emerald-950 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
-          <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh]  tracking-wider">
+          <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
             {page}
           </p>
         </div>
