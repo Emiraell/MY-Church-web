@@ -10,7 +10,9 @@ export default function Template({ details }) {
         <p className="py-10  uppercase font-bold tracking-wider">
           {details.title}
         </p>
-        <p className="py-2 w-[70%] m-auto bg-orange-800">{details.slogan}</p>
+        <p className="py-2 w-[70%] m-auto bg-orange-800 rounded-tl-full rounded-br-full">
+          {details.slogan}
+        </p>
       </div>
       <div className="w-[90%] lg:w-[70%] m-auto mt-16 text-lg">
         <div>
