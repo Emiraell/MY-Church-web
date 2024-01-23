@@ -17,6 +17,7 @@ import Acm from "./pages/fellowships/Acm";
 import GirlsGuild from "./pages/fellowships/GirlsGuild";
 import Efac from "./pages/fellowships/Efac";
 import Donate from "./pages/donate/Donate";
+import ChurchOfficials from "./pages/officials/ChurchOfficials";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="girls_guild" element={<GirlsGuild />} />
           <Route path="efac" element={<Efac />} />
           <Route path="donate" element={<Donate />} />
+          <Route path="officials" element={<ChurchOfficials />} />
         </Routes>
       </Router>
     </div>
