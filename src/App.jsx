@@ -18,6 +18,7 @@ import GirlsGuild from "./pages/fellowships/GirlsGuild";
 import Efac from "./pages/fellowships/Efac";
 import Donate from "./pages/donate/Donate";
 import ChurchOfficials from "./pages/officials/ChurchOfficials";
+import Goai from "./pages/goai/Goai";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="efac" element={<Efac />} />
           <Route path="donate" element={<Donate />} />
           <Route path="officials" element={<ChurchOfficials />} />
+          <Route path="god_of_impossibilities" element={<Goai />} />
         </Routes>
       </Router>
     </div>
