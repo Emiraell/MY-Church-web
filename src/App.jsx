@@ -14,6 +14,8 @@ import MenFellowship from "./pages/fellowships/MenFellowship";
 import WomenFellowship from "./pages/fellowships/WomenFellowship";
 import YouthFellowship from "./pages/fellowships/YouthFellowship";
 import Acm from "./pages/fellowships/Acm";
+import GirlsGuild from "./pages/fellowships/GirlsGuild";
+import Efac from "./pages/fellowships/Efac";
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="women_fellowship" element={<WomenFellowship />} />
           <Route path="youth_fellowship" element={<YouthFellowship />} />
           <Route path="children_ministry" element={<Acm />} />
+          <Route path="girls_guild" element={<GirlsGuild />} />
+          <Route path="efac" element={<Efac />} />
         </Routes>
       </Router>
     </div>
