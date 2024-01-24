@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExchange, faMicrophone } from "@fortawesome/free-solid-svg-icons";
-import goai from "./assests/GOAI.mp4";
+import {
+  faBook,
+  faExchange,
+  faMicrophone,
+  faUserTie,
+} from "@fortawesome/free-solid-svg-icons";
+import sermon1 from "./assests/sermon1.mp4";
+import sermon2 from "./assests/sermon2.mp4";
+import poster from "./assests/poster.jpg";
 import Footer from "../../components/footer/Footer";
 
 export default function Goai() {
@@ -27,6 +34,20 @@ export default function Goai() {
     }, 1000);
     return () => clearInterval(intervalId);
   }, []);
+  const [sermons, setSermons] = useState([
+    {
+      video: sermon1,
+      title: "The two days involved in every problem",
+      speaker: "Evang Peters Nwokocha",
+      link: "",
+    },
+    {
+      video: sermon2,
+      title: "The move of the Spirit",
+      speaker: "Ven. Dr. Emeka EZEA",
+      link: "",
+    },
+  ]);
   const [daetails, setDetails] = useState([
     {
       title: "GREAT SPEAKERS",
@@ -119,19 +140,44 @@ export default function Goai() {
             </div>
           ))}
         </div>
-        <div className="w-[90%] lg:w-[75%] m-auto text-xl font-montserrat lg:grid grid-cols-2 gap-6 tracking-wide mt-14 ">
-          <h2 className="text-emerald-900 font-bold pt-2 pb-7">SERMONS</h2>
-          <div className=" shadow-lg">
-            <video src={goai} controls className="pb-4"></video>
-            <div>
-              <p>Tittle: The move of the spirit</p>
-              <p className="py-1"> Speaker: Rev Peters</p>
-              <span className="text-blue-700 text-lg bg-orange-900 p-2 rounded-md">
-                watch full sermon
-              </span>
+        <h2 className="text-emerald-900 font-bold pt-2 pb-7 mt-14">SERMONS</h2>
+        <div className="w-[90%] lg:w-[75%] m-auto text-xl font-montserrat lg:grid grid-cols-2 gap-6 tracking-wide my-10">
+          {sermons.map((sermon, index) => (
+            <div key={index} className=" shadow-lg mt-10 lg:mt-0 ">
+              <video
+                src={sermon.video}
+                controls
+                poster={poster}
+                className="pb-4 rounded-t-xl"
+              ></video>
+              <div className="font-semibold font-lato">
+                <p>
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faBook}
+                    className="text-emerald-800"
+                  />{" "}
+                  {sermon.title}
+                </p>
+                <p className="py-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faUserTie}
+                    className="text-emerald-800"
+                  />{" "}
+                  {sermon.speaker}
+                </p>{" "}
+                <a href={sermon.link}></a>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
+        <p className="pb-10">
+          Listen to more sermons on our{" "}
+          <a href="">
+            <span className=" text-blue-800">facebook page</span>
+          </a>
+        </p>
         <Footer />
       </div>
     </div>
