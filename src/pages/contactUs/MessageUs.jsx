@@ -6,7 +6,8 @@ import { addDoc, collection } from "firebase/firestore";
 export default function MessageUs({ database }) {
   const schema = yup.object().shape({
     name: yup.string().required(),
-    email: yup.string().email().required(),
+    email: yup.string().email(),
+    phone: yup.string().required(),
     message: yup.string().required(),
   });
   const {
@@ -18,6 +19,7 @@ export default function MessageUs({ database }) {
   const messageRef = collection(database, "messages");
   const submitMessage = async (data, e) => {
     await addDoc(messageRef, { ...data });
+    console.log(data);
     e.target.reset();
   };
   return (
@@ -50,7 +52,7 @@ export default function MessageUs({ database }) {
 
         <div className=" relative my-5">
           <label htmlFor="email" className="text-lg font-roboto">
-            Email <span className="text-red-700">*</span>
+            Email
           </label>
 
           <input
@@ -63,6 +65,24 @@ export default function MessageUs({ database }) {
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
             {errors.email?.message}
+          </p>
+        </div>
+
+        <div className=" relative my-5">
+          <label htmlFor="phone" className="text-lg font-roboto">
+            Phone Number <span className="text-red-700">*</span>
+          </label>
+
+          <input
+            id="phone"
+            type="text"
+            {...register("phone")}
+            placeholder="Enter an phone Number"
+            className="block mt-1 rounded-sm outline-none h-12 w-[100%] m-auto shadow-lg p-2"
+          />
+
+          <p className="absolute top-2 right-0 text-sm text-red-700">
+            {errors.phone?.message}
           </p>
         </div>
 
