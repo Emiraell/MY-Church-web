@@ -19,6 +19,8 @@ import Efac from "./pages/fellowships/Efac";
 import Donate from "./pages/donate/Donate";
 import ChurchOfficials from "./pages/officials/ChurchOfficials";
 import Goai from "./pages/goai/Goai";
+import NewsBlogs from "./pages/New/NewsBlogs";
+import ContentPage from "./pages/New/ContentPage";
 
 function App() {
   return (
@@ -34,16 +36,18 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/churches" element={<Churches />} />
           <Route path="/past_priest" element={<PastPriest />} />
-          <Route path="ministries" element={<Main />} />
-          <Route path="men_fellowship" element={<MenFellowship />} />
-          <Route path="women_fellowship" element={<WomenFellowship />} />
-          <Route path="youth_fellowship" element={<YouthFellowship />} />
-          <Route path="children_ministry" element={<Acm />} />
-          <Route path="girls_guild" element={<GirlsGuild />} />
-          <Route path="efac" element={<Efac />} />
-          <Route path="donate" element={<Donate />} />
-          <Route path="officials" element={<ChurchOfficials />} />
-          <Route path="god_of_impossibilities" element={<Goai />} />
+          <Route path="/ministries" element={<Main />} />
+          <Route path="/men_fellowship" element={<MenFellowship />} />
+          <Route path="/women_fellowship" element={<WomenFellowship />} />
+          <Route path="/youth_fellowship" element={<YouthFellowship />} />
+          <Route path="/children_ministry" element={<Acm />} />
+          <Route path="/girls_guild" element={<GirlsGuild />} />
+          <Route path="/efac" element={<Efac />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/officials" element={<ChurchOfficials />} />
+          <Route path="/god_of_impossibilities" element={<Goai />} />
+          <Route path="news" element={<NewsBlogs />} />
+          <Route path="news/:id" element={<ContentPage />} />
         </Routes>
       </Router>
     </div>
