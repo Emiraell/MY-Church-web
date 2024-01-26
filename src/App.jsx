@@ -21,6 +21,7 @@ import ChurchOfficials from "./pages/officials/ChurchOfficials";
 import Goai from "./pages/goai/Goai";
 import NewsBlogs from "./pages/New/NewsBlogs";
 import ContentPage from "./pages/New/ContentPage";
+import Gallery from "./pages/gallery/Gallery";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/god_of_impossibilities" element={<Goai />} />
           <Route path="news" element={<NewsBlogs />} />
           <Route path="news/:id" element={<ContentPage />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
     </div>
