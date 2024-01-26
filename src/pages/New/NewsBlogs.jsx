@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import back from "./assests/Church.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,11 +32,13 @@ export default function NewsBlogs() {
             <span className=" font-rochester text-emerald-600">
               NEWS UPDATE
             </span>
-            <div className="w-[95%] m-auto  my-10 lg:grid grid-cols-2 gap-7">
-              {data[0].map((info) => (
+            <div className={`w-[95%] m-auto  my-10 lg:grid grid-cols-2 gap-7`}>
+              {data[0].map((info, index) => (
                 <Link
+                  key={index}
                   to={`/news/${info.id}`}
-                  className=" bg-slate-100 shadow-lg p-3 col-span-1 mb-10 lg:mb-0"
+                  className={` bg-slate-100 shadow-lg p-3 col-span-1 mb-10 lg:mb-0 
+                    `}
                 >
                   <div className="relative">
                     <img src={info.image} alt="" className="w-[100%]" />
@@ -65,9 +67,10 @@ export default function NewsBlogs() {
           </div>
           <div className={`${!showing.blogs && "hidden"}`}>
             BLOGS
-            {data[1].map((blog) => (
+            {data[1].map((blog, index) => (
               <Link
-                to={`/news/${blog.id}`}
+                key={index}
+                to={`/news/blogs/${blog.id}`}
                 className="w-[95%] m-auto shadow-lg my-10 bg-slate-100 p-3"
               >
                 <div

@@ -22,6 +22,7 @@ import Goai from "./pages/goai/Goai";
 import NewsBlogs from "./pages/New/NewsBlogs";
 import ContentPage from "./pages/New/ContentPage";
 import Gallery from "./pages/gallery/Gallery";
+import Blogs from "./pages/New/Blogs";
 
 function App() {
   return (
@@ -47,8 +48,9 @@ function App() {
           <Route path="/donate" element={<Donate />} />
           <Route path="/officials" element={<ChurchOfficials />} />
           <Route path="/god_of_impossibilities" element={<Goai />} />
-          <Route path="news" element={<NewsBlogs />} />
-          <Route path="news/:id" element={<ContentPage />} />
+          <Route path="/news" element={<NewsBlogs />} />
+          <Route path="/news/:id" element={<ContentPage />} />
+          <Route path="/news/blogs/:id" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
