@@ -20,7 +20,7 @@ export default function MainAbout() {
   ]);
   return (
     <div className="bg-gray-300">
-      <Header page={"ABOUT ST PETER'S ANGLICAN CHURCH"} />
+      <Header page={"ABOUT ST PETER'S ANGLICAN CHURCH"} pageName={"About"} />
       <HeadPageTem contents={contents} />
       <Footer />
     </div>

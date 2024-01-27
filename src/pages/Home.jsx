@@ -15,13 +15,13 @@ export default function Home() {
   return (
     <div className={`text-gray-300 bg-gray-200`}>
       <Header isHomePage={isHomePage} />
-      <Welcome />
+      {/* <Welcome />
       <AboutChurch />
-      <Prayer_Donate />
-      <TeamOfLeaders />
-      <ChurchEvents />
+      <Prayer_Donate /> */}
+      {/* <TeamOfLeaders /> */}
+      {/* <ChurchEvents />
       <ChurchMap />
-      <Footer sky={sky} />
+      <Footer sky={sky} /> */}
     </div>
   );
 }

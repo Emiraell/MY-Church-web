@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Header.module.css";
 
-export default function Carousel({ isHomePage, setIsHomePage, page, setPage }) {
+export default function Carousel({ isHomePage, page, pageName }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -67,6 +67,11 @@ export default function Carousel({ isHomePage, setIsHomePage, page, setPage }) {
           <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
             {page}
           </p>
+          <p className="text-gray-200 italic pt-40">
+            {" "}
+            Home <span className="px-3">/</span>
+            <span className=" text-orang-300">{pageName}</span>
+          </p>
         </div>
       )}
       {isHomePage && (
@@ -74,7 +79,7 @@ export default function Carousel({ isHomePage, setIsHomePage, page, setPage }) {
           {carouselDetails.map((detail, index) => (
             <div
               key={index}
-              className={`text-center bg-cover bg-center bg-blend-multiply bg-backG-medium bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
+              className={`text-center bg-cover bg-center bg-blend-multiply bg-green-950 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
               <div className="mt-[23vh]  leading-normal md:tracking-widest ">
                 <div className="font-bold">
@@ -97,8 +102,8 @@ export default function Carousel({ isHomePage, setIsHomePage, page, setPage }) {
                   {detail.buttons.map((button, index) => (
                     <Link to={`/${button.path}`} key={index}>
                       <button
-                        className={` bg-oran-light py-4 px-6 rounded-full hover:bg-oran-dark mx-2 ${
-                          detail.Id === 3 && "bg-blue-500 hover:bg-emerald-600"
+                        className={` bg-oran-light py-4 px-6 rounded-full hover:opacity-90 mx-2 ${
+                          detail[2] && "bg-blood-700 hover:bg-emerald-600"
                         }`}
                       >
                         {button.name}

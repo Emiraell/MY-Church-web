@@ -31,14 +31,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<MainAbout />} />
-          <Route path="/about_us" element={<AboutUs />} />
+          <Route path="/about_church" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/prayer" element={<PrayerRequest />} />
           <Route path="/vision_mission" element={<VisionMission />} />
           <Route path="/history" element={<History />} />
           <Route path="/churches" element={<Churches />} />
           <Route path="/past_priest" element={<PastPriest />} />
-          <Route path="/ministries" element={<Main />} />
+          <Route path="/organizations" element={<Main />} />
           <Route path="/men_fellowship" element={<MenFellowship />} />
           <Route path="/women_fellowship" element={<WomenFellowship />} />
           <Route path="/youth_fellowship" element={<YouthFellowship />} />
