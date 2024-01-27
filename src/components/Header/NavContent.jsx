@@ -1,4 +1,8 @@
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUp,
+  faChevronDown,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -32,18 +36,48 @@ export default function NavContent({ content, menuClicked }) {
   };
   return (
     <>
-      <div className={`${!menuClicked && "hidden"}`}>
-        <div
-          className={`text-black my-3 text-xl flex justify-between items-center`}
-        >
-          <ol onClick={() => navigate(content.path)}>{content.name}</ol>
-          {content.infos.length > 1 && (
-            <FontAwesomeIcon
-              icon={faArrowUp}
-              className="h-3"
-              onClick={() => clickInfo(content.name)}
-            />
-          )}
+      <div className={`${!menuClicked && "hidden"} lg:block lg:mx-4`}>
+        <div className={`text-gray-200 my-3 text-xl font-roboto`}>
+          {" "}
+          <div className="flex items-center justify-between">
+            <ol onClick={() => navigate(content.path)} className="my-3 ">
+              {content.name}
+            </ol>{" "}
+            <div>
+              {content.name === "About Us" && (
+                <div onClick={() => clickInfo(content.name)}>
+                  {!infoClicked.about ? (
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className="h-5 lg:ml-8"
+                      // onClick={() => clickInfo(content.name)}
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faChevronUp}
+                      className="h-5 lg:ml-8"
+                    />
+                  )}
+                </div>
+              )}
+              {content.name === "Organizations" && (
+                <div onClick={() => clickInfo(content.name)}>
+                  {!infoClicked.organizations ? (
+                    <FontAwesomeIcon
+                      icon={faChevronDown}
+                      className="h-5 lg:ml-8"
+                      // onClick={() => clickInfo(content.name)}
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faChevronUp}
+                      className="h-5 lg:ml-8"
+                    />
+                  )}{" "}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
         {content.infos.map((info, index) => (
           <ol
@@ -57,7 +91,7 @@ export default function NavContent({ content, menuClicked }) {
             }`}
           >
             <li
-              className="text-gray-700 my-2 ml-2"
+              className="text-gray-100 mb-4 ml-3 hover:underline"
               onClick={() => {
                 navigate(info.path);
               }}
