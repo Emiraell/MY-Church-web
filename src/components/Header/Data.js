@@ -3,7 +3,7 @@ const menuContents = [
     name: "Home",
     infos: [],
     clicked: false,
-    path: "/",
+    path: "",
   },
   {
     name: "About Us",
@@ -18,7 +18,7 @@ const menuContents = [
     path: "about",
   },
   {
-    name: "organizations",
+    name: "Organizations",
     infos: [
       { name: "Men Fellowship", path: "men_fellowship" },
       { name: "Women Fellowship", path: "women_fellowship" },
@@ -46,6 +46,7 @@ const menuContents = [
     name: "Contact Us",
     infos: [],
     clicked: false,
+    path: "contact",
   },
 ];
 

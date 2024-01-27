@@ -1,52 +1,72 @@
-import { Link } from "react-router-dom";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-export default function NavContent({ content, index, close }) {
-  const [contentClicked, setContentClicked] = useState({
+import { useNavigate } from "react-router-dom";
+
+export default function NavContent({ content, menuClicked }) {
+  const [infoClicked, setInfoClicked] = useState({
     about: false,
-    fellowship: false,
+    organizations: false,
   });
 
-  const clickOne = (name) => {
-    if (name === "Ministries and Fellowship") {
-      setContentClicked({
-        about: false,
-        fellowship: !contentClicked.fellowship,
+  const clickInfo = (name) => {
+    if (name === "About Us") {
+      setInfoClicked({
+        ...infoClicked,
+        about: !infoClicked.about,
+        organizations: false,
       });
-    } else if (name === "About Us") {
-      setContentClicked({
-        about: !contentClicked.about,
-        fellowship: false,
+    } else {
+      setInfoClicked({
+        ...infoClicked,
+        about: false,
+        organizations: !infoClicked.organizations,
       });
     }
   };
 
+  const nav = useNavigate();
+
+  const navigate = (path) => {
+    nav(`/${path}`);
+  };
   return (
-    <div className="md:mx-6">
-      <div
-        className="flex items-center justify-between"
-        onClick={() => clickOne(content.name)}
-      >
-        <span>{content.name}</span>
-        <div>
-          {index === 1 && (
-            <img src={contentClicked.about ? close : ""} alt="" />
-          )}
-          {index === 2 && (
-            <img src={contentClicked.fellowship ? close : ""} alt="" />
+    <>
+      <div className={`${!menuClicked && "hidden"}`}>
+        <div
+          className={`text-black my-3 text-xl flex justify-between items-center`}
+        >
+          <ol onClick={() => navigate(content.path)}>{content.name}</ol>
+          {content.infos.length > 1 && (
+            <FontAwesomeIcon
+              icon={faArrowUp}
+              className="h-3"
+              onClick={() => clickInfo(content.name)}
+            />
           )}
         </div>
+        {content.infos.map((info, index) => (
+          <ol
+            key={index}
+            className={`${
+              content.name === "About Us" && !infoClicked.about && "hidden"
+            } ${
+              content.name === "Organizations" &&
+              !infoClicked.organizations &&
+              "hidden"
+            }`}
+          >
+            <li
+              className="text-gray-700 my-2 ml-2"
+              onClick={() => {
+                navigate(info.path);
+              }}
+            >
+              {info.name}
+            </li>
+          </ol>
+        ))}
       </div>
-      <div className={`px-2 text-sm`}>
-        {content.infos.length >= 1 &&
-          content.infos.map((info, index) => (
-            <ol key={index} className="">
-              {contentClicked.about && <Link to={info.path}>{info.name}</Link>}
-              {contentClicked.fellowship && (
-                <Link to={info.path}>{info.name}</Link>
-              )}
-            </ol>
-          ))}
-      </div>
-    </div>
+    </>
   );
 }

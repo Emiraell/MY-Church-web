@@ -48,7 +48,7 @@ function App() {
           <Route path="/donate" element={<Donate />} />
           <Route path="/officials" element={<ChurchOfficials />} />
           <Route path="/god_of_impossibilities" element={<Goai />} />
-          <Route path="/news" element={<NewsBlogs />} />
+          <Route path="/library" element={<NewsBlogs />} />
           <Route path="/news/:id" element={<ContentPage />} />
           <Route path="/news/blogs/:id" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
