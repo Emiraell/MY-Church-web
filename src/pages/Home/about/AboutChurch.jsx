@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import fellowship from "../assets/backgrounds/fellowship.png";
 import Bible from "../assets/backgrounds/bible.png";
 import history from "../assets/backgrounds/History.png";
@@ -74,16 +74,34 @@ export default function AboutChurch() {
         ministrySec: false,
       });
     }
-    console.log(oneIsVisible);
   };
+  const [intersected, setIntersected] = useState(false);
+  const aboutRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIntersected(entry.isIntersecting);
+      // console.log(intersected);
+    });
+    observer.observe(aboutRef.current);
+  }, []);
+
   return (
-    <div className="text-center text-textCol-secondary">
-      <div className="mt-12 font-lato mb-5 text-2xl">
-        <p className="mb-10 text-emerald-700 lg:font-montserrat">
+    <div
+      ref={aboutRef}
+      className={`text-center text-textCol-secondary duration-5 opacity-0 
+      ease-in-out transition-all ${intersected && " opacity-100"}`}
+    >
+      <div className=" font-lato mb-5 text-2xl">
+        <p className="py-10 text-orang-200 font-semibold lg:font-montserrat">
           About the Church
         </p>
       </div>
-      <div className="w-[100%] m-auto text-gray-400 md:grid md:grid-cols-2 xl:grid-cols-4 gap-2 ">
+      <div
+        className={`w-[100%] m-auto text-gray-400  md:grid md:grid-cols-2 
+        xl:grid-cols-4 gap-0 `}
+      >
         {abouts.map((about, index) => (
           <Abouts
             key={index}

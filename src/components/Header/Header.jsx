@@ -7,15 +7,28 @@ import NavContent from "./NavContent";
 import { Link } from "react-router-dom";
 import Carousel from "./Carousel";
 
-export default function Header({ pageName, page, setPage, isHomepage }) {
+export default function Header({ pageName, page, setPage, isHomePage }) {
   const [menuClicked, setMenuClicaked] = useState(false);
   const clickMenu = () => {
     setMenuClicaked(!menuClicked);
-    console.log(menuClicked);
+    //console.log(menuClicked);
   };
+
+  const [navScrolled, setNavScrolled] = useState(false);
+  addEventListener("scroll", () => {
+    if (window.scrollY >= 150) {
+      setNavScrolled(true);
+    } else {
+      setNavScrolled(false);
+    }
+  });
   return (
     <div>
-      <nav className="fixed left-0 right-0 z-40">
+      <nav
+        className={`fixed left-0 right-0 z-40 ${
+          navScrolled && !menuClicked && "bg-green-950"
+        }`}
+      >
         <div className="flex justify-between m-6 items-center">
           <Link to="/">
             <img src={logo} alt="" className="rounded-full h-16" />
@@ -23,7 +36,7 @@ export default function Header({ pageName, page, setPage, isHomepage }) {
           <div className=" text-textCol-primary lg:hidden">
             <FontAwesomeIcon
               icon={faBars}
-              className={`${menuClicked && "hidden"} text-greeny-200 h-9`}
+              className={`${menuClicked && "hidden"} text-greeny-50 h-9`}
               onClick={clickMenu}
             />
           </div>
@@ -31,7 +44,7 @@ export default function Header({ pageName, page, setPage, isHomepage }) {
         <div
           className={`float-end pr-10 ${
             menuClicked &&
-            "relative -top-28 pt-10 p-7 h-[100vh] w-[70vw] bg-greeny-500 tracking-widest"
+            "relative -top-28 pt-10 p-7 h-[100vh] w-[70vw] bg-greeny-700 tracking-widest"
           }`}
         >
           <div
@@ -53,7 +66,7 @@ export default function Header({ pageName, page, setPage, isHomepage }) {
           </div>
         </div>
       </nav>
-      <Carousel isHomePage={isHomepage} page={page} pageName={pageName} />
+      <Carousel isHomePage={isHomePage} page={page} pageName={pageName} />
     </div>
   );
 }

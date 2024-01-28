@@ -36,6 +36,10 @@ export default function Welcome() {
     },
   ]);
   let [statIterated, setStatIterated] = useState(false);
+  // const [members, setMembers] = useState(0);
+  // const [pastors, setPastors] = useState(0);
+  // const [churches, setChurches] = useState(0);
+  // const [groups, setGroups] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -69,9 +73,9 @@ export default function Welcome() {
       <p className="pb-16 font-rochester text-2xl md:text-4xl tracking-widest">
         Our Church, Our Home
       </p>
-      <div className=" border-2 ">
+      <div className=" shadow-sm">
         {/* Welcome div */}
-        <div className="w-[92%]  m-auto border-2 border-blue-100 lg:grid gap-10 lg:grid-cols-2 xl:grid-cols-3 lg:px-2  ">
+        <div className="w-[92%]  m-auto lg:grid gap-10 lg:grid-cols-2 xl:grid-cols-3 lg:px-2  ">
           <div
             className="relative h-[50vh] bg-cover bg-center bg-no-repeat rounded-t-3xl  bg-gray-500 bg-blend-multiply"
             style={{ backgroundImage: `url(${bishop})` }}
@@ -85,15 +89,13 @@ export default function Welcome() {
               <span>fac</span> <span>wha</span>
             </div>
             <div className="absolute text-gray-200 w-[100%] bottom-4">
-              <p className="font-bold tracking-wide text-lg">
+              <p className="font-bold tracking-wide text-xl">
                 Rt. Rev. Robinson Adeyemi
               </p>
-              <span className="text-sm text-blue-300">
-                Bishop of Lafia Diocese{" "}
-              </span>
+              <span className=" text-greeny-50">Bishop of Lafia Diocese </span>
             </div>
           </div>
-          <p className="p-4  xl:col-span-2 lg:col-span-1 lg:text-xl lg:tracking-wide lg:leading-10  xl:pt-20 ">
+          <p className="p-4  xl:col-span-2 lg:col-span-1 lg:text-xl text-lg mt-5 lg:mt-0 leading-8 tracking-wide lg:tracking-widest font-semibold lg:leading-10  xl:pt-20 ">
             <span className="text-5xl font-bold text-red-600 font-rochester">
               P
             </span>
@@ -112,7 +114,7 @@ export default function Welcome() {
               <div className="">
                 <p
                   ref={statRef}
-                  className="text-emerald-700 font-bold text-2xl pl-3 md:pl-0 md:text-3xl md:py-6 py-3"
+                  className="text-greeny-200 font-bold text-2xl pl-3 md:pl-0 md:text-3xl md:py-6 py-3"
                 >
                   {index > 3 ? "" : stat.number + "+"}
                 </p>
