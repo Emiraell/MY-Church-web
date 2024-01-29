@@ -1,67 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import bishop from "./assets/bishop.png";
-
 import ChurchStat from "./ChurchStat";
 
 export default function Welcome() {
-  // const statRef = useRef();
-
-  const [visible, setVisible] = useState(false);
   const [bishopInfoShown, setBishopInfoShown] = useState(false);
-  // let [stats, setStats] = useState([
-  //   {
-  //     image: <FontAwesomeIcon icon={faUsers} color="orange" size="3x" />,
-  //     title: "Members",
-  //     number: 0,
-  //   },
-  //   {
-  //     image: <FontAwesomeIcon icon={faChurch} color="orange" size="3x" />,
-  //     title: "Churches",
-  //     number: 0,
-  //   },
-  //   {
-  //     image: <FontAwesomeIcon icon={faUserTie} color="orange" size="3x" />,
-  //     title: "Pastors",
-  //     number: 0,
-  //   },
-  //   {
-  //     image: <FontAwesomeIcon icon={faPeopleGroup} color="orange" size="3x" />,
-  //     title: "Group",
-  //     number: 0,
-  //   },
-  // ]);
-  let [statIterated, setStatIterated] = useState(false);
-  // const [members, setMembers] = useState(0);
-  // const [pastors, setPastors] = useState(0);
-  // const [churches, setChurches] = useState(0);
-  // const [groups, setGroups] = useState(0);
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     const entry = entries[0];
-  //     setVisible(entry.isIntersecting);
-  //   });
-  //   observer.observe(statRef.current);
-  // }, []);
-
-  // let interId;
-  // useEffect(() => {
-  //   if (!statIterated && visible) {
-  //     interId = setInterval(() => {
-  //       setStats([
-  //         ...stats,
-  //         ((stats[0].number = stats[0].number + 12.5),
-  //         (stats[1].number = stats[1].number + 0.125),
-  //         (stats[2].number = stats[2].number + 0.125),
-  //         (stats[3].number = stats[3].number + 0.125)),
-  //       ]);
-  //       stats[0].number >= 1000 && setStatIterated(true);
-  //     }, 30);
-  //   }
-  //   return () => {
-  //     clearInterval(interId);
-  //   };
-  // }, [statIterated, visible]);
 
   return (
     <div className="text-textCol-secondary pt-28  text-center py-5 xl:w-[90%] xl:m-auto">
