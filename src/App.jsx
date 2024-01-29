@@ -26,7 +26,7 @@ import Blogs from "./pages/New/Blogs";
 
 function App() {
   return (
-    <div className=" transition-all">
+    <div className=" transition-all tracking-wide">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

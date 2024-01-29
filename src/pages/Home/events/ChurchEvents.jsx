@@ -10,46 +10,38 @@ import { faBook, faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 export default function ChurchEvents() {
   return (
-    <div
-      className={`text-textCol-secondary text-center lg:grid gap-5 lg:grid-cols-2`}
-    >
-      <div
-        className=" bg-gray-950 bg-center bg-cover rounded-t-3xl lg:h-[82vh] bg-no-repeat bg-blend-multiply pt-10 "
-        style={{ backgroundImage: `url(${poster})` }}
-      >
-        <div className="text-emerald-500 font-montserrat px-10">
-          <FontAwesomeIcon icon={faCalendar} size="lg" color="lightGreen" />{" "}
-          <span className="px-5 font-montserrat">CHURCH EVENT</span>
-          <FontAwesomeIcon icon={faCalendar} size="lg" color="lightGreen" />
-        </div>
-        <div className="text-red-400 font-rochester py-4 text-2xl">
-          God of all impossibilities
-        </div>
-
-        <div>
-          <div>
-            <video
-              className=" h-[30vh] w-[900px] "
-              controls
-              src={`${video}`}
-              poster={`${post}`}
-            ></video>
-          </div>
-          <p className="py-6 text-gray-200 px-7">
-            An event expressed it's first outing in october 2017 is one that
-            Heaven and it host has used used to prove the finish work of Christ
-            and make it evidential in the lives of St peter and keffi at large.
-            First tittled God of Hannah....
+    <div className={`text-textCol-secondary`}>
+      <div>
+        <p className="border-x-8 border-orange-600 text-orang-600 text-xl lg:text-2xl my-7">
+          CHURCH EVENTS
+        </p>
+        <span className="border-b-2 border-dashed border-greeny-70 py-1 italic">
+          GOD OF ALL IMPOSSIBILITIES
+        </span>
+      </div>
+      <div className="lg:grid grid-cols-3 lg:w-[80%] m-auto">
+        <div className="col-span-2">
+          <p className="text-xl my-4 px-4  lg:tracking-widest lg:font-semibold lg:leading-10 lg:mt-16">
+            God of all impossibilities experieneced it first outing in october
+            17, 2017 and it has since then maintain it status as a yearly event.
+            First tittled God of Hannah, the program....
+            <Link to="god_of_impossibilities">
+              <span className="text-lg italic text-blue-600 hover:underline">
+                More info & sermons
+              </span>
+            </Link>
           </p>
         </div>
-        <p className="pt-5">
-          <button className="bg-emerald-500 py-3 text-gray-100 rounded-full px-10 text-lg">
-            more info and sermons
-          </button>
-        </p>
+        <div className=" lg:py-8 lg:ml-10">
+          <video controls poster={poster} className="">
+            <source src={video} type="video/mp4" />
+            <source src={video} type="video/ogg" />
+            <source src={video} type="video/webm" />
+          </video>
+        </div>
       </div>
 
-      <div
+      {/* <div
         className="pt-7 w-[100%] m-auto lg:h-[82vh] bg-cover bg-center bg-no-repeat bg-blend-multiply rounded-t-3xl bg-gray-800"
         style={{ backgroundImage: `url(${sky}) ` }}
       >
@@ -86,7 +78,7 @@ export default function ChurchEvents() {
           </Link>
           <span>📖📖📖</span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
