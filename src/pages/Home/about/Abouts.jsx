@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
   return (
     <div className="border-r">
-      <div key={about.path} className="bg-greeny-700 ">
+      <div className="bg-greeny-700 ">
         {" "}
         <div
           className={`md:block ${

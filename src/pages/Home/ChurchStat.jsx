@@ -13,7 +13,6 @@ export default function ChurchStat() {
   const [memIntersected, setMemIntersected] = useState(false);
   const [churchIntersected, setChurchIntersected] = useState(false);
 
-  const stats = { mem: memIntersected, chu: churchIntersected };
   const [members, setMembers] = useState(0);
   const [pastors, setPastors] = useState(0);
   const [Churches, setChurches] = useState(0);

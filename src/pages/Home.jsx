@@ -13,15 +13,15 @@ export default function Home() {
   const [isHomePage, setIsHomePage] = useState(true);
 
   return (
-    <div className={`text-gray-300 bg-gray-300`}>
+    <div className={`text-gray-300 bg-gray-300 tracking-wider`}>
       <Header isHomePage={isHomePage} />
       <Welcome />
       <AboutChurch />
       <Prayer_Donate />
-      {/* <TeamOfLeaders /> */}
-      {/* <ChurchEvents />
+      <TeamOfLeaders />
+      {/* <ChurchEvents /> */}
       <ChurchMap />
-      <Footer sky={sky} /> */}
+      <Footer sky={sky} />
     </div>
   );
 }
