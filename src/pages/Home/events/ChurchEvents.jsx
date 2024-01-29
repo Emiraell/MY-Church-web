@@ -40,45 +40,6 @@ export default function ChurchEvents() {
           </video>
         </div>
       </div>
-
-      {/* <div
-        className="pt-7 w-[100%] m-auto lg:h-[82vh] bg-cover bg-center bg-no-repeat bg-blend-multiply rounded-t-3xl bg-gray-800"
-        style={{ backgroundImage: `url(${sky}) ` }}
-      >
-        <p className="text-emerald-500">
-          {" "}
-          <FontAwesomeIcon icon={faBook} color="lightGreen" />
-          <span className="px-4 font-montserrat">OUR BLOGS</span>
-        </p>
-        <div className="  pt-10">
-          <div className="relative">
-            <div>
-              <img src={battle} alt="" className="w-[100%] " />
-            </div>
-            <div className="bg-gray-100 absolute left-10 right-10 bottom-[-40px] z-10 ">
-              <p className="pt-8 font-bold">YOUTH? The fierce battle</p>
-              <p className="py-4">
-                written by{" "}
-                <span className="text-emerald-500 pl-5">Edwin Emmanuel</span>
-              </p>
-              <Link className="">
-                <button className="bg-emerald-600 pt-2 px-5 text-gray-200 ">
-                  READ
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="mt-14">
-          <Link>
-            <span>📖📖📖</span>
-            <button className="bg-emerald-600 pt-2 px-5 text-gray-200 mx-5">
-              All Blogs
-            </button>
-          </Link>
-          <span>📖📖📖</span>
-        </div>
-      </div> */}
     </div>
   );
 }

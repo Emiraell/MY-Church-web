@@ -8,6 +8,7 @@ import AboutChurch from "./Home/about/AboutChurch.jsx";
 import Prayer_Donate from "./Home/Prayer_Donate.jsx";
 import sky from "./Home/events/assests/sky.png";
 import { useState } from "react";
+import BlogsNews from "./Home/newsBlogs/BlogsNews.jsx";
 
 export default function Home() {
   const [isHomePage, setIsHomePage] = useState(true);
@@ -22,6 +23,7 @@ export default function Home() {
       <Prayer_Donate />
       <TeamOfLeaders />
       <ChurchEvents />
+      <BlogsNews />
       <ChurchMap />
       <Footer sky={sky} />
     </div>
