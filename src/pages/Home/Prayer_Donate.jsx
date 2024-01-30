@@ -53,9 +53,9 @@ export default function Prayer_Donate() {
 
       <div
         ref={prayerRef}
-        className={`relative flex-col justify-between h-[50vh] w-[100%] opacity-0 translate-x-full 
+        className={`relative flex-col justify-between h-[50vh] w-[100%] opacity-0 translate-y-full 
         m-auto bg-center bg-cover bg-no-repeat bg-blend-multiply bg-gray-700 ${
-          prayerIntersected && "opacity-100 -translate-x-0"
+          prayerIntersected && "opacity-100 translate-y-0"
         } transition-all duration-0.5 ease-linear`}
         style={{ backgroundImage: `url(${churchOutside})` }}
       >

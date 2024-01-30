@@ -79,7 +79,7 @@ export default function Carousel({ isHomePage, page, pageName }) {
           {carouselDetails.map((detail, index) => (
             <div
               key={index}
-              className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-700 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
+              className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-300 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
               <div className="mt-[23vh]  leading-normal md:tracking-widest ">
                 <div className="font-bold">

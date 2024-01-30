@@ -20,8 +20,8 @@ export default function Home() {
       <Header isHomePage={isHomePage} />
       <Welcome />
       <AboutChurch />
-      {/* <Prayer_Donate /> */}
-      {/* <TeamOfLeaders /> */}
+      <Prayer_Donate />
+      <TeamOfLeaders />
       <ChurchEvents />
       <BlogsNews />
       <ChurchMap />

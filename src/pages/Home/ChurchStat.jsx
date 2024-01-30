@@ -72,8 +72,8 @@ export default function ChurchStat() {
         </div>
       </div>
       <div
-        className={` p-2  md:p-10 translate-x-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
-          memIntersected && "-translate-x-0 blur-none opacity-100"
+        className={` p-2  md:p-10 -translate-x-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
+          memIntersected && "translate-x-0 blur-none opacity-100"
         }`}
       >
         <div className={`pt-5`}>
@@ -104,8 +104,8 @@ export default function ChurchStat() {
         </div>
       </div>
       <div
-        className={` p-2  md:p-10 translate-x-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
-          churchIntersected && "-translate-x-0 blur-none opacity-100"
+        className={` p-2  md:p-10 -translate-x-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
+          churchIntersected && "translate-x-0 blur-none opacity-100"
         }`}
       >
         <div className={`pt-5`}>
