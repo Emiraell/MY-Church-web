@@ -6,7 +6,6 @@ import Footer from "../components/footer/Footer.jsx";
 import Welcome from "./Home/Welcome.jsx";
 import AboutChurch from "./Home/about/AboutChurch.jsx";
 import Prayer_Donate from "./Home/Prayer_Donate.jsx";
-import sky from "./Home/events/assests/sky.png";
 import { useState } from "react";
 import BlogsNews from "./Home/newsBlogs/BlogsNews.jsx";
 
@@ -25,7 +24,7 @@ export default function Home() {
       <ChurchEvents />
       <BlogsNews />
       <ChurchMap />
-      <Footer sky={sky} />
+      <Footer />
     </div>
   );
 }

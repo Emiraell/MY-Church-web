@@ -1,7 +1,12 @@
 import React from "react";
 import Message from "./Message";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocation, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocation,
+  faLocationPin,
+  faMapPin,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
@@ -9,29 +14,22 @@ import {
   faWebflow,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import cloud from "../Header/assests/backgrounds/cloud.png";
+import { database } from "../../configuration/Firebase";
 
-export default function Footer({
-  facebook,
-  sky,
-  envelope,
-  web,
-  location,
-  instagram,
-  youtube,
-  phone,
-}) {
+export default function Footer() {
   return (
     <section
-      className={`bg-gray-900 text-gray-200 bg-cover bg-center bg-no-repeat bg-blend-multiply`}
-      style={{ backgroundImage: `url(${sky})` }}
+      className={`bg-greeny-500 text-gray-200 text-start bg-cover bg-center bg-no-repeat bg-blend-multiply`}
+      style={{ backgroundImage: `url(${cloud})` }}
     >
       <div className={`flex-row pt-9`}>
-        <div className="md:flex md:justify-around">
+        <div className="md:grid  md:grid-cols-2">
           <div>
             <div className="px-5 md:px-11">
               {/* contact div */}
               <div className="mb-4">
-                <p className="border-l-2 border-purple-500 pl-2 tracking-wide text-lg md:text-2xl text-gray-300">
+                <p className="border-l-2 border-purple-500 pl-2 tracking-wider text-xl md:text-2xl text-gray-300">
                   contact us
                 </p>
               </div>
@@ -40,21 +38,21 @@ export default function Footer({
                 <div className="flex  items-center  my-2">
                   <div className="border-blue-800 border-2">
                     <FontAwesomeIcon
-                      icon={faLocation}
+                      icon={faLocationPin}
                       size="lg"
                       color="blue"
                       className="p-2"
                     />
                   </div>
 
-                  <div className="flex-row text-sm md:text-lg pl-5">
-                    <p className="text-gray-500">
+                  <div className="flex-row md:text-lg pl-5">
+                    <p className="text-blue-500">
                       {/* tittle */}
                       Address
                     </p>
                     <p>
                       {/* infomation */}
-                      Oppo makawala junction, keffi, Nasarawa State
+                      Opp. makawala junction, keffi, Nasarawa State
                     </p>
                   </div>
                 </div>
@@ -69,8 +67,8 @@ export default function Footer({
                     />
                   </div>
 
-                  <div className="flex-row text-sm md:text-lg pl-5">
-                    <p className="text-gray-500">
+                  <div className="flex-row md:text-lg pl-5">
+                    <p className="text-blue-500">
                       {/* tittle */}
                       Phone Us
                     </p>
@@ -91,8 +89,8 @@ export default function Footer({
                     />
                   </div>
 
-                  <div className="flex-row text-sm md:text-lg pl-5">
-                    <p className="text-gray-500">
+                  <div className="flex-row md:text-lg pl-5">
+                    <p className="text-blue-500">
                       {/* tittle */}
                       Email Us
                     </p>
@@ -112,8 +110,8 @@ export default function Footer({
                     />
                   </div>
 
-                  <div className="flex-row text-sm md:text-lg pl-5">
-                    <p className="text-gray-500">
+                  <div className="flex-row md:text-lg pl-5">
+                    <p className="text-blue-500">
                       {/* tittle */}
                       Website
                     </p>
@@ -127,48 +125,44 @@ export default function Footer({
               </div>
             </div>
 
-            <div className="md:mx-11 mx-5 my-5">
+            <div className="md:mx-11 mx-5 my-8">
               {/* socail media info */}
               <div>
-                <p className="pb-4 border-l-2 border-purple-500 pl-2 tracking-wide text-lg md:text-2xl text-gray-300">
-                  Follow us
+                <p className="pb-4 tracking-wide text-xl md:text-2xl text-gray-300">
+                  <span className="border-l-2 border-purple-500 pl-2">
+                    Let's connect
+                  </span>
                 </p>
               </div>
 
-              <div className="flex justify-evenly w-[200px]">
+              <div className="flex items-center">
                 <a href="www.facebook.com ">
                   {" "}
                   <FontAwesomeIcon
                     icon={faFacebook}
-                    size="2xl"
-                    color="lightBlue"
+                    className="h-7 px-5 text-blue-400 active:rotate-180 hover:opacity-75 transition-opacity duration-0.5"
                   />
                 </a>
 
                 <a href="www.facebook.com">
                   {" "}
-                  <FontAwesomeIcon icon={faYoutube} color="red" size="2xl" />
-                </a>
-
-                <a href="www.facebook.com">
-                  {" "}
                   <FontAwesomeIcon
-                    icon={faInstagram}
-                    color="purple"
-                    size="2xl"
+                    icon={faYoutube}
+                    className="h-7 text-red-400 active:rotate-180 hover:opacity-75 transition-opacity duration-0.5"
                   />
                 </a>
               </div>
             </div>
           </div>
-          <Message />{" "}
+          <Message database={database} />
         </div>
 
-        <div className="text-center bg-gray-900 ">
-          <p className="text-sm py-3 text-red-100">
-            (c)St peter's Anglican keffi 2023 | All right reserved
+        <div className="text-center bg-greeny-500 p-4">
+          <p className="text-xs md:text-lg text-red-100">
+            (c)St peter's Anglican keffi 2024 | All right reserved
             <span className="block">
-              Designed by and maintained by emiraelDev | the media department
+              Designed by and maintained by <a href="">Emirael</a> | the media
+              department
             </span>
           </p>
         </div>
