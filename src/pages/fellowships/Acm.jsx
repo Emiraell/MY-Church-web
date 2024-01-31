@@ -29,9 +29,12 @@ export default function Acm() {
   });
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <>
-        <Header page={"ANGLICAN CHILDREN MINISTRY"} />
+        <Header
+          page={"ANGLICAN CHILDREN MINISTRY"}
+          pageName={"Children Ministry"}
+        />
       </>
       <Template details={details} />
       <Footer />

@@ -29,9 +29,9 @@ export default function GirlsGuild() {
   });
 
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-100">
       <>
-        <Header page={"GIRL'S GUILD"} />
+        <Header page={"GIRL'S GUILD"} pageName={"Girl's Guild"} />
       </>
       <Template details={details} />
       <Footer />

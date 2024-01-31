@@ -28,9 +28,9 @@ export default function WomenFellowship() {
   });
 
   return (
-    <div>
-      <div className="text-gray-300">
-        <Header page={"WOMEN FELLOWSHIP"} />
+    <div className=" bg-gray-100">
+      <div className="text-gray-200">
+        <Header page={"WOMEN FELLOWSHIP"} pageName={"Women Fellowship"} />
       </div>
       <div>
         <Template details={details} />

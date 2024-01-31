@@ -25,7 +25,7 @@ const menuContents = [
       { name: "Youth Fellowship", path: "youth_fellowship" },
       { name: "Children Ministry", path: "children_ministry" },
       { name: "EFAC", path: "efac" },
-      { name: "Girl's Guide", path: "girl's_guide" },
+      { name: "Girl's Guide", path: "girls_guild" },
     ],
     clicked: false,
     path: "organizations",

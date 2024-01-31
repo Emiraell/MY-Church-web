@@ -27,9 +27,12 @@ export default function Efac() {
   });
 
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <>
-        <Header page={"EVANGELICAL FELLOWSHIP IN ANGLICAN COMMUNION"} />
+        <Header
+          page={"EVANGELICAL FELLOWSHIP IN ANGLICAN COMMUNION"}
+          pageName={"Efac"}
+        />
       </>
       <Template details={details} />
       <Footer />

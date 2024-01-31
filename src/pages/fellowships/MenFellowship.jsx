@@ -11,7 +11,7 @@ export default function MenFellowship() {
     title: "CHRISTIAN MEN FELOWSHIP",
     slogan: "in undertanding . . . . ",
     description:
-      "The Anglican Christian Men Fellowship in Keffi archdeaconry is achurch body which promotes and uphold the values of the Christain Men Body in the anglican communion. The purpose of this ministry is to be specially carried out at all level in this archeadconry by the excutives. The Anglican Men fellowship in St peter's Anglican Church see to it that the well being of these men are of great profile.",
+      "The Anglican Christian Men Fellowship in Keffi archdeaconry is a church body which promotes and uphold the values of the Christain Men Body in the anglican communion. The purpose of this ministry is to be specially carried out at all level in this archeadconry by the excutives. The Anglican Men fellowship in St peter's Anglican Church see to it that the well being of these men are of great profile.",
     images: { imageOne: men, imageTwo: menC, imageThree: mens },
     aims: [
       "To encourage and make Fathers to take their rightful position and play their role in their families and church",
@@ -27,9 +27,9 @@ export default function MenFellowship() {
     },
   });
   return (
-    <div className="bg-gray-300">
+    <div className="bg-gray-100">
       <div>
-        <Header page={"CHRISTIAN MEN FELLOWSHIP"} />
+        <Header page={"CHRISTIAN MEN FELLOWSHIP"} pageName={"Men Fellowship"} />
       </div>
       <Template details={details} />
       <div>

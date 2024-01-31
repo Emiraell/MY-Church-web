@@ -32,9 +32,9 @@ export default function YouthFellowship() {
   });
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <>
-        <Header page={"YOUTH FELLOWSHIP"} />
+        <Header page={"YOUTH FELLOWSHIP"} pageName={"Youth Fellowship"} />
       </>
       <Template details={details} />
       <div className="w-[90%] lg:w-[70%] m-auto mt-16 text-lg">
