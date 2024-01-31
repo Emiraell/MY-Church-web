@@ -6,9 +6,6 @@ import { database } from "../../configuration/Firebase";
 import Footer from "../../components/footer/Footer";
 
 export default function PrayerRequest() {
-  const [isHomePage, setIsHomePage] = useState(false);
-  const [page, setPage] = useState("PRAYER");
-
   const [prayerPassages, setPrayerPassages] = useState([
     {
       passage: "1 Timothy 2:1",
@@ -29,7 +26,7 @@ export default function PrayerRequest() {
 
   return (
     <div className="bg-gray-200 text-textCol-secondary text-center">
-      <Header isHomePage={isHomePage} page={page} />
+      <Header page={"REQUEST PRAYER"} pageName={"Prayer"} />
       <div className="my-16 md:w-[80%] lg:w-[70%] m-auto w-[90%]">
         <p className="text-xl md:2xl font-lato font-bold text-emerald-700">
           LET'S COMMUINE WITH GOD

@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div
-      className={`text-gray-200 bg-gray-200 tracking-wider text-center font-roboto`}
+      className={`text-gray-200 bg-gray-100 tracking-wider text-center font-roboto`}
     >
       <Header isHomePage={isHomePage} />
       <Welcome />

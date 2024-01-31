@@ -75,8 +75,8 @@ export default function Goai() {
     },
   ]);
   return (
-    <div className="bg-gray-300 text-center text-textCol-primary">
-      <Header page={"GOD OF ALL IMPOSSIBILITIES"} />
+    <div className="bg-gray-100 text-center text-textCol-primary">
+      <Header page={"God of all impossibilities"} pageName={"GOAI"} />
       <div>
         <p className="mt-5 text-xl font-bold font-lato">
           GOD OF ALL IMPOSSIBILITIES 2024

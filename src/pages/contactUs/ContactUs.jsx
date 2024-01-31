@@ -12,15 +12,10 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import ChurchMap from "../../components/ChurchMap";
-import Footer from "../../components/footer/Footer";
 import MessageUs from "./MessageUs";
 import { database } from "../../configuration/Firebase";
 
 export default function ContactUs() {
-  const [isHomePage, setIsHomePage] = useState(false);
-
-  const [page, setPage] = useState("CONTACT");
-
   const [details, setDetails] = useState([
     {
       tittle: "Address",
@@ -60,14 +55,14 @@ export default function ContactUs() {
     },
   ]);
   return (
-    <div className="text-gray-200 bg-gray-200 text-center font-montserrat">
-      <Header isHomePage={isHomePage} page={page} />
+    <div className="text-gray-100 bg-gray-200 text-center font-montserrat">
+      <Header page={"CONTACT US"} pageName={"Contact"} />
       <div className="mt-24  text-textCol-primary w-[90%] m-auto ">
         <div className="">
           <h2 className="md:text-3xl text-2xl font-bold text-red-700 font-roboto pb-7">
             Get In Touch With Us
           </h2>
-          <span className="text-lg">
+          <span className="text-xl">
             Hearing from you would nothing sort of joy to us! Please don't
             hesistate to reach out to us if you have any questions, concerns, or
             ideas for how to work together to move the the body and message of
@@ -105,19 +100,13 @@ export default function ContactUs() {
                 <a href="www.facebook.com">
                   <FontAwesomeIcon
                     icon={faFacebook}
-                    className="h-12 text-blue-700"
+                    className="h-10 text-blue-500 hover:text-blue-700"
                   />
                 </a>
                 <a href="www.facebook.com">
                   <FontAwesomeIcon
                     icon={faYoutube}
-                    className="h-12 text-red-600 px-9"
-                  />
-                </a>
-                <a href="www.facebook.com">
-                  <FontAwesomeIcon
-                    icon={faInstagram}
-                    className="h-12 text-purple-900"
+                    className="h-10 text-red-500 px-9 hover:text-red-700"
                   />
                 </a>
               </div>
@@ -128,7 +117,18 @@ export default function ContactUs() {
         </div>
       </div>
       <ChurchMap />
-      <Footer />
+      <div className="text-center bg-greeny-500 p-4">
+        <p className="text-xs md:text-lg text-red-100">
+          (c)St peter's Anglican keffi 2024 | All right reserved
+          <span className="block">
+            Designed by and maintained by{" "}
+            <a href="" className=" text-blue-200">
+              Emirael
+            </a>{" "}
+            | the media department
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
