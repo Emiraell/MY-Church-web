@@ -7,7 +7,14 @@ import NavContent from "./NavContent";
 import { Link } from "react-router-dom";
 import Carousel from "./Carousel";
 
-export default function Header({ pageName, page, setPage, isHomePage }) {
+export default function Header({
+  pageName,
+  page,
+  isHomePage,
+  blogs,
+  image,
+  author,
+}) {
   const [menuClicked, setMenuClicaked] = useState(false);
   const clickMenu = () => {
     setMenuClicaked(!menuClicked);
@@ -66,7 +73,14 @@ export default function Header({ pageName, page, setPage, isHomePage }) {
           </div>
         </div>
       </nav>
-      <Carousel isHomePage={isHomePage} page={page} pageName={pageName} />
+      <Carousel
+        isHomePage={isHomePage}
+        page={page}
+        pageName={pageName}
+        blogs={blogs}
+        image={image}
+        author={author}
+      />
     </div>
   );
 }

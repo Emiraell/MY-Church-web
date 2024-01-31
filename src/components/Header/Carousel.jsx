@@ -5,7 +5,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Header.module.css";
 
-export default function Carousel({ isHomePage, page, pageName }) {
+export default function Carousel({
+  isHomePage,
+  page,
+  pageName,
+  blogs,
+  image,
+  author,
+}) {
   const settings = {
     dots: true,
     infinite: true,
@@ -60,7 +67,7 @@ export default function Carousel({ isHomePage, page, pageName }) {
 
   return (
     <div>
-      {!isHomePage && (
+      {!isHomePage && !blogs && (
         <div
           className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
@@ -72,6 +79,27 @@ export default function Carousel({ isHomePage, page, pageName }) {
             Home <span className="px-3">/</span>
             <span className=" text-orang-300">{pageName}</span>
           </p>
+        </div>
+      )}
+      {!isHomePage && blogs && (
+        <div
+          className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
+        >
+          <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
+            {page}
+          </p>
+          <div className="text-gray-200  pt-36 relative">
+            <div className="absolute right-[45%]">
+              <img
+                src={image}
+                alt="author"
+                className="rounded-full h-16 object-cover"
+              />
+            </div>
+            <p className=" text-blue-100 text-lg lg:text-2xl font-poppins pt-16">
+              {author}
+            </p>
+          </div>
         </div>
       )}
       {isHomePage && (

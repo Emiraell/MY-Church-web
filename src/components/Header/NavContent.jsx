@@ -16,17 +16,16 @@ export default function NavContent({ content, menuClicked }) {
   const clickInfo = (name) => {
     if (name === "About Us") {
       setInfoClicked({
-        ...infoClicked,
         about: !infoClicked.about,
         organizations: false,
       });
     } else {
       setInfoClicked({
-        ...infoClicked,
         about: false,
         organizations: !infoClicked.organizations,
       });
     }
+    console.log(infoClicked);
   };
 
   const nav = useNavigate();
@@ -73,7 +72,7 @@ export default function NavContent({ content, menuClicked }) {
                       icon={faChevronUp}
                       className="h-5 lg:ml-8"
                     />
-                  )}{" "}
+                  )}
                 </div>
               )}
             </div>
@@ -82,13 +81,16 @@ export default function NavContent({ content, menuClicked }) {
         {content.infos.map((info, index) => (
           <ol
             key={index}
-            className={`${
-              content.name === "About Us" && !infoClicked.about && "hidden"
-            } ${
-              content.name === "Organizations" &&
-              !infoClicked.organizations &&
-              "hidden"
-            }`}
+            // className={`${
+            //   content.name === "About Us" &&
+            //   !infoClicked.about &&
+            //   infoClicked.organizations &&
+            //   "hidden"
+            // } ${
+            //   content.name === "Organizations" &&
+            //   !infoClicked.organizations &&
+            //   "hidden"
+            // }`}
           >
             <li
               className="text-gray-100 mb-4 ml-3 hover:underline"
@@ -96,7 +98,13 @@ export default function NavContent({ content, menuClicked }) {
                 navigate(info.path);
               }}
             >
-              {info.name}
+              {content.name === "About Us" &&
+                infoClicked.about &&
+                !infoClicked.organizations &&
+                info.name}
+              {content.name === "Organizations" &&
+                infoClicked.organizations &&
+                info.name}
             </li>
           </ol>
         ))}

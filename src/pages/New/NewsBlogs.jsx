@@ -6,30 +6,37 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import data from "./Data";
+import Footer from "../../components/footer/Footer";
 
 export default function NewsBlogs() {
   const { id } = useParams();
   const [showing, setShowing] = useState({ news: true, blogs: false });
 
   return (
-    <div className="bg-gray-200">
-      <Header page={"CHURCH NEWS & BLOGS"} />
+    <div className="bg-gray-100">
+      <Header page={"CHURCH NEWS & BLOGS"} pageName={"Blogs & News"} />
       <div className="my-16 w-[95%] lg:[70%] m-auto text-center text-textCol-secondary">
-        <div className="flex justify-evenly text-xl bg-gray-100 p-3  lg:text-2xl font-bold font-lato tracking-wide">
-          <h3
-            className=" border-r-4 pr-6 "
+        <div className="text-lg text-start lg:text-2xl font-bold font-lato tracking-wide">
+          <span
+            className={`${
+              showing.news && "bg-greeny-600 text-gray-100"
+            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out`}
             onClick={() => setShowing({ news: true, blogs: false })}
           >
             Church News
-          </h3>
-          <h3 onClick={() => setShowing({ news: false, blogs: true })}>
+          </span>
+          <span
+            onClick={() => setShowing({ news: false, blogs: true })}
+            className={`${
+              showing.blogs && "bg-greeny-600 text-gray-100"
+            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out`}
+          >
             Blogs
-          </h3>
+          </span>
         </div>
         <div className="mt-10">
           <div className={`${!showing.news && "hidden"}`}>
-            {" "}
-            <span className=" font-rochester text-emerald-600">
+            <span className=" text-orange-700 text-2xl font-montserrat">
               NEWS UPDATE
             </span>
             <div className={`w-[95%] m-auto  my-10 lg:grid grid-cols-2 gap-7`}>
@@ -66,45 +73,50 @@ export default function NewsBlogs() {
             </div>
           </div>
           <div className={`${!showing.blogs && "hidden"}`}>
-            BLOGS
-            {data[1].map((blog, index) => (
-              <Link
-                key={index}
-                to={`/news/blogs/${blog.id}`}
-                className="w-[95%] m-auto shadow-lg my-10 bg-slate-100 p-3"
-              >
-                <div
-                  className="relative bg-center bg-cover bg-no-repeat bg-blend-multiply bg-orange-200"
-                  style={{ backgroundImage: `url(${back})` }}
+            <span className=" text-orange-700 text-2xl font-montserrat">
+              BLOGS
+            </span>
+            <div className={`w-[95%] m-auto  my-10 lg:grid grid-cols-2 gap-7`}>
+              {data[1].map((blog, index) => (
+                <Link
+                  key={index}
+                  to={`/news/blogs/${blog.id}`}
+                  className="w-[95%] m-auto shadow-lg my-10 bg-slate-100 p-3"
                 >
-                  <p className=" font-semibold py-20 text-gray-200 px-5 text-xl">
-                    THE BATTLE OF THE YOUTHFUL AGE AND IT CONSEQUENCES
-                  </p>
-                </div>
-                <div className="py-3">
-                  <p className="p-4">
-                    As youth were desginated to fight a vital battle of our
-                    livesand of which we must not loose for anything ......
-                  </p>
-                  <p className="p-2 border border-green-300 my-3">
-                    By:{" "}
-                    <span className="text-green-600 border-l-4 pl-4">
-                      Edwin Emmanuel
-                    </span>{" "}
-                  </p>
-                  <p>
-                    Read More{" "}
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="h-3 animate-pulse text-red-600"
-                    />
-                  </p>
-                </div>
-              </Link>
-            ))}
+                  <div
+                    className="relative bg-center bg-cover bg-no-repeat bg-blend-multiply bg-orange-200"
+                    style={{ backgroundImage: `url(${back})` }}
+                  >
+                    <p className=" font-semibold py-20 text-gray-200 px-5 text-xl">
+                      THE BATTLE OF THE YOUTHFUL AGE AND IT CONSEQUENCES
+                    </p>
+                  </div>
+                  <div className="py-3">
+                    <p className="p-4">
+                      As youth were desginated to fight a vital battle of our
+                      livesand of which we must not loose for anything ......
+                    </p>
+                    <p className="p-2 border border-green-300 my-3">
+                      By:{" "}
+                      <span className="text-green-600 border-l-4 pl-4">
+                        Edwin Emmanuel
+                      </span>{" "}
+                    </p>
+                    <p>
+                      Read More{" "}
+                      <FontAwesomeIcon
+                        icon={faArrowRight}
+                        className="h-3 animate-pulse text-red-600"
+                      />
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
