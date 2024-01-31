@@ -1,15 +1,11 @@
 import { useState } from "react";
 import Header from "../../components/Header/Header";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
 import vision from "./assests/vision.png";
 import mission from "./assests/mission.png";
 import UsefulLinks from "../../components/UsefulLinks";
 import Footer from "../../components/footer/Footer";
 
 export default function VisionMission() {
-  const [isHomePage, setIsHomePage] = useState(false);
-  const [page, setPage] = useState("VISION AND MISSION STATEMENT");
   const [missions, setMissions] = useState([
     "To ensure a sustained growth in the number of churches and worshippers within the archedconry",
     "To develop and inspire in every church the principle of self-sufficiency and Cgristian generoisrtythereby ensuring the a strong and viable diocese",
@@ -25,7 +21,10 @@ export default function VisionMission() {
 
   return (
     <div className="text-gray-300 bg-gray-200 text-center">
-      <Header isHomePage={isHomePage} page={page} />
+      <Header
+        page={"Vision and Mission Statement"}
+        pageName={"Vision & Mission"}
+      />
       <div className=" text-textCol-primary pt-16">
         <div className="bg-gray-300 w-[90%] m-auto shadow-sm  shadow-emerald-900 rounded-t-xl">
           <div
@@ -45,14 +44,14 @@ export default function VisionMission() {
             christ
           </p>
         </div>
-        <div className="bg-gray-300 w-[90%] m-auto shadow-sm mt-28 pb-4 shadow-emerald-900 rounded-t-xl">
+        <div className="bg-gray-300 w-[90%] m-auto shadow-sm my-28 pb-4 shadow-emerald-900 rounded-t-xl">
           <div
             className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[15vh] bg-blend-multiply bg-orange-600"
             style={{
               backgroundImage: `url(${mission})`,
             }}
           >
-            <p className="mt-10">OUR MISSION</p>
+            <p className="my-10">OUR MISSION</p>
           </div>
           {missions.map((mission, index) => (
             <ul
@@ -65,7 +64,7 @@ export default function VisionMission() {
             </ul>
           ))}
         </div>
-        <UsefulLinks links={links} />
+        {/* <UsefulLinks links={links} /> */}
         <Footer />
       </div>
     </div>

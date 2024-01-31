@@ -62,7 +62,7 @@ export default function Carousel({ isHomePage, page, pageName }) {
     <div>
       {!isHomePage && (
         <div
-          className={`text-center bg-cover bg-center bg-blend-multiply bg-emerald-950 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
+          className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
           <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
             {page}
@@ -79,7 +79,7 @@ export default function Carousel({ isHomePage, page, pageName }) {
           {carouselDetails.map((detail, index) => (
             <div
               key={index}
-              className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-300 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
+              className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
               <div className="mt-[23vh]  leading-normal md:tracking-widest ">
                 <div className="font-bold">

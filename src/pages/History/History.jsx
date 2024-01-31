@@ -6,14 +6,11 @@ import { faHistory } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 
 export default function History() {
-  const [isHomePage, setIsHomePage] = useState(false);
-  const [page, setPage] = useState("HISTORY");
-
   return (
-    <div className="text-gray-200 bg-gray-300">
-      <Header isHomePage={isHomePage} page={page} />
-      <div className=" text-textCol-secondary text-center my-20">
-        <div className="w-[90%] m-auto shadow-sm  shadow-orange-900 rounded-t-xl">
+    <div className="text-gray-200 bg-gray-100">
+      <Header page={"History"} pageName={"History"} />
+      <div className=" text-textCol-secondary text-center my-2">
+        <div className="w-[90%] m-auto shadow-lg rounded-t-xl bg-gray-200 my-20">
           <div
             className=" rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center md:h-[30vh] h-[20vh] bg-blend-multiply bg-orange-600"
             style={{
@@ -27,8 +24,8 @@ export default function History() {
               <FontAwesomeIcon icon={faHistory} spin />
             </p>
           </div>
-          <p className="p-5 text-lg tracking-wide lg:w-[80%] m-auto pt-16 md:text-2xl">
-            ST peter's is one of the long standing churches in the acient city
+          <p className="p-5 text-xl leading-10 tracking-widest font-semibold lg:text-2xl lg:w-[80%] m-auto pt-16 md:text-2xl">
+            St peter's is one of the long standing churches in the acient city
             of keffi nasarawa state. The church has been in existent over 90
             years old and the first structure of the church was put in place
             with the help of then the igwe ndi igbo keffi (Igwe Nwachinemeruim)
