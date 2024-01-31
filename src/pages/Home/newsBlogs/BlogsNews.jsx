@@ -5,28 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 export default function BlogsNews() {
   const pccRef = useRef();
-  const happyRef = useRef();
-  const newsRef = useRef();
 
-  const [pccIntersected, setPccIntersected] = useState(false);
-  const [happyIntersected, setHappyIntersected] = useState(false);
-  const [newsIntersected, setNewsIntersected] = useState(false);
+  const [intersected, setIntersected] = useState(false);
 
   useEffect(() => {
-    const observerPcc = new IntersectionObserver((entries) => {
-      setPccIntersected(entries[0].isIntersecting);
+    const observer = new IntersectionObserver((entries) => {
+      setIntersected(entries[0].isIntersecting);
     });
-    observerPcc.observe(pccRef.current);
-
-    const observerHappy = new IntersectionObserver((entries) => {
-      setHappyIntersected(entries[0].isIntersecting);
-    });
-    observerHappy.observe(happyRef.current);
-
-    const observerNews = new IntersectionObserver((entries) => {
-      setNewsIntersected(entries[0].isIntersecting);
-    });
-    observerNews.observe(newsRef.current);
+    observer.observe(pccRef.current);
   }, []);
 
   return (
@@ -37,8 +23,9 @@ export default function BlogsNews() {
       <div className="shadow-md py-5">
         <div className="mt-10  lg:grid grid-cols-3 gap-5">
           <div
+            ref={pccRef}
             className={`${
-              pccIntersected && "opacity-100 translate-x-0"
+              intersected && "opacity-100 translate-x-0"
             } opacity-0 duration-1 transition-all ease-in-out -translate-x-full`}
           >
             <div className="relative p-3">
@@ -49,7 +36,7 @@ export default function BlogsNews() {
               </div>
             </div>
             <div className="py-3">
-              <p ref={pccRef}>ELECTION OF THE NEW PCC MEMBERS</p>
+              <p>ELECTION OF THE NEW PCC MEMBERS</p>
               <p className="p-3 italic">
                 Earlier on, each group in the church nominated few persons to
                 sit for them in the planning of the progress of the church
@@ -71,7 +58,7 @@ export default function BlogsNews() {
 
           <div
             className={`hidden lg:block opacity-0 ${
-              happyIntersected && "opacity-100"
+              intersected && "opacity-100"
             } transition-all duration-1 ease-in-out`}
           >
             <div className="relative p-3">
@@ -82,7 +69,7 @@ export default function BlogsNews() {
               </div>
             </div>
             <div className="py-3">
-              <p ref={happyRef}>ELECTION OF THE NEW PCC MEMBERS</p>
+              <p>ELECTION OF THE NEW PCC MEMBERS</p>
               <p className="p-3 italic">
                 Earlier on, each group in the church nominated few persons to
                 sit for them in the planning of the progress of the church
@@ -103,9 +90,9 @@ export default function BlogsNews() {
           </div>
           <div
             className={`hidden lg:block  ${
-              newsIntersected && "opacity-100 -translate-x-0"
+              intersected && "opacity-100 -translate-y-0"
             }
-					opacity-0 duration-1 transition-all ease-in-out translate-x-full`}
+					opacity-0 duration-1 transition-all ease-in-out translate-y-full`}
           >
             <div className="relative p-3">
               <img src={news} alt="" />
@@ -115,7 +102,7 @@ export default function BlogsNews() {
               </div>
             </div>
             <div className="py-3">
-              <p ref={newsRef}>ELECTION OF THE NEW PCC MEMBERS</p>
+              <p>ELECTION OF THE NEW PCC MEMBERS</p>
               <p className="p-3 italic">
                 Earlier on, each group in the church nominated few persons to
                 sit for them in the planning of the progress of the church

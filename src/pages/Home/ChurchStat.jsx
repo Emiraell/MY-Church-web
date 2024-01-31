@@ -9,8 +9,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ChurchStat() {
   const memRef = useRef();
-  const churchRef = useRef();
-  const [memIntersected, setMemIntersected] = useState(false);
+  const [intersected, setIntersected] = useState(false);
   const [churchIntersected, setChurchIntersected] = useState(false);
 
   const [members, setMembers] = useState(0);
@@ -21,33 +20,26 @@ export default function ChurchStat() {
   let intervalId;
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      setMemIntersected(entries[0].isIntersecting);
+    const memObserver = new IntersectionObserver((entries) => {
+      setIntersected(entries[0].isIntersecting);
     });
-    observer.observe(memRef.current);
+    memObserver.observe(memRef.current);
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      setChurchIntersected(entries[0].isIntersecting);
-    });
-    observer.observe(churchRef.current);
-  }, []);
-
-  useEffect(() => {
-    if (!iterated && (memIntersected || churchIntersected)) {
+    if (!iterated && intersected) {
       intervalId = setInterval(() => {
         setMembers((prev) => prev + 100);
         setPastors((prev) => prev + 1);
         setChurches((prev) => prev + 1);
         setGroups((prev) => prev + 1);
         members >= 900 && setIterated(true);
-      }, 100);
+      }, 300);
     } else {
       clearInterval(intervalId);
     }
     return () => clearInterval(intervalId);
-  }, [members, memIntersected, churchIntersected]);
+  }, [members, intersected]);
 
   return (
     <div
@@ -55,8 +47,8 @@ export default function ChurchStat() {
 			md:flex md:justify-between h-[100%]"
     >
       <div
-        className={` p-2  md:p-10 -translate-x-full blur-md duration-0.5 opacity-0 transition-all ease-in-out ${
-          memIntersected && "translate-x-0 blur-none opacity-100"
+        className={` p-2  md:p-10 translate-y-full blur-md duration-0.5 opacity-0 transition-all ease-in-out ${
+          intersected && "-translate-y-0 blur-none opacity-100"
         }`}
       >
         <div className={`pt-5`}>
@@ -72,8 +64,8 @@ export default function ChurchStat() {
         </div>
       </div>
       <div
-        className={` p-2  md:p-10 -translate-x-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
-          memIntersected && "translate-x-0 blur-none opacity-100"
+        className={` p-2  md:p-10 -translate-y-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
+          intersected && "-translate-y-0 blur-none opacity-100"
         }`}
       >
         <div className={`pt-5`}>
@@ -87,8 +79,8 @@ export default function ChurchStat() {
         </div>
       </div>
       <div
-        className={` p-2  md:p-10 -translate-x-full duration-0.5 opacity-0 blur-md transition-all ease-in-out ${
-          churchIntersected && "translate-x-0 blur-none opacity-100"
+        className={` p-2  md:p-10 translate-y-full duration-0.5 opacity-0 blur-md transition-all ease-in-out ${
+          intersected && "-translate-y-0 blur-none opacity-100"
         }`}
       >
         <div className={`pt-5`}>
@@ -98,14 +90,12 @@ export default function ChurchStat() {
           <p className="text-greeny-200 font-bold text-xl md:text-2xl md:py-6 py-3">
             {Churches}+
           </p>
-          <p className="md:text-2xl" ref={churchRef}>
-            Churches
-          </p>
+          <p className="md:text-2xl">Churches</p>
         </div>
       </div>
       <div
-        className={` p-2  md:p-10 -translate-x-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
-          churchIntersected && "translate-x-0 blur-none opacity-100"
+        className={` p-2  md:p-10 translate-y-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
+          intersected && "-translate-y-0 blur-none opacity-100"
         }`}
       >
         <div className={`pt-5`}>
