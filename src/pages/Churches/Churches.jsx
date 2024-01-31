@@ -1,8 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../../components/Header/Header";
 import churchTop from "./assests/churchTop.jpg";
-import church from "./assests/churches.png";
-import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import barnabas from "./assests/barnabas.jpg";
+import garaku from "./assests/garaku.jpg";
+import jigwada from "./assests/jigwada.jpg";
+import sabonGida from "./assests/sabonGida.jpg";
+import shamaki from "./assests/shamaki.jpg";
+import zakara from "./assests/zakara.jpg";
+import gra from "./assests/churches.png";
+import {
+  faChurch,
+  faLocationDot,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
@@ -11,90 +21,83 @@ import Footer from "../../components/footer/Footer";
 export default function Churches() {
   const [churches, setChurches] = useState([
     {
-      name: "st barnabas anglican church keffi, nasarawa state",
-      address: "Behind otunsha hotel, dadin kowa keffi",
-      vicar: "Rev. Can Okafor Josiah",
+      name: "St. Peter's Anglican Church ",
+      address: "Keffi, Nasarawa State",
+      vicar: "Rev'd. Canon Dr. Josiah C. Okafor",
       number: "08136553986",
-      image: church,
-      socialMedia: {
-        facebook: "www.facebook",
-        whatsapp: "https://wa.me/08136553986",
-      },
+      image: churchTop,
+    },
+
+    {
+      name: "St. Barnabas Anglican Church ",
+      address: "Dadin kowa keffi, Nasarawa State",
+      vicar: "Rev'd. Canon Dr. Josiah C. Okafor",
+      number: "08136553986",
+      image: barnabas,
     },
     {
-      name: "emmanuel church, gidan zakara",
-      address: "Oppo first baptist church, gidan zakara",
-      vicar: "Rev.Can Ejike Arinze",
+      name: "Emmanuel Anglican church",
+      address: "Gidan zakara, Nasarawa State",
+      vicar: "Rev'd. Ejike C. Arinze",
       number: "08136553986",
-      image: church,
-      socialMedia: { facebook: null, whatsapp: "https://wa.me/09020098285" },
+      image: zakara,
     },
     {
-      name: "church of advent jigwada",
-      address: "Behind Otunsha Hotel, jigwada",
-      vicar: "Evang Ali Onyeka",
+      name: "St. Philips Anglican Church",
+      address: "Garaku, Nasarawa State",
+      vicar: " Rev'd. Ernest C. Eleje",
       number: "08136553986",
-      image: church,
-      socialMedia: { facebook: null, whatsapp: "https://wa.me/08136553986" },
+      image: garaku,
     },
     {
-      name: "st philip anglican church, garaku",
-      address: "Behind Otunsha Hotel, garaku",
-      vicar: "Rev. Can iam coming",
+      name: "All Soul's Anglican Church,",
+      address: "Sabon gari, Nasarawa State",
+      vicar: "Ord. Bayo Ajayi",
       number: "08136553986",
-      image: church,
-      socialMedia: { facebook: null, whatsapp: "https://wa.me/08136553986" },
+      image: sabonGida,
     },
     {
-      name: "church of epiphany, keffi",
-      address: "government resisdential area keffi",
-      vicar: "Rev enugu man",
+      name: "Zion Anglican Church",
+      address: "Shamake, Nasarawa State",
+      vicar: "Ord. Abednego Ibrahim",
       number: "08136553986",
-      image: church,
-      socialMedia: { facebook: null, whatsapp: "https://wa.me/08136553986" },
+      image: shamaki,
     },
     {
-      name: "Bro bayos church",
-      address: "sabon garerikr",
-      vicar: "Evang Bayo",
+      name: "Church of Advent",
+      address: "Jigwada, Nasarawa State",
+      vicar: "Evang. Onyeka Ali",
       number: "08136553986",
-      image: church,
-      socialMedia: { facebook: null, whatsapp: "https://wa.me/08136553986" },
+      image: jigwada,
     },
     {
-      name: "evang kenneths church",
-      address: "marababa shamaki",
-      vicar: "Bro Kenneth",
+      name: "Church of Epiphany",
+      address: "Gra, Keffi, Nasarawa State",
+      vicar: " Ord. Daniel Onyekachi",
       number: "08136553986",
-      image: church,
-      socialMedia: { facebook: null, whatsapp: "https://wa.me/08136553986" },
+      image: gra,
     },
   ]);
   return (
-    <div className="text-gray-200 bg-gray-200 text-center font-lato">
-      <Header isHomePage={false} page={"CHURCHES"} />
+    <div className="text-gray-200 bg-gray-100 text-center font-lato">
+      <Header page={"Our Churches"} pageName={"churches"} />
       <div className=" text-textCol-primary mt-24 lg:grid lg:grid-cols-2 w-[90%] gap-8 m-auto">
         {churches.map((church, index) => (
           <div
             key={index}
-            className=" border col-span-1 border-lime-900 rounded-t-xl mb-20 shadow-lg"
+            className=" border col-span-1 border-lime-900 rounded-t-xl bg-gray-200 mb-20 shadow-lg"
           >
             <div
-              className="h-[30vh] md:h-[40vh] relative rounded-t-xl bg-emerald-900 bg-cover bg-blend-multiply bg-center bg-no-repeat"
+              className="h-[40vh] md:h-[40vh] relative rounded-t-xl bg-gray-300 bg-cover bg-blend-multiply bg-center bg-no-repeat "
               style={{ backgroundImage: `url(${church.image})` }}
-            >
-              <p className="absolute top-2/4 w-[100%] m-auto uppercase font-bold animate-pulse px-10 text-orange-500 drop-shadow-lg">
-                {church.name}
-              </p>
-              <a
-                href="www.facebook.com"
-                className="bottom-4 absolute text-blue-700"
-              >
-                <FontAwesomeIcon icon={faFacebook} />
-              </a>
-            </div>
+            ></div>
             <div className="md:text-xl py-4">
-              <div className=" flex mt-3 px-3 items-center">
+              <div className=" flex mt-3 px-2 items-center">
+                <FontAwesomeIcon icon={faChurch} className="text-emerald-700" />
+                <p className=" px-4">{church.name}</p>
+              </div>
+
+              <div className=" flex mt-5 px-3 items-center">
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   className="text-emerald-700"
@@ -113,9 +116,6 @@ export default function Churches() {
           </div>
         ))}
       </div>
-      <span className="text-red-600 ">
-        NB: All churches are located in Nasarawa State{" "}
-      </span>
       <Footer />
     </div>
   );
