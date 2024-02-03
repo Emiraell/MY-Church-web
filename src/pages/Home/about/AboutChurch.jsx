@@ -90,7 +90,7 @@ export default function AboutChurch() {
   return (
     <div
       ref={aboutRef}
-      className={`text-center text-textCol-primary duration-5 opacity-0 
+      className={`text-center text-textCol-primary duration-0.5 opacity-0 
       ease-in-out transition-all ${intersected && " opacity-100"}`}
     >
       <div className=" font-lato mb-5 text-2xl">
@@ -100,7 +100,7 @@ export default function AboutChurch() {
       </div>
       <div
         className={`w-[100%] m-auto md:grid md:grid-cols-2 
-        xl:grid-cols-4 gap-0 `}
+        xl:grid-cols-4  `}
       >
         {abouts.map((about, index) => (
           <Abouts

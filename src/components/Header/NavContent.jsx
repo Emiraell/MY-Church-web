@@ -1,33 +1,13 @@
-import {
-  faArrowUp,
-  faChevronDown,
-  faChevronUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function NavContent({ content, menuClicked }) {
-  const [infoClicked, setInfoClicked] = useState({
-    about: false,
-    organizations: false,
-  });
-
-  const clickInfo = (name) => {
-    if (name === "About Us") {
-      setInfoClicked({
-        about: !infoClicked.about,
-        organizations: false,
-      });
-    } else {
-      setInfoClicked({
-        about: false,
-        organizations: !infoClicked.organizations,
-      });
-    }
-    console.log(infoClicked);
-  };
-
+export default function NavContent({
+  content,
+  menuClicked,
+  infoClicked,
+  clickInfo,
+}) {
   const nav = useNavigate();
 
   const navigate = (path) => {
@@ -42,66 +22,37 @@ export default function NavContent({ content, menuClicked }) {
             <ol onClick={() => navigate(content.path)} className="my-3 ">
               {content.name}
             </ol>{" "}
-            <div>
-              {content.name === "About Us" && (
-                <div onClick={() => clickInfo(content.name)}>
-                  {!infoClicked.about ? (
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      className="h-5 lg:ml-8"
-                      // onClick={() => clickInfo(content.name)}
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={faChevronUp}
-                      className="h-5 lg:ml-8"
-                    />
-                  )}
-                </div>
-              )}
-              {content.name === "Organizations" && (
-                <div onClick={() => clickInfo(content.name)}>
-                  {!infoClicked.organizations ? (
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      className="h-5 lg:ml-8"
-                      // onClick={() => clickInfo(content.name)}
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={faChevronUp}
-                      className="h-5 lg:ml-8"
-                    />
-                  )}
-                </div>
-              )}
+            <div onClick={() => clickInfo(content.name)}>
+              {content.name === "About Us" &&
+                (infoClicked.about ? (
+                  <FontAwesomeIcon icon={faChevronUp} className="h-5 lg:ml-8" />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="h-5 lg:ml-8"
+                  />
+                ))}
+              {content.name === "Organizations" &&
+                (infoClicked.organizations ? (
+                  <FontAwesomeIcon icon={faChevronUp} className="h-5 lg:ml-8" />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className="h-5 lg:ml-8"
+                  />
+                ))}
             </div>
           </div>
         </div>
         {content.infos.map((info, index) => (
-          <ol
-            key={index}
-            // className={`${
-            //   content.name === "About Us" &&
-            //   !infoClicked.about &&
-            //   infoClicked.organizations &&
-            //   "hidden"
-            // } ${
-            //   content.name === "Organizations" &&
-            //   !infoClicked.organizations &&
-            //   "hidden"
-            // }`}
-          >
+          <ol key={index}>
             <li
               className="text-gray-100 mb-4 ml-3 hover:underline"
               onClick={() => {
                 navigate(info.path);
               }}
             >
-              {content.name === "About Us" &&
-                infoClicked.about &&
-                !infoClicked.organizations &&
-                info.name}
+              {content.name === "About Us" && infoClicked.about && info.name}
               {content.name === "Organizations" &&
                 infoClicked.organizations &&
                 info.name}

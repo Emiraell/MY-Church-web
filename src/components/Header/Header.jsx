@@ -21,6 +21,25 @@ export default function Header({
     //console.log(menuClicked);
   };
 
+  const [infoClicked, setInfoClicked] = useState({
+    about: false,
+    organizations: false,
+  });
+
+  const clickInfo = (name) => {
+    if (name === "About Us") {
+      setInfoClicked({
+        about: !infoClicked.about,
+        organizations: false,
+      });
+    } else {
+      setInfoClicked({
+        about: false,
+        organizations: !infoClicked.organizations,
+      });
+    }
+  };
+
   const [navScrolled, setNavScrolled] = useState(false);
   addEventListener("scroll", () => {
     if (window.scrollY >= 150) {
@@ -68,6 +87,8 @@ export default function Header({
                 key={index}
                 content={content}
                 menuClicked={menuClicked}
+                infoClicked={infoClicked}
+                clickInfo={clickInfo}
               />
             ))}
           </div>
