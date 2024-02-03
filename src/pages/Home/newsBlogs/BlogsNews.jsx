@@ -1,35 +1,25 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import news from "./assests/menC.jpg";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 export default function BlogsNews() {
-  const pccRef = useRef();
-
-  const [intersected, setIntersected] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      setIntersected(entries[0].isIntersecting);
-    });
-    observer.observe(pccRef.current);
-  }, []);
-
   return (
     <div className=" text-textCol-primary mt-28 w-[95%] m-auto">
       <p className="text-xl font-semibold italic border-x-8 border-orange-600">
         OUR TOP STORIES AND <span className=" text-orange-500">BLOGS</span>
-      </p>{" "}
+      </p>
       <div className="shadow-md py-5">
         <div className="mt-10  lg:grid grid-cols-3 gap-5">
-          <div
-            ref={pccRef}
-            className={`${
-              intersected && "opacity-100 translate-x-0"
-            } opacity-0 duration-1 transition-all ease-in-out -translate-x-full`}
+          <motion.div
+            initial={{ y: 400, opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <div className="relative p-3">
-              <img src={news} alt="" />
+              <img src={news} alt="news" />
               <div className="absolute top-0 bg-greeny-200 text-gray-200">
                 <p className="p-3">25 JAN</p>
                 <p className=" bg-gray-200 text-greeny-200">2024</p>
@@ -54,12 +44,14 @@ export default function BlogsNews() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div
-            className={`hidden lg:block opacity-0 ${
-              intersected && "opacity-100"
-            } transition-all duration-1 ease-in-out`}
+          <motion.div
+            className={`hidden lg:block`}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <div className="relative p-3">
               <img src={news} alt="" />
@@ -87,12 +79,13 @@ export default function BlogsNews() {
                 </p>
               </div>
             </div>
-          </div>
-          <div
-            className={`hidden lg:block  ${
-              intersected && "opacity-100 -translate-y-0"
-            }
-					opacity-0 duration-1 transition-all ease-in-out translate-y-full`}
+          </motion.div>
+          <motion.div
+            className={`hidden lg:block `}
+            initial={{ y: -400, opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <div className="relative p-3">
               <img src={news} alt="" />
@@ -120,7 +113,7 @@ export default function BlogsNews() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
         <Link>
           <span className="text-greeny-500 animate-pulse bg-gray-200">

@@ -3,6 +3,7 @@ import okafor from "./assests/okafor.jpg";
 import arinze from "./assests/shutDown.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 import {
   faChurch,
   faLink,
@@ -43,7 +44,11 @@ export default function TeamOfLeaders() {
         </p>
         <div className="lg:grid grid-cols-3 gap-4">
           {leaders.map((leader, index) => (
-            <div
+            <motion.div
+              initial={{ rotate: 180, opacity: 0 }}
+              whileInView={{ rotate: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              viewport={{ once: true }}
               className={` mt-10 col-span-1 ${index > 0 && "hidden"} lg:block`}
               key={index}
             >
@@ -69,7 +74,7 @@ export default function TeamOfLeaders() {
                 <span className="block text-lg py-1">{leader.position}</span>
                 <p className="text-xl text-gray-950">{leader.church}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <Link to="officials">

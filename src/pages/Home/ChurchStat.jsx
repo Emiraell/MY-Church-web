@@ -6,11 +6,11 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function ChurchStat() {
   const memRef = useRef();
   const [intersected, setIntersected] = useState(false);
-  const [churchIntersected, setChurchIntersected] = useState(false);
 
   const [members, setMembers] = useState(0);
   const [pastors, setPastors] = useState(0);
@@ -46,10 +46,12 @@ export default function ChurchStat() {
       className="w-[90%] m-auto py-10 grid grid-cols-2 gap-1 
 			md:flex md:justify-between h-[100%]"
     >
-      <div
-        className={` p-2  md:p-10 translate-y-full blur-md duration-0.5 opacity-0 transition-all ease-in-out ${
-          intersected && "-translate-y-0 blur-none opacity-100"
-        }`}
+      <motion.div
+        className={` p-2  md:p-10 `}
+        initial={{ opacity: 0, y: -200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
       >
         <div className={`pt-5`}>
           <FontAwesomeIcon icon={faUsers} className="h-12 text-orang-600" />
@@ -62,11 +64,13 @@ export default function ChurchStat() {
             members
           </p>
         </div>
-      </div>
-      <div
-        className={` p-2  md:p-10 -translate-y-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
-          intersected && "-translate-y-0 blur-none opacity-100"
-        }`}
+      </motion.div>
+      <motion.div
+        className={` p-2  md:p-10 `}
+        initial={{ opacity: 0, y: -200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
       >
         <div className={`pt-5`}>
           <FontAwesomeIcon icon={faUserTie} className="h-12 text-orang-600" />
@@ -77,11 +81,13 @@ export default function ChurchStat() {
           </p>
           <p className="md:text-2xl">Pastors</p>
         </div>
-      </div>
-      <div
-        className={` p-2  md:p-10 translate-y-full duration-0.5 opacity-0 blur-md transition-all ease-in-out ${
-          intersected && "-translate-y-0 blur-none opacity-100"
-        }`}
+      </motion.div>
+      <motion.div
+        className={` p-2  md:p-10 `}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
       >
         <div className={`pt-5`}>
           <FontAwesomeIcon icon={faChurch} className="h-12 text-orang-600" />
@@ -92,11 +98,13 @@ export default function ChurchStat() {
           </p>
           <p className="md:text-2xl">Churches</p>
         </div>
-      </div>
-      <div
-        className={` p-2  md:p-10 translate-y-full duration-0.5 blur-md opacity-0 transition-all ease-in-out ${
-          intersected && "-translate-y-0 blur-none opacity-100"
-        }`}
+      </motion.div>
+      <motion.div
+        className={` p-2  md:p-10 `}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
       >
         <div className={`pt-5`}>
           <FontAwesomeIcon
@@ -110,7 +118,7 @@ export default function ChurchStat() {
           </p>
           <p className="md:text-2xl pl-3">Groups</p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

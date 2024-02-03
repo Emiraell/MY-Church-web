@@ -1,11 +1,17 @@
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
   return (
-    <div className=" border-r">
+    <motion.div
+      className=" border-r"
+      initial={{ opacity: 0, y: 200 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5, duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <div className="flex p-3 items-center justify-between bg-greeny-500 text-gray-50 border-none">
         <p className="text-lg">{about.name}</p>
         <div
@@ -75,6 +81,6 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
           <Link to={about.path}>Read More</Link>
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

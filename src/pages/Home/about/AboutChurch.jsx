@@ -75,24 +75,9 @@ export default function AboutChurch() {
       });
     }
   };
-  const [intersected, setIntersected] = useState(false);
-  const aboutRef = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setIntersected(entry.isIntersecting);
-      // console.log(intersected);
-    });
-    observer.observe(aboutRef.current);
-  }, []);
 
   return (
-    <div
-      ref={aboutRef}
-      className={`text-center text-textCol-primary duration-1 opacity-0 
-      ease-in-out transition-all ${intersected && " opacity-100"}`}
-    >
+    <div className={`text-center text-textCol-primary `}>
       <div className=" font-lato mb-5 text-2xl">
         <p className="py-10 text-orang-200 font-semibold lg:font-montserrat">
           About the Church
