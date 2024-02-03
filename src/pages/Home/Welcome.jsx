@@ -29,7 +29,7 @@ export default function Welcome() {
               <p className="font-bold tracking-wide text-xl">
                 Rt. Rev. Robinson Adeyemi
               </p>
-              <span className=" text-greeny-50">Bishop of Lafia Diocese </span>
+              <span className=" text-blue-300">Bishop of Lafia Diocese </span>
             </div>
           </div>
           <p className="p-4  xl:col-span-2 lg:col-span-1 lg:text-xl text-lg mt-5 lg:mt-0 leading-8 tracking-wide lg:tracking-widest font-semibold lg:leading-10  xl:pt-20 ">

@@ -34,8 +34,8 @@ export default function TeamOfLeaders() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className=" font-lato w-[90%] m-auto text-textCol-secondary my-20 text-center">
-      <div className=" m-auto">
+    <div className=" font-lato w-[95%] m-auto text-textCol-secondary my-20 text-center">
+      <div className=" m-auto shadow-xl p-2">
         <p className="text-2xl text-orang-600 ">
           <span className="border-b-2 pb-2 border-dashed border-greeny-100">
             Leadership
@@ -44,9 +44,7 @@ export default function TeamOfLeaders() {
         <div className="lg:grid grid-cols-3 gap-4">
           {leaders.map((leader, index) => (
             <div
-              className={`shadow-xl mt-10 col-span-1 ${
-                index > 0 && "hidden"
-              } lg:block`}
+              className={` mt-10 col-span-1 ${index > 0 && "hidden"} lg:block`}
               key={index}
             >
               <div
@@ -75,8 +73,11 @@ export default function TeamOfLeaders() {
           ))}
         </div>
         <Link to="officials">
-          <button className="mt-5 bg-greeny-300 rounded text-gray-200 px-8 py-3 text-lg">
-            see more
+          <button
+            className="my-5 bg-greeny-300 hover:text-greeny-300 hover:border 
+          hover:bg-gray-100 rounded w-64 text-gray-200 py-3 text-xl border-greeny-300"
+          >
+            see all
           </button>
         </Link>
       </div>

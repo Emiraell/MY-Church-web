@@ -32,11 +32,8 @@ export default function Carousel({
       tittle: "ST PETER'S ANGLICAN CHURCH, KEFFI",
       subTittle: "(Lafia Diocese)",
       image: styles.imageOne,
-      passage: [
-        "I beseech you therefore, brethren, by the mercies of God, that",
-        "ye present your bodies a living sacrifice, holy, acceptable",
-        "unto God, which is your reasonable service.",
-      ],
+      passage:
+        "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God",
       buttons: [{ name: "About Us", path: "about" }],
     },
     {
@@ -44,11 +41,9 @@ export default function Carousel({
       tittle: "MOVING IN GOD'S DIRECTION",
       subTittle: "THEME OF THE YEAR",
       image: styles.imageTwo,
-      passage: [
-        "The LORD makes firm the steps of the one who delights in",
-        "him; though he may stumble, he will not fall,",
-        "for the LORD upholds him with his hand.",
-      ],
+      passage:
+        "The LORD makes firm the steps of the one who delights in him; though he may stumble, he will not fall, for the LORD upholds him with his hand.",
+
       buttons: [{ name: "Join Us", path: "contact" }],
     },
     {
@@ -56,11 +51,8 @@ export default function Carousel({
       tittle: "A PRAYING CHURCH",
       subTittle: "",
       image: styles.imageThree,
-      passage: [
-        "The Lord is near. Do not be anxious about anything,",
-        " but in everysituation, by prayer and petition, with",
-        "thanksgiving, present your requests to God",
-      ],
+      passage:
+        "Do not be anxious about anything, but in everysituation, by prayer and petition, with thanksgiving, present your requests to God",
       buttons: [{ name: "Request a Prayer", path: "prayer" }],
     },
   ]);
@@ -103,42 +95,38 @@ export default function Carousel({
         </div>
       )}
       {isHomePage && (
-        <Slider {...settings} className=" overflow-hidden">
+        <Slider {...settings} className="overflow-hidden ">
           {carouselDetails.map((detail, index) => (
             <div
               key={index}
-              className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
+              className={`text-center relative bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
-              <div className="mt-[23vh]  leading-normal md:tracking-widest ">
-                <div className="font-bold">
-                  <p className="md:text-lg">
-                    {detail.tittle}
-                    <span className="block text-blue-500 text-sm font-thin">
-                      {detail.subTittle}
-                    </span>
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm py-16 md:text-lg px-4 tracking-wide">
-                    {detail.passage[0]}
-                    <span className="block"> {detail.passage[1]}</span>{" "}
-                    <span className="block">{detail.passage[2]}</span>
-                  </p>
-                </div>
+              <div className="font-semibold absolute left-0 right-0 bottom-2/3">
+                <p className="text-xl md:text-xl px-2">
+                  {detail.tittle}
+                  <span className="block text-blue-500 text-lg font-thin">
+                    {detail.subTittle}
+                  </span>
+                </p>
+              </div>
+              <div className="absolute bottom-1/3 leading-10">
+                <p className="py-16 md:text-xl lg:px-52 px-4 tracking-wider text-lg">
+                  {detail.passage}
+                </p>
+              </div>
 
-                <div>
-                  {detail.buttons.map((button, index) => (
-                    <Link to={`/${button.path}`} key={index}>
-                      <button
-                        className={` bg-oran-light py-4 px-6 rounded-full hover:opacity-90 mx-2 ${
-                          detail[2] && "bg-blood-700 hover:bg-emerald-600"
-                        }`}
-                      >
-                        {button.name}
-                      </button>
-                    </Link>
-                  ))}
-                </div>
+              <div className="absolute w-[100%] bottom-20">
+                {detail.buttons.map((button, index) => (
+                  <Link to={`/${button.path}`} key={index}>
+                    <button
+                      className={`w-60 bg-oran-light py-5 tracking-wider text-lg rounded-full hover:opacity-90 mx-2 ${
+                        detail[2] && "bg-blood-700 hover:bg-emerald-600"
+                      }`}
+                    >
+                      {button.name}
+                    </button>
+                  </Link>
+                ))}
               </div>
             </div>
           ))}

@@ -90,7 +90,7 @@ export default function AboutChurch() {
   return (
     <div
       ref={aboutRef}
-      className={`text-center text-textCol-primary duration-0.5 opacity-0 
+      className={`text-center text-textCol-primary duration-1 opacity-0 
       ease-in-out transition-all ${intersected && " opacity-100"}`}
     >
       <div className=" font-lato mb-5 text-2xl">
