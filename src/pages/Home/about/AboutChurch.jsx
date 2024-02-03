@@ -25,7 +25,7 @@ export default function AboutChurch() {
       name: "History",
       image: history,
       description:
-        "ST peter's is one of the long standing churches in the acient city of keffi nasarawa state. The church has been in existent over 90 years old and the first",
+        "St peter's is one of the long standing churches in the acient city of keffi nasarawa state. The church has been in existent over 90 years old and the first",
       path: "history",
     },
     {

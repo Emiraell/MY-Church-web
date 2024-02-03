@@ -16,13 +16,23 @@ export default function Gallery() {
         <Header page={"CHURCH GALLERY"} />
       </>
       <div className="my-16 w-[90%] lg:w-[70%] m-auto text-center">
-        <div className="flex justify-evenly">
-          <h3 onClick={() => setShow({ ministrations: true, photos: false })}>
+        <div className="text-lg text-start lg:text-2xl font-bold font-lato tracking-wide">
+          <span
+            onClick={() => setShow({ ministrations: true, photos: false })}
+            className={`p-2 rounded-md mx-4 transition-all duration-0.5 ease-in-out ${
+              show.ministrations && "bg-greeny-600 text-gray-100"
+            }`}
+          >
             Ministrations
-          </h3>
-          <h3 onClick={() => setShow({ ministrations: false, photos: true })}>
+          </span>
+          <span
+            onClick={() => setShow({ ministrations: false, photos: true })}
+            className={`p-2 rounded-md  transition-all duration-0.5 ease-in-out ${
+              show.photos && "bg-greeny-600 text-gray-100"
+            }`}
+          >
             Photos
-          </h3>
+          </span>
         </div>
         <div className="my-10">
           <div className={`${!show.ministrations && "hidden"}`}>
