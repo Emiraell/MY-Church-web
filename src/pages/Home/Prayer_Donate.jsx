@@ -7,8 +7,8 @@ export default function Prayer_Donate() {
   return (
     <div className="font-montserrat  md:grid lg:grid-cols-2 tracking-wider text-lg text-textCol-secondary text-center">
       <motion.div
-        initial={{ opacity: 0, y: 400 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -385 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
         className={` relative flex-col justify-between h-[50vh]  

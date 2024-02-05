@@ -11,29 +11,29 @@ export default function AboutChurch() {
       name: "About us",
       image: aboutUs,
       description:
-        "St peter's Anglican church is one of the 20 archdeaconry within the Lafia Dicoces overseen by Rt Rev Robinson Adeyemi St peter's anglican church, keffi is the",
-      path: "about",
+        "St peter's Anglican church keffi is one of the 20 archdeaconry within the diocese of Lafia overseen by Rt Rev Robinson Adeyemi. St peter's anglican church, keffi is the",
+      path: "about_church",
     },
     {
       name: "Vision and Mission",
       image: Bible,
       description:
         "As a church to be a true signpost of the kingdom of God in this last days, reach to people with the gospel of salvation and in love potrary Christ daily. As an",
-      path: "vision",
+      path: "vision_mission",
     },
     {
       name: "History",
       image: history,
       description:
-        "St peter's is one of the long standing churches in the acient city of keffi nasarawa state. The church has been in existent over 90 years old and the first",
+        "St peter's is one of the long standing churches in the acient city of keffi, Nasarawa state. The church has been in existent for over 90 years and it first",
       path: "history",
     },
     {
       name: "Ministries and Fellowship",
       image: fellowship,
       description:
-        "Just as no organization will stand without a structure, so also will the body of christ not be able to stand without fellowships. Several m",
-      path: "ministries",
+        "Just as no Church or establishment will stand strong without several wings, the same can be said of St peter's Anglican  Keffi. Get to see our several wings of strength",
+      path: "organizations",
     },
   ]);
 
@@ -45,7 +45,7 @@ export default function AboutChurch() {
   });
 
   const toggleVisibilty = (name) => {
-    if (name === "vision") {
+    if (name === "vision_mission") {
       setOneIsVisible({
         aboutSec: false,
         visionSec: true,
@@ -59,7 +59,7 @@ export default function AboutChurch() {
         historySec: true,
         ministrySec: false,
       });
-    } else if (name === "ministries") {
+    } else if (name === "organizations") {
       setOneIsVisible({
         aboutSec: false,
         visionSec: false,

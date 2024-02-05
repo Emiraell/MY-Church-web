@@ -25,20 +25,12 @@ import Gallery from "./pages/gallery/Gallery";
 import Blogs from "./pages/New/Blogs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [top, setTop] = useState(false);
-
-  const toTop = () => {
-    if (window.scrollY > 300) {
-      setTop(true);
-    } else {
-      setTop(false);
-    }
-  };
-
-  window.addEventListener("scroll", toTop);
+  useEffect(() => {
+    document.title = "StPetersAngKeffi";
+  }, []);
   return (
     <div className="tracking-wide">
       <Router>
@@ -68,13 +60,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
-
-      <a href="/" className={`${top ? "block" : "hidden"}`}>
-        <FontAwesomeIcon
-          icon={faArrowUp}
-          className="h-10 p-2 bg fixed bottom-3 right-5"
-        />
-      </a>
     </div>
   );
 }

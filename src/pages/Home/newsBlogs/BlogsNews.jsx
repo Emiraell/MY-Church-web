@@ -35,11 +35,11 @@ export default function BlogsNews() {
                 <p>
                   <span>By:</span> Happinness ifeuze
                 </p>
-                <p>
-                  Read More{" "}
+                <p className=" cursor-pointer px-2">
+                  Read More
                   <FontAwesomeIcon
                     icon={faArrowRight}
-                    className=" animate-pulse text-red-800 text-sm"
+                    className=" animate-pulse text-red-800 text-sm px-2"
                   />
                 </p>
               </div>
@@ -70,8 +70,8 @@ export default function BlogsNews() {
                 <p>
                   <span>By:</span> Happinness ifeuze
                 </p>
-                <p>
-                  Read More{" "}
+                <p className=" cursor-pointer">
+                  Read More
                   <FontAwesomeIcon
                     icon={faArrowRight}
                     className=" animate-pulse text-red-800 text-sm"
@@ -104,8 +104,8 @@ export default function BlogsNews() {
                 <p>
                   <span>By:</span> Happinness ifeuze
                 </p>
-                <p>
-                  Read More{" "}
+                <p className=" cursor-pointer">
+                  Read More
                   <FontAwesomeIcon
                     icon={faArrowRight}
                     className=" animate-pulse text-red-800 text-sm"
@@ -116,7 +116,7 @@ export default function BlogsNews() {
           </motion.div>
         </div>
         <Link>
-          <span className="text-greeny-500 animate-pulse bg-gray-200">
+          <span className="text-greeny-500 animate-pulse bg-gray-200 p-2 rounded cursor-pointer">
             See more stories{" "}
             <FontAwesomeIcon
               icon={faArrowRight}

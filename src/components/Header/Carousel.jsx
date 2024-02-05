@@ -39,7 +39,7 @@ export default function Carousel({
     {
       Id: 2,
       tittle: "MOVING IN GOD'S DIRECTION",
-      subTittle: "THEME OF THE YEAR",
+      subTittle: "Theme of the year",
       image: styles.imageTwo,
       passage:
         "The LORD makes firm the steps of the one who delights in him; though he may stumble, he will not fall, for the LORD upholds him with his hand.",
@@ -102,15 +102,15 @@ export default function Carousel({
               className={`text-center relative bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
               <div className="font-semibold absolute left-0 right-0 bottom-2/3">
-                <p className="text-xl md:text-xl px-2">
+                <p className="text-xl md:text-xl px-2 font-lato">
                   {detail.tittle}
-                  <span className="block text-blue-500 text-lg font-thin">
+                  <span className="block text-blue-300 text-lg font-light font-rochester">
                     {detail.subTittle}
                   </span>
                 </p>
               </div>
               <div className="absolute bottom-1/3 leading-10">
-                <p className="py-16 md:text-xl lg:px-52 px-4 tracking-wider text-lg">
+                <p className="py-16 md:text-xl lg:px-52 px-4 tracking-wider font-light text-lg ">
                   {detail.passage}
                 </p>
               </div>
@@ -119,9 +119,8 @@ export default function Carousel({
                 {detail.buttons.map((button, index) => (
                   <Link to={`/${button.path}`} key={index}>
                     <button
-                      className={`w-60 bg-oran-light py-5 tracking-wider text-lg rounded-full hover:opacity-90 mx-2 ${
-                        detail[2] && "bg-blood-700 hover:bg-emerald-600"
-                      }`}
+                      className={`w-56 text-orang-200 border py-5 tracking-wider text-xl rounded-full hover:opacity-90 mx-2
+                      border-orang-200 hover:scale-75 hover:text-gray-100 hover:bg-orang-200 transition-all duration-0.5 ease-in`}
                     >
                       {button.name}
                     </button>

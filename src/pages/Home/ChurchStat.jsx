@@ -53,9 +53,9 @@ export default function ChurchStat() {
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className={`pt-5`}>
+        <motion.div className={`pt-5`}>
           <FontAwesomeIcon icon={faUsers} className="h-12 text-orang-600" />
-        </div>
+        </motion.div>
         <div className="pl-3">
           <p className="text-greeny-200 font-bold text-xl  md:text-2xl md:py-6 py-3">
             {members}+
@@ -72,9 +72,9 @@ export default function ChurchStat() {
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className={`pt-5`}>
+        <motion.div className={`pt-5`}>
           <FontAwesomeIcon icon={faUserTie} className="h-12 text-orang-600" />
-        </div>
+        </motion.div>
         <div className="pl-3">
           <p className="text-greeny-200 font-bold text-xl md:text-2xl md:py-6 py-3">
             {pastors}+

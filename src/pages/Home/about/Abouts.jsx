@@ -12,19 +12,19 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
       transition={{ delay: 0.5, duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <div className="flex p-3 items-center justify-between bg-greeny-500 text-gray-50 border-none">
+      <div
+        onClick={() => toggleVisibilty(about.path)}
+        className="flex p-3 items-center cursor-pointer justify-between bg-greeny-500 text-gray-50 border-none"
+      >
         <p className="text-lg">{about.name}</p>
-        <div
-          onClick={() => toggleVisibilty(about.path)}
-          className="text-orange-300 text-lg md:hidden"
-        >
-          {about.path === "about" &&
+        <div className="text-orange-300 text-lg md:hidden">
+          {about.path === "about_church" &&
             (oneIsVisible.aboutSec ? (
               <FontAwesomeIcon icon={faChevronUp} />
             ) : (
               <FontAwesomeIcon icon={faChevronDown} />
             ))}
-          {about.path === "vision" &&
+          {about.path === "vision_mission" &&
             (oneIsVisible.visionSec ? (
               <FontAwesomeIcon icon={faChevronUp} />
             ) : (
@@ -36,7 +36,7 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
             ) : (
               <FontAwesomeIcon icon={faChevronDown} />
             ))}
-          {about.path === "ministries" &&
+          {about.path === "organizations" &&
             (oneIsVisible.ministrySec ? (
               <FontAwesomeIcon icon={faChevronUp} />
             ) : (
@@ -46,16 +46,16 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
       </div>{" "}
       <div
         className={`md:block ${
-          about.path === "about" &&
+          about.path === "about_church" &&
           (oneIsVisible.aboutSec ? "block " : "hidden ")
         } ${
-          about.path === "vision" &&
+          about.path === "vision_mission" &&
           (oneIsVisible.visionSec ? "block" : "hidden")
         } ${
           about.path === "history" &&
           (oneIsVisible.historySec ? "block" : "hidden")
         } ${
-          about.path === "ministries" &&
+          about.path === "organizations" &&
           (oneIsVisible.ministrySec ? "block" : "hidden")
         }`}
       >
@@ -76,7 +76,7 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
         </div>
         <button
           className=" border border-orange-500 text-orange-500 rounded-md py-3 drop-shadow-xl
-       hover:bg-orange-500 hover:border-transparent hover:text-gray-50  w-52 mb-5"
+       hover:bg-orange-500 hover:border-transparent transition-all ease-linear duration-0.5 hover:text-gray-50  w-52 mb-5"
         >
           <Link to={about.path}>Read More</Link>
         </button>

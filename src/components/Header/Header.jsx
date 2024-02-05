@@ -62,7 +62,9 @@ export default function Header({
           <div className=" text-textCol-primary lg:hidden">
             <FontAwesomeIcon
               icon={faBars}
-              className={`${menuClicked && "hidden"} text-greeny-50 h-9`}
+              className={`${
+                menuClicked && "hidden"
+              } text-greeny-50 h-9 cursor-pointer`}
               onClick={clickMenu}
             />
           </div>
