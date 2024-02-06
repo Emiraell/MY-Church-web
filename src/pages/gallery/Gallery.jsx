@@ -1,55 +1,45 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
-import "react-image-gallery/styles/css/image-gallery.css";
-import photo from "./assests/photos/youth3.png";
-import ReactImageGallery from "react-image-gallery";
+import Footer from "../../components/footer/Footer";
+import old from "./assests/oldStructures/church24.jpg";
+import children from "./assests/children/children10.jpg";
+import church from "./assests/churchInside/church14.jpg";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Gallery() {
-  const [show, setShow] = useState({ ministrations: true, photos: false });
-  const images = [
-    { original: photo, thumbnail: photo },
-    { original: photo, thumbnail: photo },
+  const structures = [
+    { name: "Church Older Structures", image: old, id: "old_structures" },
+    { name: "Church Structures", image: church, id: "church_structures" },
+    { name: "Children Section", image: children, id: "children_section" },
   ];
   return (
     <div>
       <>
         <Header page={"CHURCH GALLERY"} pageName={"Gallery"} />
       </>
-      <div className="my-16 w-[90%] lg:w-[70%] m-auto text-center">
-        <div className="text-lg text-start lg:text-2xl font-bold font-lato tracking-wide">
-          <span
-            onClick={() => setShow({ ministrations: true, photos: false })}
-            className={`p-2 rounded-md mx-4 transition-all duration-0.5 ease-in-out ${
-              show.ministrations && "bg-greeny-600 text-gray-100"
-            }`}
-          >
-            Ministrations
-          </span>
-          <span
-            onClick={() => setShow({ ministrations: false, photos: true })}
-            className={`p-2 rounded-md  transition-all duration-0.5 ease-in-out ${
-              show.photos && "bg-greeny-600 text-gray-100"
-            }`}
-          >
-            Photos
-          </span>
-        </div>
-        <div className="my-10">
-          <div className={`${!show.ministrations && "hidden"}`}>
-            Ministrations
-          </div>
-          <div className={`${!show.photos && "hidden"}`}>
-            Photos
-            <div className="w-[80vw] h-[100vh] m-auto">
-              <ReactImageGallery
-                items={images}
-                showIndex={true}
-                slideOnThumbnailOver={true}
-              />
-            </div>
-          </div>
+      <div className="my-16  text-center tracking-wider">
+        <p className="text-xl font-semibold w-[70%] m-auto">
+          Welcome to our photo gallery and we do hope you enjoy your moment here
+          and get to see some of our lovely moments
+        </p>
+        <div className="w-[90%] lg:w-[60%] md:w-[70%] m-auto my-10 ">
+          {structures.map((structure, index) => (
+            <Link key={index} to={`${structure.id}`}>
+              <div
+                className="relative h-[30vh] bg-center hover:bg-gray-500 bg-cover bg-no-repeat bg-gray-300 bg-blend-multiply
+              my-14 rounded-lg"
+                style={{ backgroundImage: `url(${structure.image})` }}
+              >
+                <p className=" text-green-400 text-2xl font-bold hover:underline uppercase absolute w-full bottom-1/2">
+                  {structure.name}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

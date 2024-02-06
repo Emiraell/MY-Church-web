@@ -26,6 +26,7 @@ import Blogs from "./pages/New/Blogs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import Picture from "./pages/gallery/Picture";
 
 function App() {
   useEffect(() => {
@@ -58,6 +59,7 @@ function App() {
           <Route path="/news/:id" element={<ContentPage />} />
           <Route path="/news/blogs/:id" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/:id" element={<Picture />} />
         </Routes>
       </Router>
     </div>
