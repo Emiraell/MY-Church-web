@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 export default function HeadPageTem({ contents }) {
   const navigate = useNavigate();
-
   const goTo = (link) => navigate(`/${link}`);
   return (
     <div>
@@ -15,8 +14,9 @@ export default function HeadPageTem({ contents }) {
             <div
               style={{ backgroundImage: `url(${content.image})` }}
               className={`mt-10 lg:mt-0 ${
-                contents.length < 3 ? "h-[40vh]" : "h-[20vh]"
-              } relative rounded-md bg-cover bg-center bg-no-repeat bg-blend-multiply bg-gray-700`}
+                contents.length < 3 ? "h-[40vh]" : "h-[25vh]"
+              } relative rounded-md bg-cover bg-center bg-no-repeat 
+              bg-blend-multiply hover:bg-gray-700 cursor-pointer  bg-gray-500`}
             >
               <p
                 className={`absolute w-[100%] top-1/2 font-bold text-2xl text-greeny-80 hover:underline`}

@@ -63,7 +63,7 @@ export default function Carousel({
         <div
           className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
-          <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
+          <p className="font-bold font-lato text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
             {page}
           </p>
           <p className="text-gray-200 italic pt-40">
@@ -77,7 +77,7 @@ export default function Carousel({
         <div
           className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
-          <p className="font-bold font-poppins text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
+          <p className="font-bold font-lato text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
             {page}
           </p>
           <div className="text-gray-200  pt-36 relative">

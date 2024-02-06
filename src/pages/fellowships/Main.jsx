@@ -42,7 +42,7 @@ export default function Main() {
 
   return (
     <div className="text-gray-300 bg-gray-100 text-center">
-      <Header page={"FELLOWSHIPS AND MINISTRIES"} />
+      <Header page={"FELLOWSHIPS AND MINISTRIES"} pageName={"Fellowships"} />
       <HeadPageTem contents={contents} />
       <Footer />
     </div>

@@ -17,8 +17,7 @@ export default function NavContent({
     <>
       <div className={`${!menuClicked && "hidden"} lg:block lg:mx-4`}>
         <div className={`text-gray-200 my-3 text-xl font-roboto`}>
-          {" "}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between cursor-pointer">
             <ol onClick={() => navigate(content.path)} className="my-3 ">
               {content.name}
             </ol>{" "}
@@ -47,7 +46,7 @@ export default function NavContent({
         {content.infos.map((info, index) => (
           <ol key={index}>
             <li
-              className="text-gray-100 mb-4 ml-3 hover:underline"
+              className="text-gray-100 mb-4 hover:underline cursor-pointer italic"
               onClick={() => {
                 navigate(info.path);
               }}

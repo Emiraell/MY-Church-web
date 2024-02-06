@@ -26,18 +26,19 @@ export default function VisionMission() {
         pageName={"Vision & Mission"}
       />
       <div className=" text-textCol-primary pt-16">
-        <div className="bg-gray-300 w-[90%] m-auto shadow-sm  shadow-emerald-900 rounded-t-xl">
+        <div className="bg-gray-300 w-[90%] m-auto shadow-sm  shadow-emerald-200 rounded-t-xl">
           <div
-            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[15vh] bg-blend-multiply bg-orange-600"
+            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[20vh] 
+            bg-blend-multiply bg-orange-700"
             style={{
               backgroundImage: `url(${vision})`,
             }}
           >
-            <p className="mt-10">OUR VISION</p>
+            <p className=" absolute w-full bottom-1/3 text-2xl">OUR VISION</p>
           </div>
-          <p className="p-5 text-lg tracking-wider lg:w-[80%] m-auto pt-8">
-            <span className="font-rochester text-red-700 text-3xl">A</span>s a
-            church to be a true signpost of the kingdom of God in this last
+          <p className="p-5 text-xl tracking-wider lg:w-[80%] m-auto pt-8 leading-9">
+            <span className=" italic text-red-700 text-5xl font-light">A</span>s
+            a church to be a true signpost of the kingdom of God in this last
             days, reach to people with the gospel of salvation and in love
             potrary christ daily. As an archdeaconry to be a significant force
             in preparing the nation for the second coming of our lord jesus
@@ -46,12 +47,12 @@ export default function VisionMission() {
         </div>
         <div className="bg-gray-300 w-[90%] m-auto shadow-sm my-28 pb-4 shadow-emerald-900 rounded-t-xl">
           <div
-            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[15vh] bg-blend-multiply bg-orange-600"
+            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[20vh] bg-blend-multiply bg-orange-600"
             style={{
               backgroundImage: `url(${mission})`,
             }}
           >
-            <p className="my-10">OUR MISSION</p>
+            <p className="absolute w-full bottom-1/3 text-2xl">OUR MISSION</p>
           </div>
           {missions.map((mission, index) => (
             <ul

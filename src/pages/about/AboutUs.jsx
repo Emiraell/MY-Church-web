@@ -12,20 +12,14 @@ import UsefulLinks from "../../components/UsefulLinks";
 import Footer from "../../components/footer/Footer";
 
 export default function AboutUs() {
-  // const [links, setLinks] = useState([
-  //   { name: "Vision & Mission", path: "vision" },
-  //   { name: "Church History", path: "history" },
-  //   { name: "Churches", path: "churches" },
-  // ]);
-
   return (
     <div className=" text-textCol-secondary bg-gray-50 text-center font-montserrat">
       <Header page={"About Us"} pageName={"About Us"} />
       <div className="mt-14 ">
-        <div className="lg:w-[70%] m-auto w-[90%] shadow-lg  rounded-t-xl ">
+        <div className="lg:w-[70%] m-auto w-[90%] shadow-lg rounded-t-xl ">
           <div
             className=" rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover 
-            bg-center md:h-[30vh] h-[20vh] bg-blend-multiply bg-orange-400"
+            bg-center md:h-[30vh] h-[20vh] bg-blend-multiply bg-orange-700"
             style={{
               backgroundImage: `url(${church})`,
             }}
@@ -40,16 +34,20 @@ export default function AboutUs() {
           <div className="px-5 leading-8 tracking-normal lg:tracking-wider bg-gray-200 py-10 text-lg lg:text-2xl">
             <p className=" text-xl  lg:text-2xl">
               <span className="font-semibold text-4xl text-orange-600">S</span>t
-              peter's Anglican church is one of the 20 archdeaconry within the
-              Diocese of Lafia overseen His Grace Rt Rev Robinson Adeyemi. St
-              peter's anglican church is the administrative heaquater of all the
-              parishes and churches under the keffi archdecaonry. St peter's as
-              an achdeaconry houses two Parishes and has about 8 churches under
-              it where the ministry and message of christ is carried out
-              effictively. As an archdeaconry, we love to pray together in faith
-              and play together in fellowship. We care about family life, our
-              memebers and people in need. It is a place where you can belong
-              wherever you are on the journey of faith.
+              peter's Anglican Church Keffi (SPACK), Nasarawa State is one out
+              of the 20 archdeaconry within the Diocese of Lafia overseen by
+              <span className="font-poppins italic text-xl">
+                Rt. Rev. Robinson Adeyemi.
+              </span>
+              St peter's anglican church is the administrative heaquater of all
+              the parishes and churches under the keffi archdecaonry. St peter's
+              as an achdeaconry houses two Parishes and precise over about 8
+              churches under it where the ministry and message of christ is
+              attended to with utmost commitment and zeal. As an archdeaconry,
+              we love to pray together in faith and worship together in
+              fellowship. We care about the church and it members as a family.
+              It is a place where you can belong wherever you are on the journey
+              of faith.
             </p>
           </div>
         </div>
