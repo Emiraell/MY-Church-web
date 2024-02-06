@@ -28,7 +28,7 @@ export default function VisionMission() {
       <div className=" text-textCol-primary pt-16">
         <div className="bg-gray-300 w-[90%] m-auto shadow-sm  shadow-emerald-200 rounded-t-xl">
           <div
-            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[20vh] 
+            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[25vh] 
             bg-blend-multiply bg-orange-700"
             style={{
               backgroundImage: `url(${vision})`,
@@ -47,7 +47,7 @@ export default function VisionMission() {
         </div>
         <div className="bg-gray-300 w-[90%] m-auto shadow-sm my-28 pb-4 shadow-emerald-900 rounded-t-xl">
           <div
-            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[20vh] bg-blend-multiply bg-orange-600"
+            className=" relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center h-[25vh] bg-blend-multiply bg-orange-600"
             style={{
               backgroundImage: `url(${mission})`,
             }}

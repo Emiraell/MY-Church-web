@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import efac from "./assests/efac/efac.png";
 import efaac from "./assests/efac/efaac.png";
 import efacc from "./assests/efac/efacc.png";
+import leader from "./assests/efac/efacLeader.jpg";
 
 export default function Efac() {
   const [details, setDetails] = useState({
@@ -19,7 +20,7 @@ export default function Efac() {
       "To see that the church is on track on folllowing the guideline of Christ in spreading the gospel",
     ],
     president: {
-      image: efac,
+      image: leader,
       name: "Bro EFAC",
       position: "President",
       contact: "8032923489",

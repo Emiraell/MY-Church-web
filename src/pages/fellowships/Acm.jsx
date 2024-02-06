@@ -2,6 +2,7 @@ import { useState } from "react";
 import acm from "./assests/children/acm.png";
 import acmm from "./assests/children/acmm.png";
 import children from "./assests/children/children.png";
+import leader from "./assests/children/acmLeader.jpg";
 import Header from "../../components/Header/Header";
 import Template from "./Template";
 import Footer from "../../components/footer/Footer";
@@ -21,7 +22,7 @@ export default function Acm() {
       " In several other acceptable ways to help them to deepen their spiritual life through worship.",
     ],
     president: {
-      image: acm,
+      image: leader,
       name: "MR ERIC ONU",
       position: "Cordinator",
       contact: "8032923489",

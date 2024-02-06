@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../../components/Header/Header";
-import bishop from "./assests/bishop.png";
+import bishop from "./assests/bishop.jpg";
 import ali from "./assests/evangAli.png";
 import okafor from "./assests/okafor.png";
 import daniel from "./assests/ordDaniel.png";
@@ -88,7 +88,7 @@ export default function ChurchOfficials() {
         <Header page={"CHURCH OFFICIALS"} pageName={"officials"} />
       </>
       <div>
-        <div className="my-12 text-lg w-[90%] lg:w-[70%] m-auto tracking-wider leading-normal font-poppins text-textCol-primary">
+        <div className="my-20 text-lg w-[90%] lg:w-[70%] m-auto tracking-wider leading-normal font-poppins text-textCol-primary">
           <div className="lg:grid grid-cols-2 gap-8">
             {leaderDetails.map((leader) => (
               <div className="shadow-xl mt-10 lg:mt-0 bg-gray-100 text-start">

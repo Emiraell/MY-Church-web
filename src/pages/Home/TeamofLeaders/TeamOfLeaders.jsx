@@ -1,6 +1,6 @@
-import luka from "./assests/vicar.jpg";
+import luka from "./assests/luka.jpg";
 import okafor from "./assests/okafor.jpg";
-import arinze from "./assests/shutDown.jpg";
+import bishop from "./assests/bishop.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
@@ -19,16 +19,19 @@ export default function TeamOfLeaders() {
       name: "Rt. Rev Robinson Adeyemi",
       church: "Lafia Diocese",
       position: "The Bishop",
+      image: bishop,
     },
     {
       name: "Ven. Dr Luka B. Allu J.P",
       church: "St Peter's Anglican Church, Keffi",
       position: "Vicar / supervising priest",
+      image: luka,
     },
     {
       name: "Rev Can Josiah Okafor",
       church: "St Barnabas Anglican Church Keffi",
       position: "Vicar",
+      image: okafor,
     },
   ];
 
@@ -57,7 +60,7 @@ export default function TeamOfLeaders() {
                 rounded-b-xl border-orange-500 bg-gray-200 ${
                   hovered && "bg-gray-700"
                 } bg-blend-multiply`}
-                style={{ backgroundImage: `url(${luka})` }}
+                style={{ backgroundImage: `url(${leader.image})` }}
               >
                 <FontAwesomeIcon
                   icon={faLink}

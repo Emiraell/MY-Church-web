@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import mothers from "./assests/women/mothers.png";
 import mothers2 from "./assests/women/mothers2.png";
 import mothers1 from "./assests/women/mothers1.png";
+import leader from "./assests/women/womenLeader.jpg";
 import Template from "./Template";
 
 export default function WomenFellowship() {
@@ -20,7 +21,7 @@ export default function WomenFellowship() {
       "To help those whose family life has met with adversity",
     ],
     president: {
-      image: mothers,
+      image: leader,
       name: "MRS LUKA ALLU",
       position: "President",
       contact: "8032923489",

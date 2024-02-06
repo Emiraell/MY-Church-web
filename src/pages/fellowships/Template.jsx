@@ -43,15 +43,15 @@ export default function Template({ details }) {
             </ul>
           ))}
         </div>
-        <div className="flex mt-10 items-center w-[50%] m-auto">
+        <div className="flex mt-10 items-center text-start">
           <div className="md:px-10 px-3">
             <img
               src={details.president.image}
               alt="photo"
-              className="rounded-full h-32 w-32 object-cover object-center"
+              className="rounded-full h-28 w-28 object-cover object-center"
             />
           </div>
-          <div className="">
+          <div className="ml-3">
             <p className="font-semibold">{details.president.name}</p>
             <p className="py-1">{details.president.position}</p>
             <p>{details.president.contact}</p>
