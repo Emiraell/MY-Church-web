@@ -13,8 +13,8 @@ export default function BlogsNews() {
       <div className="shadow-md py-5">
         <div className="mt-10  lg:grid grid-cols-3 gap-5">
           <motion.div
-            initial={{ y: 400, opacity: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ x: -380, opacity: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
           >

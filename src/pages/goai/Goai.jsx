@@ -11,6 +11,7 @@ import sermon1 from "./assests/sermon1.mp4";
 import sermon2 from "./assests/sermon2.mp4";
 import poster from "./assests/poster.jpg";
 import Footer from "../../components/footer/Footer";
+import { motion } from "framer-motion";
 
 export default function Goai() {
   const [days, setDays] = useState(0);
@@ -81,6 +82,7 @@ export default function Goai() {
         <p className="mt-5 text-xl font-bold font-lato">
           GOD OF ALL IMPOSSIBILITIES 2024
         </p>
+        <p className="mt-3 italic text-orange-400">October, 2024</p>
         <div className="flex-col lg:flex, justify-around text-xl py-5 font-roboto tracking-wider">
           <div className="flex justify-evenly">
             <p className=" border-dashed py-7 px-8 font-bold border-8 rounded-full border-blue-500">
@@ -128,7 +130,10 @@ export default function Goai() {
         </div>
         <div className="w-[90%] lg:w-[75%] m-auto text-xl font-montserrat lg:grid grid-cols-2 gap-6 tracking-wide mt-14 ">
           {daetails.map((detail, index) => (
-            <div
+            <motion.div
+              initial={{ y: 200, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
               key={index}
               className="shadow-xl rounded-md col-span-1  bg-gray-200 mt-10 lg:mt-0 rounded-br-3xl"
             >
@@ -137,7 +142,7 @@ export default function Goai() {
                 {detail.title}
               </span>
               <p className="p-5">{detail.content}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
         <h2 className="text-emerald-900 font-bold pt-2 pb-7 mt-14">SERMONS</h2>

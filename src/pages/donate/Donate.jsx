@@ -41,18 +41,20 @@ export default function Donate() {
       <>
         <Header page={"KINGDOM PARTAKER"} />
       </>
-      <div className="my-12 text-lg w-[80%] lg:w-[70%] m-auto tracking-wider leading-normal font-poppins text-textCol-primary">
+      <div className="my-12 text-lg w-[90%] lg:w-[70%] m-auto tracking-wider leading-normal font-poppins text-textCol-primary">
         <div>
           <p className=" font-montserrat text-orange-700">
             THE GREAT COMMISION
           </p>
 
-          <p className="py-10 font-semibold  md:text-2xl ">
+          <p className="py-10 font-semibold  text-xl md:text-2xl">
             The ministry and work of Christ must strive forward and we encourage
             you to be a part of the ministry of giving by supporting the gospel
             and work of Christ in st Peter's Anglican Church Keffi with your
             resources.
-            <span className="block">Matthew 28:19-20</span>
+            <span className="block italic  text-blue-500">
+              Matthew 28:19-20
+            </span>
           </p>
         </div>
         <div className="lg:grid grid-cols-2 gap-8">
@@ -72,14 +74,14 @@ export default function Donate() {
                   />
                   <p className="">{detail.name}</p>
                 </div>
-                <div className="flex items-center justify-center px-5 py-2">
+                <div className="flex items-center  px-5 py-2">
                   <FontAwesomeIcon
                     icon={faDonate}
                     className="text-orange-700"
                   />
                   <p className="px-5">{detail.number}</p>
                 </div>
-                <div className="flex items-center justify-center px-5 py-2">
+                <div className="flex items-center  px-5 py-2">
                   <FontAwesomeIcon icon={faBank} className="text-orange-700" />
                   <p className="px-5">{detail.bank} Bank</p>
                 </div>

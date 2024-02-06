@@ -13,7 +13,7 @@ export default function Gallery() {
   return (
     <div>
       <>
-        <Header page={"CHURCH GALLERY"} />
+        <Header page={"CHURCH GALLERY"} pageName={"Gallery"} />
       </>
       <div className="my-16 w-[90%] lg:w-[70%] m-auto text-center">
         <div className="text-lg text-start lg:text-2xl font-bold font-lato tracking-wide">
