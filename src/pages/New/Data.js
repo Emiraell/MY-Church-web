@@ -2,7 +2,7 @@ import back from "./assests/Church.jpg";
 const data = [
   [
     {
-      id: "123348",
+      id: "1",
       image: back,
       date: { day: "01", month: "	JAN" },
       title: "PCC NOMINATION @ ST PETE CHURCH KEFFI",
