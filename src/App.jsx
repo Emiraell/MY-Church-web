@@ -57,7 +57,7 @@ function App() {
           <Route path="/god_of_impossibilities" element={<Goai />} />
           <Route path="/library" element={<NewsBlogs />} />
           <Route path="/news/:id" element={<ContentPage />} />
-          <Route path="/news/blogs/:id" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/gallery/:id" element={<Picture />} />
         </Routes>

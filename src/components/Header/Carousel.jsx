@@ -61,12 +61,16 @@ export default function Carousel({
     <div>
       {!isHomePage && !blogs && (
         <div
-          className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
+          className={`text-center relative bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat 
+          ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
-          <p className="font-bold px-3 font-lato text-3xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
+          <p
+            className="font-bold absolute px-3 font-lato text-3xl md:text-4xl
+          w-full bottom-1/3 text-gray-200 tracking-wider"
+          >
             {page}
           </p>
-          <p className="text-gray-200 italic pt-40 text-xl">
+          <p className="text-gray-200 italic pt-40 text-xl absolute bottom-10 w-full">
             Home <span className="px-3">/</span>
             <span className=" text-orang-200">{pageName}</span>
           </p>

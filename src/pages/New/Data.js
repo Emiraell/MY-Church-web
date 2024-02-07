@@ -1,39 +1,111 @@
-import back from "./assests/Church.jpg";
+import back from "./assests/news/Church.jpg";
+import twenty from "./assests/news/21days.jpg";
+import building from "./assests/news/building.jpg";
 const data = [
   [
     {
       id: "1",
       image: back,
-      date: { day: "01", month: "	JAN" },
-      title: "PCC NOMINATION @ ST PETE CHURCH KEFFI",
+      date: { day: "22", month: "	Jan", year: "2024" },
       author: "Edwin Emmanuel",
-      details: `Ven Dr Luka Allu J.P(vicar in charge) on sunday the 21st of January, led the the nomiation of the incoming PCC members from each group. He earlier told the church late last year that each group should get ready as they will be nominating members from their respectives groups to represent them in the church planning commitee. 10, 6 and 2 memebers were nominated to represent the men women and youth respectively. This nominations were carried out succesful andthe following names were nominated to represnted the men Barrister kenchuks Barrister Barrister Barrister Barrister Barrister Barrister Barrister Barrister. The following names were nominated to represent the women Barrister Barrister Barrister Barrister Barrister Barrister. They following were nominated to represent the youth Barrister Barrister. The elections comes on febrruay 2024`,
+      title:
+        "Nominations for the New Planning Committee @ St Peter's Anglican Church Keffi",
+      author: "Edwin Emmanuel",
+      details:
+        "In recognition of his commitment to the growth of the church, Ven. Dr Luka Allu J.P led the nomination of the new planning committee on the 21st of January 2024.  With this significant move, committed people will have the chance to actively influence the church's future initiatives and course.",
+      detailOne:
+        "The new planning committee were nominated, and this process was carried out with great excitement and expectation. Candidates who exemplify the values of service, integrity, and vision were nominated from various groups mainly from the men, women and youth of the church",
+      detailTwo:
+        "By including these groups in the planning committee they will play an important role in guiding strategic initiatives and fostering a spirit of unity and collaboration by engaging in open dialogue and transparent decision making.",
+      detailThree:
+        "Each groups were allocated slots to nominate capable hands. The men were allocated ten slots of which six will be elected, the women were allocated six slots of which four will be and the youth two slots to elect one.",
+      listHeader: "Nominated Names",
+      lists: [
+        {
+          listHeader: "Men",
+          list: [
+            "Mr Isaac Ogamanya",
+            "Mr Ikechukwu Chukwuagwu",
+            "Mr Cyprain Okorie",
+            "Mr Mattias Agbo",
+            "Barr MC Egbo",
+            "Mr Sunday Onovo",
+            "Mr Ben Okoro",
+            "Bro Ikechukwu  Christian",
+            "Bro Emmanuel Ifejika",
+          ],
+        },
+        {
+          listHeader: "Women",
+          list: [
+            "Mrs Rejoice Uba",
+            "Mrs Clementina Ewulonu",
+            "Mrs perpetual Danzaria",
+          ],
+        },
+        {
+          listHeader: "Youth",
+          list: ["Bro Owunezi Fineboy", "Bro SmartGoodMan"],
+        },
+      ],
+      end: "Election is scheduled to hold on the 18th of February, 2024 at the church premises and all members are advised to participate",
     },
+
     {
       id: 2,
-      image: back,
-      date: { day: "01", month: "	JAN" },
-      title: "PCC NOMINATION @ ST ",
-      details: `Ven Dr Luka Allu J.P(vicar in charge) on sunday the 21st of January, led the the nomiation of the incoming PCC members from each group. He earlier told the church late last year that each group should get ready as they will be nominating members from their respectives groups to represent them in the church planning commitee. 10, 6 and 2 memebers were nominated to represent the men women and youth respectively. This nominations were carried out succesful andthe following names were nominated to represnted the men Barrister kenchuks Barrister Barrister Barrister Barrister Barrister Barrister Barrister Barrister. The following names were nominated to represent the women Barrister Barrister Barrister Barrister Barrister Barrister. They following were nominated to represent the youth Barrister Barrister. The elections comes on febrruay 2024`,
+      image: twenty,
+      date: { day: "22", month: "	Jan", year: "2024" },
+      author: "Edwin Emmanuel",
+      title: "Completion of 21 days fasting and praying",
+      details:
+        "As the church bids a fond farewell to its annual 21-day fast and prayer of beginning the year with Christ, St. Peter's Anglican Church keffu does so with hearts full of gratitude and spirits lifted by shared experiences. This transformative endeavor has left an indelible mark on the hearts and minds of participants. Reflections on the journey's lasting influence and treasured memories are abundant as the curtains close.",
+      detailOne:
+        "The program is designed to focus the church's attention on the importance of having Christ in the driver's seat at the start of each year. This program lasts 21 days, and several speakers are invited to speak to the church's team of the year.",
+      detailTwo:
+        "The poignant conclusion of this year's 21-day fasting and prayer event, with the theme MOVING IN GOD'S DIRECTION, took place on January 21, 2024, following days and weeks of dedicated service and participation.",
+      detailThree:
+        "The church welcomed Bro. Okafor Nnebolisa as a guest speaker following this year's 21-day fast and prayer period. During his charge, he urged the church not to be like a horse riding with anything on its back in 2024, but to listen to what God has to say about them and move in that direction.",
+      detailFour:
+        "We celebrate not only the end of this year's 21-day fast and prayer, but also the lasting legacy of love, faith, and community that it has left behind. As we embark on new chapters with courage and conviction, let us cherish the memories, celebrate the accomplishments, and embrace the promise of tomorrow.",
     },
     {
       id: 3,
-      image: back,
-      date: { day: "01", month: "	JAN" },
-      title: " PETER'S ANGLICAN CHURCH KEFFI",
-      details: `Ven Dr Luka Allu J.P(vicar in charge) on sunday the 21st of January, led the the nomiation of the incoming PCC members from each group. He earlier told the church late last year that each group should get ready as they will be nominating members from their respectives groups to represent them in the church planning commitee. 10, 6 and 2 memebers were nominated to represent the men women and youth respectively. This nominations were carried out succesful andthe following names were nominated to represnted the men Barrister kenchuks Barrister Barrister Barrister Barrister Barrister Barrister Barrister Barrister. The following names were nominated to represent the women Barrister Barrister Barrister Barrister Barrister Barrister. They following were nominated to represent the youth Barrister Barrister. The elections comes on febrruay 2024`,
+      image: building,
+      date: { day: "18", month: "	Jan", year: "2024" },
+      author: "Edwin Emmanuel",
+      title:
+        "Commencement  of new vicarge at st barnabas anglican church keffi",
+      details:
+        "St barnabas anglican church, keffi has started the building of a new vicarage project that's aimed at the improvement of the comfort of the vicar, pastors and church workers, as part of a daring attempt to promote both physical and spiritual growth and also enhcaned close engagement with the church and it enivrins.  The project's goal is to build a permanent resident for the vicar and subsequent ones that will overseeing the affairs of the church and that of it members.",
+      detailOne:
+        "The project's foundation has been established through intense prayer and work has commened with serious dedication which has seen the project take a significant and visible progress. The leadership of the church has carefully crafted plans that take into account the vicar(s) practical needs as well as its spiritual aspirations.",
+      detailTwo:
+        "As construction is ongoing, the new church project reflects the church's  enduring spirit of faith and unity. It further shows that the church and it's members have the well-being of all it's serving priest at hand and will always look for means to ensure the message of Christ is carried out with ease",
+      detailThree:
+        "In a video, Rev'd. Canon Dr. Josiah C. Okafor appreciated his members and all those who made the project progress possible and unleashed God's blessings on them",
     },
     {
       id: 4,
       image: back,
-      date: { day: "01", month: "	JAN" },
-      title: "PCC NOMINATION ANGLICAN CHURCH KEFFI",
-      details: `Ven Dr Luka Allu J.P(vicar in charge) on sunday the 21st of January, led the the nomiation of the incoming PCC members from each group. He earlier told the church late last year that each group should get ready as they will be nominating members from their respectives groups to represent them in the church planning commitee. 10, 6 and 2 memebers were nominated to represent the men women and youth respectively. This nominations were carried out succesful andthe following names were nominated to represnted the men Barrister kenchuks Barrister Barrister Barrister Barrister Barrister Barrister Barrister Barrister. The following names were nominated to represent the women Barrister Barrister Barrister Barrister Barrister Barrister. They following were nominated to represent the youth Barrister Barrister. The elections comes on febrruay 2024`,
+      author: "Ifezue Happiness Nneamaka",
+      date: { day: "04", month: "Jan", year: "2024" },
+      title:
+        "Purchase of musical instruments and the bishop's throne @ Emmanuel church, gidan zakara",
+      details:
+        "Emmanue Anglican Church, Gidan Zakara recently acquired a new musical instrument and a bishop's throne as a gesture of spiritual enrichment and reverence, enhancing the sanctity and ceremonial grandeur of their sacred space.",
+      detailOne:
+        "The purchase is a testament to the congregation's desire to provide a lively place of worship. With its rich melodies and resonant tones, the recently acquired musical instrument is sure to take musical performances and congregational hymns to new levels of spiritual inspiration.",
+      detailTwo:
+        "Additionally, including the bishop's throne represents the congregation's respect and reverence for spiritual leaders. The throne, which is positioned prominently inside the sanctuary, is a physical reminder of the bishop's function as a shepherd and guardian of the faith.",
+      detailThree:
+        "In a statement, Rev. Ejike Arinze conveyed his sincere gratitude to the members of the congregation for their kindness and commitment to enhancing worshippers' spiritual experiences.",
+      detailFour:
+        "As congregants gather to worship and commune, the new church instrument and bishop's throne serve as enduring symbols of faith, unity, and reverence, inviting all to encounter the transformative power of divine grace in their midst.",
     },
   ],
   [
     {
-      id: 1,
+      id: "1",
       image: back,
       title: " THE SIN OF PRAYERLESSNESS",
       subtittle: "What is Prayer",
@@ -96,48 +168,106 @@ const data = [
         " 1 Thessalonians 5:16-18",
         "Jeremiah 29:12",
       ],
-      author: "IFEZUE HAPPINESS NNEAMAKA",
+      author: "Ifezue Happiness Nneamaka",
       "author-image": "",
     },
     {
-      id: 1,
+      id: "2",
       image: back,
-      title: "Youthful age the junction of fierce battle",
-      "sub-description":
-        "As youth we'redesginated to fight a vital battle of our lives and of which we must not looose for .....",
-      author: "Edwin Emmanuel",
+      title: " Wisdom, a neccessity for the youthful age",
+      subtittle: null,
+      definitions: null,
+      subContent: null,
+      "sub-description": null,
+      subContentTittle: null,
+      subDescription:
+        "Young age is frequently accompanied by intense battles, in which internal and external conflicts can shake the foundations of one's faith and identity. Being young is primarily defined as being in the stage of MAKING IMPORTANT CHOICES. As such, making the wrong decision can occasionally have irreversible consequences, making it a serious battle for youth.",
+      subIntro:
+        "Wisdom is a lighthouse that guides young people through the complexity of the world as they navigate their formative years. As the Bible attests, seeking wisdom is not only admirable but also extremely important. We will examine the importance of having wisdom when you are young by referencing a few biblical passages. ",
+      moreContentHeader: null,
+      moreContentTitle: null,
+      moreContentSub: null,
+      moreContentDetail: null,
+      moreContentList: null,
+      moreContentPassages: null,
+      finalHeader: null,
+      finalSub: null,
+      finalList: [
+        {
+          title:
+            'Proverbs 4:7 - "The beginning of wisdom is this: Get wisdom. Though it cost all you have, get understanding."',
+          details:
+            "Wisdom is extremely important, as this verse emphasizes. It highlights that becoming wise is not just a choice but a basic requirement. One cannot overstate the importance of wisdom, and gaining wisdom along the way is encouraged since it will influence how they make decisions.",
+        },
+        {
+          title:
+            'Ecclesiastes 12:1 - "Remembe your Creator in the days of your youth, before the days of trouble come and the year approaches when you will say, I find no pleasure in them."',
+          details:
+            "An important time to cultivate a relationship with God is during one's youth. This verse emphasizes the importance of recognizing and honoring God in one's youth. Through wisdom, young people can navigate life's challenges and uncertainties, finding fulfillment and purpose in their Creator.",
+        },
+        {
+          title:
+            '1 Timothy 4:12 - "Do not let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity."',
+          details:
+            "Through their words and deeds, youth have the ability to uplift and inspire others. Regardless of their age, they are called to embody wisdom and virtue, to be beacons of light in a dark world. This verse encourages young people to embrace their roles as Christ's ambassadors, living with wisdom, integrity, and purity in all aspects of their lives.",
+        },
+      ],
+      conclusion: "Conclusion",
+      conclusionTittle:
+        "Although they are difficult, youth battles are not insurmountable.  Wisdom at this stage of your journey is essential and cannot be overstated. As youth embrace the call to wisdom, they embark on a transformative journey full of purpose, fulfillment, and divine guidance.",
+      conclusionPassages: null,
+      author: "Edwin Emmanuel Chukwunonso",
       "author-image": "",
-      description: "",
     },
     {
-      id: 1,
+      id: "3",
       image: back,
-      title: "Youthful age the junction of fierce battle",
+      title: "The foundation of society: Christian women",
+      subtittle: null,
+      definitions: null,
+      subContent: null,
       "sub-description":
-        "As youth we'redesginated to fight a vital battle of our lives and of which we must not looose for .....",
-      author: "Edwin Emmanuel",
+        "Women play a vital role in society, offering their distinct viewpoints, skills, and abilities to a variety of fields. Women enrich and shape communities in profound ways, from the nurturing roles they play within families to their active participation in professional, social, and cultural domains.",
+      subContentTittle: null,
+      subDescription:
+        "Biblically, women are said to be an important structure in the home or in society as a whole, and the lives of Deborah, Rahab, and others demonstrate this. Similarly, Christian women have demonstrated that advancement and fundamental values are inevitably brought about by their presence in any aspect of society in the modern world.",
+      subIntro:
+        "For Jesus Christ to be able to carry out his mission on earth, he needed women in his inner circle. It is impossible to overstate the value of a Christian woman, regardless of one's perspective.",
+      moreContentHeader: "The influence of a Christian woman",
+      moreContentTitle: null,
+      moreContentSub: null,
+      moreContentDetail:
+        "Using the ageless wisdom of the Bible as our guide, let us examine the significant influence of women as pillars of society.",
+      moreContentList: null,
+      moreContentPassages: null,
+      finalHeader: null,
+      finalSub: null,
+      finalList: [
+        {
+          title:
+            'Micah 6:8 - "He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God."',
+          details:
+            "Women have historically been catalysts for social change and champions of justice, embodying the principles of righteousness and mercy. Women exemplify the call to act justly, love mercy, and walk humbly with God by advocating for the marginalized and oppressed and speaking out against injustice and inequality. Their voices and actions are powerful transformational tools, inspiring hope and fostering societal inclusivity.",
+        },
+        {
+          title:
+            'Proverbs 31:30 - "Charm is deceptive, and beauty is fleeting; but a woman who fears the Lord is to be praised."',
+          details:
+            "Women serve as moral defenders and lights of faith in a society where morality is viewed as relative and values are changing rapidly. They shine light in the gloom of moral decay because of their foundation in awe of the Lord and their virtuous example of righteousness, humility, and purity. As they shape society's moral fabric and guide others toward righteousness, their unwavering faithfulness and steadfast commitment to God's truth inspire reverence and admiration.",
+        },
+        {
+          title:
+            'Colossians 3:14 - "And over all these virtues put on love, which binds them all together in perfect unity',
+          details:
+            "The ability of women to promote healing and unity within society is truly remarkable. They build environments of inclusivity and harmony by bridging divides and reconciling differences, all while keeping love as their guiding principle. Women demonstrate the transformational power of love by creating bonds of unity that surpass cultural, ethnic, and ideological barriers through deeds of kindness, empathy, and reconciliation.",
+        },
+      ],
+      conclusion: "Conclusion",
+      conclusionTittle:
+        "In summary, women are the cornerstones of society because they exemplify the qualities of grace, strength, and compassion that support families and communities. As they navigate the complexities of their responsibilities, may they find strength and inspiration in Scripture's timeless truths, knowing that their contributions are invaluable and their impact immeasurable. As women persist in their role as the cornerstones of society, may they be enabled to embrace their divine calling and leave enduring testaments to love, faith, and morality for future generations.",
+      conclusionPassages: null,
+      author: "Umenze Blessing Chinonye",
       "author-image": "",
-      description: "",
-    },
-    {
-      id: 1,
-      image: back,
-      title: "Youthful age the junction of fierce battle",
-      "sub-description":
-        "As youth we'redesginated to fight a vital battle of our lives and of which we must not looose for .....",
-      author: "Edwin Emmanuel",
-      "author-image": "",
-      description: "",
-    },
-    {
-      id: 1,
-      image: back,
-      title: "Youthful age the junction of fierce battle",
-      "sub-description":
-        "As youth we'redesginated to fight a vital battle of our lives and of which we must not looose for .....",
-      author: "Edwin Emmanuel",
-      "author-image": "",
-      description: "",
     },
   ],
 ];
