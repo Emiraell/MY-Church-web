@@ -1,19 +1,14 @@
 import React from "react";
 import video from "./assests/GOAI.mp4";
 import poster from "./assests/poster.jpg";
-import sky from "./assests/sky.png";
-import post from "./assests/post.jpg";
-import battle from "./assests/battle.png";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook, faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 export default function ChurchEvents() {
   return (
     <div className={`text-textCol-secondary`}>
       <div>
-        <p className="border-x-8 border-orange-600 text-orang-600 text-xl lg:text-2xl my-7">
-          CHURCH EVENTS
+        <p className="border-x-8 border-orange-600 text-orang-200 text-2xl lg:text-3xl my-7">
+          Church Events
         </p>
         <span className="border-b-2 border-dashed border-greeny-70 py-1 italic">
           GOD OF ALL IMPOSSIBILITIES

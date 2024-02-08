@@ -13,9 +13,8 @@ export default function Home() {
   const [isHomePage, setIsHomePage] = useState(true);
 
   return (
-    <div
-      className={`text-gray-200 bg-gray-100 tracking-wider text-center font-roboto`}
-    >
+    <div className={`text-gray-100 tracking-wider`}>
+      {/* components needed for my home page */}
       <Header isHomePage={isHomePage} />
       <Welcome />
       <AboutChurch />

@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ChurchStat() {
+  //ref to detect when user scroll to the ref  sectiion
   const memRef = useRef();
   const [intersected, setIntersected] = useState(false);
 
@@ -17,8 +18,9 @@ export default function ChurchStat() {
   const [Churches, setChurches] = useState(0);
   const [groups, setGroups] = useState(0);
   const [iterated, setIterated] = useState(false);
-  let intervalId;
 
+  let intervalId;
+  // intersectioObserver to detect when the referneced content is intersecting or visible
   useEffect(() => {
     const memObserver = new IntersectionObserver((entries) => {
       setIntersected(entries[0].isIntersecting);
@@ -26,6 +28,7 @@ export default function ChurchStat() {
     memObserver.observe(memRef.current);
   }, []);
 
+  //iterating the values of church stat only once depending on the state of intersected and iterated
   useEffect(() => {
     if (!iterated && intersected) {
       intervalId = setInterval(() => {
@@ -46,6 +49,7 @@ export default function ChurchStat() {
       className="w-[90%] m-auto py-10 grid grid-cols-2 gap-1 
 			md:flex md:justify-between h-[100%]"
     >
+      {/* used motion dependency for the animations */}
       <motion.div
         className={` p-2  md:p-10 `}
         initial={{ opacity: 0, y: -200 }}
@@ -57,7 +61,7 @@ export default function ChurchStat() {
           <FontAwesomeIcon icon={faUsers} className="h-12 text-orang-600" />
         </motion.div>
         <div className="pl-3">
-          <p className="text-greeny-200 font-bold text-xl  md:text-2xl md:py-6 py-3">
+          <p className="text-greeny-200 font-bold text-xl md:text-2xl md:py-6 py-3">
             {members}+
           </p>
           <p className="md:text-2xl" ref={memRef}>

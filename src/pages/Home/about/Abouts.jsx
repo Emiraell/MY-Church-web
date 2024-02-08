@@ -6,13 +6,14 @@ import { motion } from "framer-motion";
 export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
   return (
     <motion.div
-      className=" border-r"
+      className=" lg:border-r"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.5 }}
       viewport={{ once: true }}
     >
       <div
+        // inserting the function to open one div at a time just like an accordion
         onClick={() => toggleVisibilty(about.path)}
         className="flex p-3 items-center cursor-pointer justify-between bg-greeny-500 text-gray-50 border-none"
       >
@@ -43,7 +44,7 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
               <FontAwesomeIcon icon={faChevronDown} />
             ))}
         </div>
-      </div>{" "}
+      </div>
       <div
         className={`md:block ${
           about.path === "about_church" &&

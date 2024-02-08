@@ -2,14 +2,8 @@ import luka from "./assests/luka.jpg";
 import okafor from "./assests/okafor.jpg";
 import bishop from "./assests/bishop.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
-import {
-  faChurch,
-  faLink,
-  faStar,
-  faUserTie,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -35,12 +29,10 @@ export default function TeamOfLeaders() {
     },
   ];
 
-  const [hovered, setHovered] = useState(false);
-
   return (
-    <div className=" font-lato w-[95%] m-auto text-textCol-secondary my-20 text-center">
+    <div className=" font-lato w-[95%] m-auto text-textCol-secondary my-20">
       <div className=" m-auto shadow-xl p-2">
-        <p className="text-2xl text-orang-600 ">
+        <p className="text-2xl md:text-3xl text-orang-200 ">
           <span className="border-b-2 pb-2 border-dashed border-greeny-100">
             Leadership
           </span>
@@ -56,26 +48,17 @@ export default function TeamOfLeaders() {
               key={index}
             >
               <div
-                className={`h-[45vh] bg-center bg-cover relative rounded-t-lg border-b-8 
-                rounded-b-xl border-orange-500 bg-gray-200 ${
-                  hovered && "bg-gray-700"
-                } bg-blend-multiply`}
+                className={`h-[45vh] background rounded-t-lg border-b-8 
+                rounded-b-xl border-orange-500 bg-gray-200 bg-blend-multiply`}
                 style={{ backgroundImage: `url(${leader.image})` }}
-              >
-                <FontAwesomeIcon
-                  icon={faLink}
-                  className={` ${
-                    hovered && "opacity-100"
-                  } opacity-0 absolute top-1/2 text-4xl text-blue-700`}
-                />
-              </div>
+              ></div>
 
               <div className="py-5 -mt-2">
-                <p className=" text-gray-950 font-bold text-2xl">
+                <p className=" text-gray-700 font-semibold text-2xl">
                   {leader.name}
                 </p>
                 <span className="block text-lg py-1">{leader.position}</span>
-                <p className="text-xl text-gray-950">{leader.church}</p>
+                <p className="text-xl text-gray-700">{leader.church}</p>
               </div>
             </motion.div>
           ))}
