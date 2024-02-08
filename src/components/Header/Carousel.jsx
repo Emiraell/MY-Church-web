@@ -13,6 +13,7 @@ export default function Carousel({
   image,
   author,
 }) {
+  //settings to control the functionality of my slider section
   const settings = {
     dots: true,
     infinite: true,
@@ -26,9 +27,9 @@ export default function Carousel({
     pauseOnHover: true,
   };
 
-  const [carouselDetails, setCarouselDetails] = useState([
+  //my slider contents
+  const carouselDetails = [
     {
-      Id: 1,
       tittle: "ST PETER'S ANGLICAN CHURCH, KEFFI",
       subTittle: "(Lafia Diocese)",
       image: styles.imageOne,
@@ -37,7 +38,6 @@ export default function Carousel({
       buttons: [{ name: "About Us", path: "about" }],
     },
     {
-      Id: 2,
       tittle: "MOVING IN GOD'S DIRECTION",
       subTittle: "Theme of the year",
       image: styles.imageTwo,
@@ -47,7 +47,6 @@ export default function Carousel({
       buttons: [{ name: "Join Us", path: "contact" }],
     },
     {
-      Id: 3,
       tittle: "A PRAYING CHURCH",
       subTittle: "",
       image: styles.imageThree,
@@ -55,13 +54,14 @@ export default function Carousel({
         "Do not be anxious about anything, but in everysituation, by prayer and petition, with thanksgiving, present your requests to God",
       buttons: [{ name: "Request a Prayer", path: "prayer" }],
     },
-  ]);
+  ];
 
   return (
     <div>
+      {/*header Content to display if not on home page or blogs page */}
       {!isHomePage && !blogs && (
         <div
-          className={`text-center relative bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat 
+          className={`relative bg-greeny-100 background 
           ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
           <p
@@ -70,15 +70,17 @@ export default function Carousel({
           >
             {page}
           </p>
-          <p className="text-gray-200 italic pt-40 text-xl absolute bottom-10 w-full">
+          <p className="text-gray-100 italic pt-40 text-xl absolute bottom-10 w-full">
             Home <span className="px-3">/</span>
             <span className=" text-orang-200">{pageName}</span>
           </p>
         </div>
       )}
+
+      {/*header content to display on blogs page */}
       {!isHomePage && blogs && (
         <div
-          className={`text-center bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${styles.imageOne} h-[75vh] md:h-[85vh]`}
+          className={`background bg-greeny-100  ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
           <p className="font-bold font-lato text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
             {page}
@@ -97,23 +99,25 @@ export default function Carousel({
           </div>
         </div>
       )}
+
+      {/* header content to slide when on homepage */}
       {isHomePage && (
         <Slider {...settings} className="overflow-hidden ">
           {carouselDetails.map((detail, index) => (
             <div
               key={index}
-              className={`text-center relative bg-cover bg-center bg-blend-multiply bg-greeny-100 bg-no-repeat ${detail.image} h-[77vh] lg:h-[85vh]`}
+              className={`relative bg-greeny-100 background ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
               <div className="font-semibold absolute left-0 right-0 bottom-2/3">
-                <p className="text-xl md:text-xl px-2 font-lato">
+                <p className="text-xl md:text-3xl px-3 font-lato ">
                   {detail.tittle}
-                  <span className="block text-blue-300 text-lg font-light font-rochester">
+                  <span className="block text-blue-300 font-light font-rochester">
                     {detail.subTittle}
                   </span>
                 </p>
               </div>
               <div className="absolute bottom-1/3 leading-10">
-                <p className="py-16 md:text-xl lg:px-52 px-4 tracking-wider font-light text-lg ">
+                <p className="md:text-xl lg:px-52 px-4 tracking-wide font-light text-lg ">
                   {detail.passage}
                 </p>
               </div>
@@ -122,8 +126,8 @@ export default function Carousel({
                 {detail.buttons.map((button, index) => (
                   <Link to={`/${button.path}`} key={index}>
                     <button
-                      className={`w-56 text-orang-200 border py-5 tracking-wider text-xl rounded-full hover:opacity-90 mx-2
-                      border-orang-200 hover:scale-75 hover:text-gray-100 hover:bg-orang-200 transition-all duration-0.5 ease-in`}
+                      className={`w-56 text-orange-200 border py-5 tracking-wider text-xl rounded-full hover:opacity-90 mx-2
+                      border-orange-400 hover:scale-75 hover:text-gray-100 hover:bg-orang-200 transition-all duration-0.5 ease-in`}
                     >
                       {button.name}
                     </button>

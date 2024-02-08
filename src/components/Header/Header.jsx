@@ -1,3 +1,4 @@
+//importing all the dependencies and files needed for this component
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "./assests/logo.png";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
@@ -16,9 +17,10 @@ export default function Header({
   author,
 }) {
   const [menuClicked, setMenuClicaked] = useState(false);
+
+  //A function to control the opening and closing of my menu bar
   const clickMenu = () => {
     setMenuClicaked(!menuClicked);
-    //console.log(menuClicked);
   };
 
   const [infoClicked, setInfoClicked] = useState({
@@ -26,6 +28,7 @@ export default function Header({
     organizations: false,
   });
 
+  // A function to control visibility of my menuBar content
   const clickInfo = (name) => {
     if (name === "About Us") {
       setInfoClicked({
@@ -40,6 +43,7 @@ export default function Header({
     }
   };
 
+  // changing the background color of my navbar on scrolling for better UI experience
   const [navScrolled, setNavScrolled] = useState(false);
   addEventListener("scroll", () => {
     if (window.scrollY >= 150) {
@@ -48,6 +52,7 @@ export default function Header({
       setNavScrolled(false);
     }
   });
+
   return (
     <div>
       <nav
@@ -56,15 +61,16 @@ export default function Header({
         }`}
       >
         <div className="flex justify-between m-6 items-center">
+          {/* logo and menu bar container */}
           <Link to="/">
-            <img src={logo} alt="" className="rounded-full h-16" />
+            <img src={logo} alt="" className="rounded-full h-16 md:h-20" />
           </Link>
           <div className=" text-textCol-primary lg:hidden">
             <FontAwesomeIcon
               icon={faBars}
               className={`${
                 menuClicked && "hidden"
-              } text-greeny-50 h-9 cursor-pointer`}
+              } text-greeny-50 h-9 cursor-pointer  p-2`}
               onClick={clickMenu}
             />
           </div>
@@ -83,6 +89,8 @@ export default function Header({
             <p className="font-bold text-xl">Menu</p>
             <FontAwesomeIcon icon={faX} className="h-6" onClick={clickMenu} />
           </div>
+
+          {/* menu bar content */}
           <div className="lg:flex lg:justify-evenly lg:-mt-20">
             {menuContents.map((content, index) => (
               <NavContent
@@ -96,6 +104,8 @@ export default function Header({
           </div>
         </div>
       </nav>
+
+      {/* Header slider component */}
       <Carousel
         isHomePage={isHomePage}
         page={page}

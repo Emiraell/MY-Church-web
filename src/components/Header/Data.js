@@ -1,3 +1,4 @@
+//creating variables needed for my header component
 const menuContents = [
   {
     name: "Home",

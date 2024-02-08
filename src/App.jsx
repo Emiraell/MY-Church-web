@@ -1,3 +1,4 @@
+// importing all the component needed for the application
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
@@ -23,17 +24,18 @@ import NewsBlogs from "./pages/New/NewsBlogs";
 import ContentPage from "./pages/New/ContentPage";
 import Gallery from "./pages/gallery/Gallery";
 import Blogs from "./pages/New/Blogs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Picture from "./pages/gallery/Picture";
 
 function App() {
+  // setting the document tittle for the webpage
   useEffect(() => {
     document.title = "StPetersAngKeffi";
   }, []);
+
   return (
-    <div className="tracking-wide">
+    <div className="tracking-wide bg-gray-100 font-roboto text-center">
+      {/* A router for easy navigation of all the pages */}
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
