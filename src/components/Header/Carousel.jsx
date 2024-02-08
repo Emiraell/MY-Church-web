@@ -66,11 +66,11 @@ export default function Carousel({
         >
           <p
             className="font-bold absolute px-3 font-lato text-3xl md:text-4xl
-          w-full bottom-1/3 text-gray-200 tracking-wider"
+          w-full bottom-1/2 text-gray-200 tracking-wider"
           >
             {page}
           </p>
-          <p className="text-gray-100 italic pt-40 text-xl absolute bottom-10 w-full">
+          <p className="text-gray-100 italic text-xl absolute bottom-10 w-full">
             Home <span className="px-3">/</span>
             <span className=" text-orang-200">{pageName}</span>
           </p>

@@ -11,7 +11,7 @@ export default function Prayer_Donate() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
-        className={`relative flex-col justify-between h-[50vh]  background w-full m-auto bg-orange-600 `}
+        className={`relative flex-col justify-between h-[50vh] background w-full m-auto bg-orange-600 `}
         style={{
           backgroundImage: `url(${prayingHand})`,
         }}

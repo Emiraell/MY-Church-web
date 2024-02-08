@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function ChurchEvents() {
   return (
-    <div className={`text-textCol-secondary`}>
+    <div className={`text-textCol-secondary my-14`}>
       <div>
         <p className="border-x-8 border-orange-600 text-orang-200 text-2xl lg:text-3xl my-7">
           Church Events
@@ -21,7 +21,7 @@ export default function ChurchEvents() {
             17, 2017 and it has since then maintain it status as a yearly event.
             First tittled God of Hannah, the program....
             <Link to="god_of_impossibilities">
-              <span className="text-lg italic text-blue-600 hover:underline">
+              <span className="text-lg italic text-blue-600 hover:underline cursor-pointer">
                 More info & sermons
               </span>
             </Link>
