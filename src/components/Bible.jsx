@@ -25,7 +25,7 @@ export default function Bible({ prayerPassages }) {
     >
       {prayerPassages.map((passage, index) => (
         <div key={index}>
-          <div className="relative md:w-[70%] m-auto text-center">
+          <div className="md:w-[70%] m-auto ">
             <div className="flex items-center justify-center">
               <FontAwesomeIcon icon={faBible} className="h-7 md:h-10" />
               <p className="font-bold font-rochester text-3xl text-blue-800 pb-7 px-5 md:px-10 pt-5">

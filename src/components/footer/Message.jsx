@@ -4,20 +4,24 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { addDoc, collection } from "firebase/firestore";
 
 export default function Message({ database }) {
+  // controlling my input element using yup
   const schema = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().email(),
     phone: yup.string().required(),
     message: yup.string().required(),
   });
+  // resolving arguements on my input element
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
+  // collection to send the data from my inputs element in my database
   const messageRef = collection(database, "footerMessage");
 
+  //function to send messages to my database
   const submitMessage = async (data, e) => {
     await addDoc(messageRef, { ...data });
     e.target.reset();

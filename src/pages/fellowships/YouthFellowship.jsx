@@ -6,13 +6,15 @@ import youtth from "./assests/youth/youtth.png";
 import leader from "./assests/youth/youthLeader.jpg";
 import Template from "./Template";
 import Footer from "../../components/footer/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function YouthFellowship() {
   const [details, setDetails] = useState({
     title: "ANGLICAN YOUTH FELLOWSHIP (AYF)",
     slogan: "And fellowship . . . . ",
     description:
-      "Aanlican youth fellowship keffi(AYFK) is one that has held herself to a very high standard and met all her standrad. The fellowship is one of the important wing of the church and archdeaconry which is saddle with responsibitly of the growth of it's member and ensure maximu prticaption in activities that mean well for them and the church. The church quiver is never in deficiet of them as are putting the message of Christ at the forefront of it memebers",
+      "The Anglican Youth Fellowship Keffi (AYFK) is a group that has fulfilled all of its standards and held herself to an extremely high standard. The fellowship is an important wing of the church and archdeaconry, responsible for the development of its members and ensuring maximum participation in activities that benefit them and the church. The church's quiver is never deficient in them because they are putting the message of Christ at the forefront of its members.",
     images: { imageOne: youtth, imageTwo: youthOne, imageThree: youthTwo },
     aims: [
       "To help in projecting the Christian principles and teachings in accordance with relevant provisions in the national constitution of the parent body, 'The Anglican Youth Fellowship (Nigeria)'.",
@@ -24,20 +26,26 @@ export default function YouthFellowship() {
     ],
     president: {
       image: leader,
-      name: "BRO ONYEMACHI NGOZI",
+      name: "Bro Onyemachi Ngozi",
       position: "President",
-      contact: "8032923489",
+      contact: "08160179071",
     },
   });
 
   return (
     <div className="bg-gray-100">
       <>
-        <Header page={"YOUTH FELLOWSHIP"} pageName={"Youth Fellowship"} />
+        <Header page={"Youth Fellowship"} pageName={"Youth Fellowship"} />
       </>
       <Template details={details} />
-      <div className="w-[90%] lg:w-[70%] m-auto mt-16 text-lg">
-        <p>connect with us</p>
+      <div className="w-[90%] lg:w-[70%] m-auto my-10 text-lg flex items-center justify-center">
+        <span className=" text-3xl text-orang-200">Connect with us:</span>
+        <a href="https://www.facebook.com/profile.php?id=100089929903770&mibextid=LQQJ4d">
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className="text-3xl text-blue-600 px-4 py-3"
+          />
+        </a>
       </div>
       <Footer />
     </div>

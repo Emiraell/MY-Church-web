@@ -1,16 +1,9 @@
-import React from "react";
 import Message from "./Message";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocation,
-  faLocationPin,
-  faMapPin,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faLocationPin, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
-  faInstagram,
   faWebflow,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
@@ -136,16 +129,14 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center">
-                <a href="www.facebook.com ">
-                  {" "}
+                <a href="https://web.facebook.com/saintpeters.anglicankeffi">
                   <FontAwesomeIcon
                     icon={faFacebook}
                     className="h-7 px-5 text-blue-400 active:rotate-180 hover:opacity-75 transition-opacity duration-0.5"
                   />
                 </a>
 
-                <a href="www.facebook.com">
-                  {" "}
+                <a href="https://www.youtube.com/@SPACKeffi">
                   <FontAwesomeIcon
                     icon={faYoutube}
                     className="h-7 text-red-400 active:rotate-180 hover:opacity-75 transition-opacity duration-0.5"
@@ -157,12 +148,16 @@ export default function Footer() {
           <Message database={database} />
         </div>
 
-        <div className="text-center bg-greeny-500 p-4">
-          <p className="text-xs md:text-lg text-red-100">
-            (c)St peter's Anglican keffi 2024 | All right reserved
+        <div className="text-center bg-greeny-500 py-3">
+          <p className=" md:text-xl text-red-100">
+            <span className="text-xl">&copy;</span> St peter's Anglican keffi
+            2024 | All right reserved
             <span className="block">
-              Designed by and maintained by <a href="">Emirael</a> | the media
-              department
+              Designed by and maintained by{" "}
+              <a href="https://wa.me/08136553986" className="italic">
+                emiraelDev
+              </a>
+              | the media department
             </span>
           </p>
         </div>

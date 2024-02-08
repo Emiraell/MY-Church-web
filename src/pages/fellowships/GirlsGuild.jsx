@@ -12,7 +12,7 @@ export default function GirlsGuild() {
     title: "GIRL'S GUILD",
     slogan: "Future mothers . . . . ",
     description:
-      "An Organization that has put in her best in ensuring the girls in the church and archdeacocnry are kept on track in all that concerns them. This ministry is aimed at ensuring that our girl's protray the life on Christ to the outside world by maintaining purity in heart.",
+      "An organization that has worked hard to keep the girls in the church and archdeaconry on track in all aspects of their lives. This ministry aims to ensure that our girls reflect the life of Christ to the outside world while remaining pure in heart.",
     images: { imageOne: girls, imageTwo: girlsguid, imageThree: girlsguild },
     aims: [
       "To help in projecting the Christian principles and teachings in the life of it members",
@@ -22,16 +22,16 @@ export default function GirlsGuild() {
     ],
     president: {
       image: leader,
-      name: "Sis Atuba Purity",
+      name: "Sister Atuba Purity",
       position: "President",
-      contact: "8032923489",
+      contact: "08147317408",
     },
   });
 
   return (
     <div className="bg-gray-100">
       <>
-        <Header page={"GIRL'S GUILD"} pageName={"Girl's Guild"} />
+        <Header page={"Girl's Guild"} pageName={"Girl's guild"} />
       </>
       <Template details={details} />
       <Footer />

@@ -4,6 +4,7 @@ import men from "./assests/men/men.png";
 import menC from "./assests/men/menC.jpg";
 import mens from "./assests/men/mens.png";
 import Footer from "../../components/footer/Footer";
+import leader from "./assests/men/menLeader.jpg";
 import Template from "./Template";
 
 export default function MenFellowship() {
@@ -11,7 +12,7 @@ export default function MenFellowship() {
     title: "CHRISTIAN MEN FELOWSHIP",
     slogan: "in undertanding . . . . ",
     description:
-      "The Anglican Christian Men Fellowship in Keffi archdeaconry is a church body which promotes and uphold the values of the Christain Men Body in the anglican communion. The purpose of this ministry is to be specially carried out at all level in this archeadconry by the excutives. The Anglican Men fellowship in St peter's Anglican Church see to it that the well being of these men are of great profile.",
+      "The Anglican Christian men fellowship in keffi archdeaconry is a church body dedicated to promoting and upholding the values of the Christian men's body within the Anglican communion.  The Anglican men's fellowship at St Peter's Anglican church ensures that the men's well-being receives high priority.",
     images: { imageOne: men, imageTwo: menC, imageThree: mens },
     aims: [
       "To encourage and make Fathers to take their rightful position and play their role in their families and church",
@@ -20,16 +21,16 @@ export default function MenFellowship() {
       "To be the leading pillar in which the instruction of Christ towards men are been seen",
     ],
     president: {
-      image: menC,
-      name: "EMEKA UBA",
+      image: leader,
+      name: "Mr Emeka Uba",
       position: "President",
-      contact: "8032923489",
+      contact: "08035891861",
     },
   });
   return (
-    <div className="bg-gray-100">
+    <div>
       <div>
-        <Header page={"CHRISTIAN MEN FELLOWSHIP"} pageName={"Men Fellowship"} />
+        <Header page={"Christain Men Fellowship"} pageName={"Men Fellowship"} />
       </div>
       <Template details={details} />
       <div>

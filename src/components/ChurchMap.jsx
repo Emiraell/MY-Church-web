@@ -1,5 +1,4 @@
-import React from "react";
-
+//church map embedded in the website
 export default function ChurchMap() {
   return (
     <div className="mt-10">

@@ -7,8 +7,11 @@ import ReactImageGallery from "react-image-gallery";
 import Footer from "../../components/footer/Footer";
 
 export default function Picture() {
+  // using params to get the actual that was clicked and display it content
   const { id } = useParams();
   const [page, setPage] = useState("");
+
+  //display content based on the link clicked
   useEffect(() => {
     if (id === "church_structures") {
       setPage("Church Structures");

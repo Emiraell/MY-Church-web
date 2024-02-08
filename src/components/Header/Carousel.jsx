@@ -70,7 +70,7 @@ export default function Carousel({
           >
             {page}
           </p>
-          <p className="text-gray-100 italic text-xl absolute bottom-10 w-full">
+          <p className="text-gray-100 italic text-xl absolute bottom-24 w-full">
             Home <span className="px-3">/</span>
             <span className=" text-orang-200">{pageName}</span>
           </p>

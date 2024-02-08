@@ -1,11 +1,15 @@
-import back from "./assests/news/Church.jpg";
 import twenty from "./assests/news/21days.jpg";
 import building from "./assests/news/building.jpg";
+import instrument from "./assests/news/instrument.jpg";
+import planning from "./assests/news/building.jpg";
+import christain from "./assests/blogs/christainWomen.jpg";
+import prayerless from "./assests/blogs/prayerless.jpg";
+import youth from "./assests/blogs/youth.jpg";
 const data = [
   [
     {
       id: "1",
-      image: back,
+      image: planning,
       date: { day: "22", month: "	Jan", year: "2024" },
       author: "Edwin Emmanuel",
       title:
@@ -86,7 +90,7 @@ const data = [
     },
     {
       id: 4,
-      image: back,
+      image: instrument,
       author: "Ifezue Happiness Nneamaka",
       date: { day: "04", month: "Jan", year: "2024" },
       title:
@@ -106,7 +110,7 @@ const data = [
   [
     {
       id: "1",
-      image: back,
+      image: prayerless,
       title: " THE SIN OF PRAYERLESSNESS",
       subtittle: "What is Prayer",
       definitions: [
@@ -173,8 +177,8 @@ const data = [
     },
     {
       id: "2",
-      image: back,
-      title: " Wisdom, a neccessity for the youthful age",
+      image: youth,
+      title: " WISDOM, A NECCESSITY FOR THE YOUTHFUL AGE",
       subtittle: null,
       definitions: null,
       subContent: null,
@@ -221,8 +225,8 @@ const data = [
     },
     {
       id: "3",
-      image: back,
-      title: "The foundation of society: Christian women",
+      image: christain,
+      title: "THE FOUNDATION OF SOCIETY: CHRISTIAN WOMEN",
       subtittle: null,
       definitions: null,
       subContent: null,

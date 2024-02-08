@@ -9,10 +9,10 @@ export default function History() {
   return (
     <div className="text-gray-200 bg-gray-100">
       <Header page={"History"} pageName={"History"} />
-      <div className=" text-textCol-secondary text-center my-2">
-        <div className="w-[90%] m-auto shadow-lg rounded-t-xl bg-gray-200 my-20">
+      <div className=" text-textCol-primary ">
+        <div className="w-[90%] m-auto shadow-lg rounded-t-xl bg-gray-300 my-20">
           <div
-            className="relative rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover bg-center md:h-[30vh] h-[20vh] bg-blend-multiply bg-orange-600"
+            className="relative background rounded-xl font-lato font-bold text-emerald-200 pt-5 md:h-[30vh] h-[20vh] bg-orange-500"
             style={{
               backgroundImage: `url(${history})`,
             }}
@@ -24,25 +24,25 @@ export default function History() {
               <FontAwesomeIcon icon={faHistory} spin />
             </p>
           </div>
-          <p className="p-5 text-2xl leading-9 font-lato tracking-widest lg:text-2xl lg:w-[80%] m-auto pt-16 md:text-2xl">
-            <span className="italic text-4xl text-red-600">S</span>t peter's is
-            one of the long standing churches in the acient city of keffi
-            nasarawa state. The church has been in existent over for 90 years
-            and the first structure of the church was put in place with the help
-            of then the igwe ndi igbo keffi (Igwe Nwachinemeruim) and so many
-            other prominent men and women in the early 1900. St peter's is one
-            of the church that housed so many christain that relocated into town
-            in the 90s which led to constant modernization of the first church
-            structure(s). St peter is also the home of many priest both in the
-            anglican communiion and the body of christ in general as a result of
-            it hospitality in the 90s and even till date. The Lord bishop of
-            mabmili diocese Rt Rev Henry S Okeke also played his part in the
-            development of the church and the life of it members when he served
-            at the church in the late 90s to early 20s as a Venerable. The
-            church was finally inaugrated by the former bishop of lafia diocese
-            Rt Rev Milla K. Maza in the early 2000s and since then the church
-            has taken so many significant and noticeable improvement both
-            structure wise and in the life of the of their members
+          <p className="p-5 text-xl leading-9 font-lato tracking-widest md:text-2xl lg:text-3xl lg:w-[80%] m-auto pt-16">
+            <span className="italic text-red-700 text-5xl font-light">I</span>n
+            the ancient city of Keffi, Nasarawa State, St. Peter's is one of the
+            oldest churches. The igwe ndi igbo keffi (Igwe Nwachinemeruim) and
+            numerous other well-known men and women helped to put the church's
+            original structure in place in the early 1900s. The church has been
+            functioning for over nine decades. One of the churches where a large
+            number of Christians moved to the town in the 1990s was St. Peter's,
+            which caused the original church building(s) to undergo continuous
+            renovation. As a result of its hospitality in the 1990s and even
+            today, St Peter has become the home of many priests from both the
+            Anglican Communion and the body of Christ in general. When he served
+            as a Venerable at the church from the late 90s to early 20s, the
+            Lord Bishop of Mabmili Diocese, Rt Rev Henry S Okeke, also
+            contributed to the development of the church and the lives of its
+            members. The church was finally inaugurated by the former bishop of
+            the Lafia diocese, Rt Rev Milla K. Maza, in the early 2000s, and
+            since then, the church has made so many significant and noticeable
+            improvements, both structurally and in the lives of its members.
           </p>
         </div>
       </div>

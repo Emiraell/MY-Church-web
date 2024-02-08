@@ -11,7 +11,7 @@ export default function WomenFellowship() {
     title: "ANGLICAN WOMEN FELOWSHIP",
     slogan: "pillars . . . .  ",
     description:
-      "The women organization which constitue both the mothers union and women fellowship is an instrumental organiztion in St peter's anglican church, keffi. The organizaton is aimed at the general Christain value of our women both in the church and their respective home.This ministry is also concerned with all that strengthens and preserves marriages and Christian family life and see to it that advancement of Christianity in the sphere of marriage and family life are achieved as the WOMEN is an important aspect of the home and the church",
+      "The women's organization, which includes both the mothers' union and the women's fellowship, plays an important role in St. Peter's Anglican Church in Keffi. The organization aims to promote our women's overall Christian values in both the church and their homes.This ministry is also concerned with all that strengthens and preserves marriages and Christian family life and sees to it that advancement of Christianity in the sphere of marriage and family life are achieved because women are an important aspect of the home and the church.",
     images: { imageOne: mothers, imageTwo: mothers1, imageThree: mothers2 },
     aims: [
       "To uphold Christ's teaching in the nature of marriage and promote its wider understanding",
@@ -22,16 +22,16 @@ export default function WomenFellowship() {
     ],
     president: {
       image: leader,
-      name: "MRS LUKA ALLU",
+      name: "Mrs Luka Allu",
       position: "President",
-      contact: "8032923489",
+      contact: null,
     },
   });
 
   return (
     <div className=" bg-gray-100">
       <div className="text-gray-200">
-        <Header page={"WOMEN FELLOWSHIP"} pageName={"Women Fellowship"} />
+        <Header page={"Women Organization"} pageName={"Women Fellowship"} />
       </div>
       <div>
         <Template details={details} />

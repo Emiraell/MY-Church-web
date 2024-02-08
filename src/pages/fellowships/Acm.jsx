@@ -12,7 +12,7 @@ export default function Acm() {
     title: "ANGLICAN CHILDREN MINISTRY",
     slogan: "Catch them young for Christ",
     description:
-      "A ministry we're proud of as a church and as an archdeaconry. The anglican children ministry is one which has remianed commited in making sure that our children are been caught for Christ. ",
+      "A ministry of which we are both proud as a church and an archdeaconry. The Anglican Children's Ministry has remained committed to catching children for Christ.",
     images: { imageOne: acm, imageTwo: acmm, imageThree: children },
     aims: [
       "To ensure the upbringing of children and young people in the fear of the Lord",
@@ -23,9 +23,9 @@ export default function Acm() {
     ],
     president: {
       image: leader,
-      name: "MR ERIC ONU",
+      name: "Mr Eric Onu",
       position: "Cordinator",
-      contact: "8032923489",
+      contact: "07035356151",
     },
   });
 
@@ -33,7 +33,7 @@ export default function Acm() {
     <div className="bg-gray-100">
       <>
         <Header
-          page={"ANGLICAN CHILDREN MINISTRY"}
+          page={"Anglican Children Ministry"}
           pageName={"Children Ministry"}
         />
       </>

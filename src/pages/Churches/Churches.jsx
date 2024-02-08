@@ -14,17 +14,15 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
 import Footer from "../../components/footer/Footer";
 
 export default function Churches() {
-  const [churches, setChurches] = useState([
+  const churches = [
     {
-      name: "St. Peter's Anglican Church ",
+      name: "St. Peter's Anglican Church",
       address: "Keffi, Nasarawa State",
-      vicar: "Rev'd. Canon Dr. Josiah C. Okafor",
-      number: "08136553986",
+      vicar: "Ven. Dr. Luka Allu JP",
+      number: "08035913155",
       image: churchTop,
     },
 
@@ -32,54 +30,54 @@ export default function Churches() {
       name: "St. Barnabas Anglican Church ",
       address: "Dadin kowa keffi, Nasarawa State",
       vicar: "Rev'd. Canon Dr. Josiah C. Okafor",
-      number: "08136553986",
+      number: "07061546004",
       image: barnabas,
     },
     {
       name: "Emmanuel Anglican church",
       address: "Gidan zakara, Nasarawa State",
       vicar: "Rev'd. Ejike C. Arinze",
-      number: "08136553986",
+      number: "09020098285",
       image: zakara,
     },
     {
       name: "St. Philips Anglican Church",
       address: "Garaku, Nasarawa State",
       vicar: " Rev'd. Ernest C. Eleje",
-      number: "08136553986",
+      number: "08036041339",
       image: garaku,
     },
     {
       name: "All Soul's Anglican Church,",
       address: "Sabon gari, Nasarawa State",
       vicar: "Ord. Bayo Ajayi",
-      number: "08136553986",
+      number: "07039020485",
       image: sabonGida,
     },
     {
       name: "Zion Anglican Church",
       address: "Shamake, Nasarawa State",
       vicar: "Ord. Abednego Ibrahim",
-      number: "08136553986",
+      number: "08131211557",
       image: shamaki,
     },
     {
       name: "Church of Advent",
       address: "Jigwada, Nasarawa State",
-      vicar: "Evang. Onyeka Ali",
-      number: "08136553986",
+      vicar: "Evang. Onyekachi Ali",
+      number: "09060749752",
       image: jigwada,
     },
     {
       name: "Church of Epiphany",
       address: "Gra, Keffi, Nasarawa State",
       vicar: " Ord. Daniel Onyekachi",
-      number: "08136553986",
+      number: "07038965341",
       image: gra,
     },
-  ]);
+  ];
   return (
-    <div className="text-gray-200 bg-gray-100 text-center font-lato">
+    <div className=" font-lato text-lg">
       <Header page={"Our Churches"} pageName={"churches"} />
       <div className=" text-textCol-primary mt-24 lg:grid lg:grid-cols-2 w-[90%] gap-8 m-auto">
         {churches.map((church, index) => (
@@ -88,7 +86,7 @@ export default function Churches() {
             className=" border col-span-1 border-lime-900 rounded-t-xl bg-gray-200 mb-20 shadow-lg"
           >
             <div
-              className="h-[40vh] md:h-[40vh] relative rounded-t-xl bg-gray-300 bg-cover bg-blend-multiply bg-center bg-no-repeat "
+              className="h-[40vh] md:h-[40vh] rounded-t-xl bg-gray-300 background"
               style={{ backgroundImage: `url(${church.image})` }}
             ></div>
             <div className="md:text-xl py-4">
@@ -96,7 +94,6 @@ export default function Churches() {
                 <FontAwesomeIcon icon={faChurch} className="text-emerald-700" />
                 <p className=" px-4">{church.name}</p>
               </div>
-
               <div className=" flex mt-5 px-3 items-center">
                 <FontAwesomeIcon
                   icon={faLocationDot}
@@ -107,11 +104,16 @@ export default function Churches() {
               <div className=" flex mt-3 px-3 items-center py-3">
                 <FontAwesomeIcon icon={faUser} className="text-emerald-700" />
                 <p className=" px-4">{church.vicar}</p>
-              </div>
-              <div className=" flex mt-3 px-3 items-center">
-                <FontAwesomeIcon icon={faPhone} className="text-emerald-700" />
-                <p className=" px-4">{church.number}</p>
-              </div>
+              </div>{" "}
+              {church.number && (
+                <div className=" flex mt-3 px-3 items-center">
+                  <FontAwesomeIcon
+                    icon={faPhone}
+                    className="text-emerald-700"
+                  />
+                  <p className=" px-4">{church.number}</p>
+                </div>
+              )}
             </div>
           </div>
         ))}

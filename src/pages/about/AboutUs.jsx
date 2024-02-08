@@ -1,6 +1,4 @@
-import { useState } from "react";
 import Header from "../../components/Header/Header";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import church from "./assests/churchess.png";
 import {
@@ -8,52 +6,46 @@ import {
   faChurch,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
-import UsefulLinks from "../../components/UsefulLinks";
 import Footer from "../../components/footer/Footer";
 
 export default function AboutUs() {
   return (
-    <div className=" text-textCol-secondary bg-gray-50 text-center font-montserrat">
+    <div className=" text-textCol-secondary">
       <Header page={"About Us"} pageName={"About Us"} />
       <div className="mt-14 ">
         <div className="lg:w-[70%] m-auto w-[90%] shadow-lg rounded-t-xl ">
           <div
-            className=" rounded-xl font-lato font-bold text-emerald-200 pt-5 bg-cover 
-            bg-center md:h-[30vh] h-[20vh] bg-blend-multiply bg-orange-700"
+            className=" rounded-xl font-lato font-bold text-emerald-200 pt-5 background md:h-[30vh] h-[23vh] bg-orange-500"
             style={{
               backgroundImage: `url(${church})`,
             }}
           >
-            <p className="font-bold text-2xl font-roboto md:text-3xl text-emerald-300 mt-14 md:mt-20">
-              {" "}
-              <FontAwesomeIcon icon={faChurch} spin />
+            <p className="font-bold text-2xl font-lato md:text-3xl text-emerald-300 mt-14 md:mt-20">
+              <FontAwesomeIcon icon={faChurch} />
               <span className="px-5">About Us</span>
-              <FontAwesomeIcon icon={faChurch} spin />
+              <FontAwesomeIcon icon={faChurch} />
             </p>
           </div>
-          <div className="px-5 leading-8 tracking-normal lg:tracking-wider bg-gray-200 py-10 text-lg lg:text-2xl">
-            <p className=" text-xl  lg:text-2xl">
-              <span className="font-semibold text-4xl text-orange-600">S</span>t
-              peter's Anglican Church Keffi (SPACK), Nasarawa State is one out
-              of the 20 archdeaconry within the Diocese of Lafia overseen by
-              <span className="font-poppins italic text-xl">
-                Rt. Rev. Robinson Adeyemi.
-              </span>
-              St peter's anglican church is the administrative heaquater of all
-              the parishes and churches under the keffi archdecaonry. St peter's
-              as an achdeaconry houses two Parishes and precise over about 8
-              churches under it where the ministry and message of christ is
-              attended to with utmost commitment and zeal. As an archdeaconry,
-              we love to pray together in faith and worship together in
-              fellowship. We care about the church and it members as a family.
-              It is a place where you can belong wherever you are on the journey
-              of faith.
+          <div className="px-5 leading-8 lg:tracking-wider bg-gray-200 py-10 text-lg lg:text-2xl">
+            <p className=" text-xl  lg:text-3xl md:text-2xl">
+              <span className="italic text-red-700 text-5xl font-light">S</span>
+              t. Peter's Anglican Church Keffi, Nasarawa State, is one of 20
+              archdeaconries in the Diocese of Lafia, which is overseen by Rt.
+              Rev. Robinson Adeyemi. Within the Keffi archdecaonry, St. Peter's
+              Anglican Church serves as the administrative hub for all parishes
+              and churches. St. peter's anglican church, an achdeaconry, is home
+              to two Parishes and roughly eight churches where the ministry and
+              teachings of Christ are fervently and fully attended to. As an
+              archdeaconry, we enjoy praying in faith and worshipping together
+              in fellowship. As a family, we are concerned about the church and
+              its members. Regardless of where you are in your spiritual
+              journey, this is a place where you can belong.
             </p>
           </div>
         </div>
 
         <div className="bg-greeny-600 my-20 text-gray-100">
-          <p className="pt-5 text-emerald-300 text-xl">CHURCH SERVICES</p>
+          <p className="pt-5 text-emerald-300 text-xl">Church Services</p>
           <div className="lg:grid lg:grid-cols-2 pb-10">
             <div className="shadown-3xl bg-green-900 w-[90%] m-auto mt-5">
               <div className="py-5">
@@ -86,7 +78,7 @@ export default function AboutUs() {
                   icon={faCalendar}
                   size="xl"
                   color="lightblue"
-                />{" "}
+                />
                 <span className="font-bold text-lg pl-5">
                   Mid Week Services
                 </span>
@@ -108,7 +100,6 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-        {/* <UsefulLinks links={links} /> */}
         <Footer />
       </div>
     </div>

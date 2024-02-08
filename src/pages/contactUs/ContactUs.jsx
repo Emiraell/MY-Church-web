@@ -55,35 +55,33 @@ export default function ContactUs() {
     },
   ]);
   return (
-    <div className="text-gray-100 bg-gray-200 text-center font-montserrat">
+    <div className=" text-center font-roboto">
       <Header page={"CONTACT US"} pageName={"Contact"} />
-      <div className="mt-24  text-textCol-primary w-[90%] m-auto ">
+      <div className="mt-24 text-textCol-primary w-[90%] m-auto text-xl md:text-2xl lg:text-3xl ">
         <div className="">
           <h2 className="md:text-3xl text-2xl font-bold text-red-700 font-roboto pb-7">
             Get In Touch With Us
           </h2>
-          <span className="text-xl">
-            Hearing from you would nothing sort of joy to us! Please don't
-            hesistate to reach out to us if you have any questions, concerns, or
-            ideas for how to work together to move the the body and message of
-            Christ forward
+          <span>
+            Hearing from you would bring us nothing but joy! Please do not
+            hesitate to contact us if you have any questions, concerns, or ideas
+            for how we can work together to move the body and message of Christ
+            forward.
           </span>
         </div>
 
         <div className=" mt-11 lg:grid lg:grid-cols-2 gap-3">
-          <div className=" ">
-            <p className=" text-start pl-5 my-5 font-roboto font-bold text-2xl md:text-3xl text-red-700">
+          <div>
+            <p className=" text-start pl-5 my-5 font-bold text-2xl md:text-3xl text-red-700">
               Contact Details
             </p>
             {details.map((detail) => (
               <div className="py-2">
                 <div className="flex items-center px-5 pt-4">
-                  <div className="bg-gray-300 rounded-full w-11 h-11">
+                  <div className="bg-gray-300 text-xl rounded-full w-11 h-11">
                     {detail.image}
                   </div>
-                  <span className="px-3 text-lg md:text-2xl font-roboto">
-                    {detail.tittle}
-                  </span>
+                  <span className="px-3">{detail.tittle}</span>
                 </div>
                 {detail.contents.map((content) => (
                   <p className="pl-8 pt-3 text-left md:text-lg">{content}</p>
