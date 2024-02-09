@@ -30,28 +30,26 @@ export default function Donate() {
     },
     {
       title: "GOD OF ALL IMPOSSIBILITIES",
-      name: "St Peter's Ang Church(programmes)",
+      name: "St Peter's Anglocan Church(programmes)",
       number: "2002357965",
       bank: "FCMB",
       image: donate,
     },
   ]);
   return (
-    <div className="text-center bg-gray-300">
+    <div>
       <>
-        <Header page={"KINGDOM PARTAKER"} />
+        <Header page={"KINGDOM PARTAKER"} pageName={"Donate"} />
       </>
-      <div className="my-12 text-lg w-[90%] lg:w-[70%] m-auto tracking-wider leading-normal font-poppins text-textCol-primary">
+      <div className="my-12 text-lg w-[90%] lg:w-[70%] m-auto tracking-wider leading-9 font-poppins text-textCol-primary">
         <div>
-          <p className=" font-montserrat text-orange-700">
-            THE GREAT COMMISION
-          </p>
+          <p className=" font-montserrat text-orang-200">THE GREAT COMMISION</p>
 
-          <p className="py-10 font-semibold  text-xl md:text-2xl">
-            The ministry and work of Christ must strive forward and we encourage
-            you to be a part of the ministry of giving by supporting the gospel
-            and work of Christ in st Peter's Anglican Church Keffi with your
-            resources.
+          <p className="py-10 font-semibold  text-xl md:text-2xl lg:text-3xl">
+            The ministry and work of Christ must advance, and we invite you to
+            participate in the ministry of giving by contributing a small
+            portion of your resources to the gospel and work of Christ at St.
+            Peter's Anglican Church in Keffi.
             <span className="block italic  text-blue-500">
               Matthew 28:19-20
             </span>
@@ -62,26 +60,26 @@ export default function Donate() {
             <div className="shadow-xl mt-10 lg:mt-0 bg-gray-200">
               <div
                 style={{ backgroundImage: `url(${detail.image})` }}
-                className="bg-cover bg-center bg-no-repeat bg-blend-multiply bg-green-700 rounded-xl border-b-8 border-orange-600"
+                className="background bg-green-700 rounded-xl border-b-8 border-orange-600"
               >
                 <p className="py-16 lg:py-20 text-gray-200">{detail.title}</p>
               </div>
-              <div className="text-2xl pb-7">
-                <div className="flex items-center justify-center pt-8 pb-2">
+              <div className="text-xl md:text-2xl pb-7">
+                <div className="flex text-start pt-8 pb-2 px-3">
                   <FontAwesomeIcon
                     icon={faChurch}
-                    className="text-orange-700 pl-4 pr-2"
+                    className="text-orange-700"
                   />
-                  <p className="">{detail.name}</p>
+                  <p className="px-5">{detail.name}</p>
                 </div>
-                <div className="flex items-center  px-5 py-2">
+                <div className="flex items-center px-3 py-2">
                   <FontAwesomeIcon
                     icon={faDonate}
                     className="text-orange-700"
                   />
                   <p className="px-5">{detail.number}</p>
                 </div>
-                <div className="flex items-center  px-5 py-2">
+                <div className="flex items-center  px-3 py-2">
                   <FontAwesomeIcon icon={faBank} className="text-orange-700" />
                   <p className="px-5">{detail.bank} Bank</p>
                 </div>
@@ -92,7 +90,7 @@ export default function Donate() {
         <p className="px-10 my-7 text-red-600">
           NB: No church pastor, official or member from this archdeaconry will
           ask you to send your offering, tithe, pledge, support to an account
-          other than ones listed above
+          other than the ones listed above
         </p>
       </div>
       <Footer />

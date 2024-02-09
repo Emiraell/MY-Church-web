@@ -27,7 +27,7 @@ export default function ContactUs() {
           className="p-2"
         />
       ),
-      contents: ["Opposite Makwalla junction, Keffi, Nasarawa State"],
+      contents: ["Opposite makwalla junction, Keffi, Nasarawa State"],
     },
     {
       tittle: "Phone",
@@ -39,7 +39,7 @@ export default function ContactUs() {
           className="p-2"
         />
       ),
-      contents: ["+2348136553986", "+2348036912087"],
+      contents: ["+2348035913155", "+2349045247458"],
     },
     {
       tittle: "Email",
@@ -51,7 +51,7 @@ export default function ContactUs() {
           className="p-2"
         />
       ),
-      contents: ["stPeters@gmail.com"],
+      contents: ["st.petersanglicanchurch.keffi@gmail.com"],
     },
   ]);
   return (
@@ -59,9 +59,7 @@ export default function ContactUs() {
       <Header page={"CONTACT US"} pageName={"Contact"} />
       <div className="mt-24 text-textCol-primary w-[90%] m-auto text-xl md:text-2xl lg:text-3xl ">
         <div className="">
-          <h2 className="md:text-3xl text-2xl font-bold text-red-700 font-roboto pb-7">
-            Get In Touch With Us
-          </h2>
+          <h2 className="font-bold text-red-700 pb-7">Get In Touch With Us</h2>
           <span>
             Hearing from you would bring us nothing but joy! Please do not
             hesitate to contact us if you have any questions, concerns, or ideas
@@ -84,27 +82,27 @@ export default function ContactUs() {
                   <span className="px-3">{detail.tittle}</span>
                 </div>
                 {detail.contents.map((content) => (
-                  <p className="pl-8 pt-3 text-left md:text-lg">{content}</p>
+                  <p className="pl-8 pt-3 text-left ">{content}</p>
                 ))}
               </div>
             ))}
             <div>
               {/* connect us */}
-              <p className="mt-14 text-start pl-5 my-5 font-roboto font-bold text-2xl md:text-3xl text-red-700">
+              <p className="mt-14 text-start pl-5 my-5 font-bold text-2xl md:text-3xl text-red-700">
                 Connect With Us
               </p>
               <div className="text-start pl-7 py-3 ">
                 {/* socail medias */}
-                <a href="www.facebook.com">
+                <a href="https://web.facebook.com/saintpeters.anglicankeffi">
                   <FontAwesomeIcon
                     icon={faFacebook}
-                    className="h-10 text-blue-500 hover:text-blue-700"
+                    className="h-10 text-blue-500 hover:text-blue-700 cursor-pointer"
                   />
                 </a>
-                <a href="www.facebook.com">
+                <a href="https://www.youtube.com/@SPACKeffi">
                   <FontAwesomeIcon
                     icon={faYoutube}
-                    className="h-10 text-red-500 px-9 hover:text-red-700"
+                    className="h-10 text-red-500 px-9 hover:text-red-700 cursor-pointer"
                   />
                 </a>
               </div>
@@ -116,13 +114,17 @@ export default function ContactUs() {
       </div>
       <ChurchMap />
       <div className="text-center bg-greeny-500 p-4">
-        <p className="text-xs md:text-lg text-red-100">
-          (c)St peter's Anglican keffi 2024 | All right reserved
+        <p className="text-lg md:text-xl text-red-100">
+          <span className="text-2xl">&copy;</span>St peter's Anglican keffi 2024
+          | All right reserved
           <span className="block">
             Designed by and maintained by{" "}
-            <a href="" className=" text-blue-200">
+            <a
+              href="https://wa.me/08136553986"
+              className=" text-blue-200 italic"
+            >
               Emirael
-            </a>{" "}
+            </a>
             | the media department
           </span>
         </p>

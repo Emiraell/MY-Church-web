@@ -130,12 +130,12 @@ export default function BlogsNews() {
             </div>
           </motion.div>
         </div>
-        <Link>
+        <Link to="/library">
           <span className="text-greeny-500 animate-pulse bg-gray-200 p-2 rounded cursor-pointer">
             See more stories{" "}
             <FontAwesomeIcon
               icon={faArrowRight}
-              className=" text-red-800 text-sm"
+              className=" text-red-800 text-lg"
             />
           </span>
         </Link>

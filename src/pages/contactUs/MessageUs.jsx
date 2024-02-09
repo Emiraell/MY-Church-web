@@ -4,36 +4,42 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { addDoc, collection } from "firebase/firestore";
 
 export default function MessageUs({ database }) {
+  // controlling my input element using yup
   const schema = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().email(),
     phone: yup.string().required(),
     message: yup.string().required(),
   });
+
+  // resolving arguements on my input element
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
+  // collection to send the data from my inputs element in my database
   const messageRef = collection(database, "messages");
+
+  // collection to send the data from my inputs element in my database
   const submitMessage = async (data, e) => {
     await addDoc(messageRef, { ...data });
     console.log(data);
     e.target.reset();
   };
   return (
-    <div className="mt-5 bg-gray-100 rounded-md text-center font-poppins justify-center">
+    <div className="mt-5 rounded-md text-center tracking-wider font-poppins justify-center">
       {/* send a message */}
-      <p className="md:text-3xl text-2xl font-bold text-red-700 font-roboto pb-12 pl-4">
+      <p className="md:text-3xl text-2xl font-bold text-red-700 pb-12 pl-4">
         Message Us
-      </p>{" "}
+      </p>
       <form
         onSubmit={handleSubmit(submitMessage)}
         className="m-auto w-[80%] text-start"
       >
         <div className="relative ">
-          <label htmlFor="name" className="text-lg font-roboto">
+          <label htmlFor="name">
             Full Name <span className="text-red-700">*</span>
           </label>
 
@@ -42,7 +48,7 @@ export default function MessageUs({ database }) {
             type="text"
             placeholder="Enter a name"
             {...register("name")}
-            className="block mt-1 rounded-sm outline-none h-12 w-[100%] m-auto shadow-lg p-2"
+            className="block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg p-4"
           />
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
@@ -51,16 +57,14 @@ export default function MessageUs({ database }) {
         </div>
 
         <div className=" relative my-5">
-          <label htmlFor="email" className="text-lg font-roboto">
-            Email
-          </label>
+          <label htmlFor="email">Email</label>
 
           <input
             id="email"
             type="text"
             {...register("email")}
             placeholder="Enter an email"
-            className="block mt-1 rounded-sm outline-none h-12 w-[100%] m-auto shadow-lg p-2"
+            className="block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg p-4"
           />
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
@@ -69,7 +73,7 @@ export default function MessageUs({ database }) {
         </div>
 
         <div className=" relative my-5">
-          <label htmlFor="phone" className="text-lg font-roboto">
+          <label htmlFor="phone">
             Phone Number <span className="text-red-700">*</span>
           </label>
 
@@ -78,7 +82,7 @@ export default function MessageUs({ database }) {
             type="text"
             {...register("phone")}
             placeholder="Enter an phone Number"
-            className="block mt-1 rounded-sm outline-none h-12 w-[100%] m-auto shadow-lg p-2"
+            className="block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg p-4"
           />
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
@@ -87,7 +91,7 @@ export default function MessageUs({ database }) {
         </div>
 
         <div className=" relative my-5 pb-1">
-          <label htmlFor="message" className="text-lg font-roboto">
+          <label htmlFor="message">
             Message <span className="text-red-700">*</span>
           </label>
 
@@ -96,7 +100,7 @@ export default function MessageUs({ database }) {
             id="message"
             {...register("message")}
             placeholder="Enter your Message"
-            className="block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg h-32 p-3"
+            className="block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg h-40 p-4"
           ></textarea>
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
@@ -128,7 +132,8 @@ export default function MessageUs({ database }) {
           </div>
         </div>
         <button
-          className="mx-5 my-5 bg-red-600 p-3 text-gray-200 rounded-lg"
+          className="mx-5 my-5 bg-red-600 p-3 hover:bg-gray-400 transition-all duration-0.5 ease-linear
+          hover:text-red-600 text-gray-200 rounded-lg cursor-pointer"
           type="submit"
         >
           Send Message

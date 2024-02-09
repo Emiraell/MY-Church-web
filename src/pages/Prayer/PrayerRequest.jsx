@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "../../components/Header/Header";
 import Bible from "../../components/Bible";
 import PrayerReq from "./PrayerReq";
@@ -6,7 +5,7 @@ import { database } from "../../configuration/Firebase";
 import Footer from "../../components/footer/Footer";
 
 export default function PrayerRequest() {
-  const [prayerPassages, setPrayerPassages] = useState([
+  const prayerPassages = [
     {
       passage: "1 Timothy 2:1",
       passageContent:
@@ -22,21 +21,21 @@ export default function PrayerRequest() {
       passageContent:
         "Therefore I tell you, whatever you ask in prayer, believe that you have received it, and it will be yours",
     },
-  ]);
+  ];
 
   return (
-    <div className="bg-gray-200 text-textCol-secondary text-center">
+    <div className="text-textCol-secondary ">
       <Header page={"REQUEST PRAYER"} pageName={"Prayer"} />
       <div className="my-16 md:w-[80%] lg:w-[70%] m-auto w-[90%]">
         <p className="text-xl md:2xl font-lato font-bold text-emerald-700">
           LET'S COMMUINE WITH GOD
         </p>
-        <p className="text-lg leading-normal md:text-xl font-montserrat mt-7">
-          Here in st peter's we believe in the power of prayer and so therefore
-          we communicate Heaven daily. Prayer gives us strength, assurance and
-          rekindle our love for that which is placed above. We care about you
-          and we're willingly to communicate Heaven with you concerning that
-          which troubles you
+        <p className="text-xl md:text-2xl lg:text-3xl leading-normal font-montserrat mt-7">
+          We at St Peter's Anglican Church in Keffi believe in the power of
+          prayer, so we communicate with Heaven on a daily basis. Prayer gives
+          us strength, assurance, and renews our love for what is placed above.
+          We care about you, and we are willing to communicate Heaven with you
+          about whatever troubles you.
         </p>
       </div>
       <Bible prayerPassages={prayerPassages} />

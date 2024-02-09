@@ -4,19 +4,25 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { addDoc, collection } from "firebase/firestore";
 
 export default function PrayerReq({ database }) {
+  // controlling my input element using yup
   const schema = yup.object().shape({
     name: yup.string().required(),
-    email: yup.string().email().required(),
+    email: yup.string().email(),
+    phone: yup.string().required(),
     message: yup.string().required(),
   });
 
+  // resolving arguements on my input element
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
+
+  // collection to send the data from my inputs element in my database
   const prayerRef = collection(database, "prayers");
 
+  //function to send messages to my database
   const sendPrayer = async (data, e) => {
     await addDoc(prayerRef, { ...data });
     e.target.reset();
@@ -38,15 +44,16 @@ export default function PrayerReq({ database }) {
           <input
             id="name"
             type="text"
-            placeholder="Enter a name"
+            placeholder="Enter your name"
             {...register("name")}
-            className="block mt-1 rounded-sm outline-none h-12 w-[100%] m-auto shadow-lg p-2"
+            className="input placeholder:font-light"
           />
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
             {errors.name?.message}
           </p>
         </div>
+
         <div className="relative my-7">
           <label htmlFor="email" className="pl-3">
             Email <span className="text-red-700">*</span>
@@ -56,13 +63,27 @@ export default function PrayerReq({ database }) {
             type="text"
             placeholder="Enter an email"
             {...register("email")}
-            className="block mt-1 rounded-sm outline-none h-12 w-[100%] m-auto shadow-lg p-2"
+            className="input placeholder:font-light"
+          />
+        </div>
+
+        <div className="relative my-7">
+          <label htmlFor="email" className="pl-3">
+            Phone <span className="text-red-700">*</span>
+          </label>
+          <input
+            id="phone"
+            type="text"
+            placeholder="Enter your phone"
+            {...register("phone")}
+            className="input placeholder:font-light"
           />
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
-            {errors.email?.message}
+            {errors.phone?.message}
           </p>
         </div>
+
         <div className=" relative my-7 pb-1">
           <label htmlFor="message" className="pl-3">
             Message <span className="text-red-700">*</span>
@@ -73,7 +94,7 @@ export default function PrayerReq({ database }) {
             id="message"
             {...register("message")}
             placeholder="Enter your Message"
-            className="block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg h-32 p-3"
+            className="input h-40 placeholder:font-light"
           ></textarea>
 
           <p className="absolute top-2 right-0 text-sm text-red-700">
@@ -81,7 +102,8 @@ export default function PrayerReq({ database }) {
           </p>
         </div>
         <button
-          className="mx-5 my-5 bg-red-600 p-3 text-gray-200 rounded-lg"
+          className="mx-5 my-5 w-56 bg-red-600 p-3 text-gray-200 rounded-lg cursor-pointer 
+          hover:text-red-600 hover:bg-gray-400 transition-all duration-0.5 ease-linear"
           type="submit"
         >
           Send Request
