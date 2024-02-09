@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "../../components/Header/Header";
 import mothers from "./assests/women/mothers.png";
 import mothers2 from "./assests/women/mothers2.png";
@@ -7,7 +6,7 @@ import leader from "./assests/women/womenLeader.jpg";
 import Template from "./Template";
 
 export default function WomenFellowship() {
-  const [details, setDetails] = useState({
+  const details = {
     title: "ANGLICAN WOMEN FELOWSHIP",
     slogan: "pillars . . . .  ",
     description:
@@ -26,7 +25,7 @@ export default function WomenFellowship() {
       position: "President",
       contact: null,
     },
-  });
+  };
 
   return (
     <div className=" bg-gray-100">

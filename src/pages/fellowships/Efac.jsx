@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "../../components/Header/Header";
 import Template from "./Template";
 import Footer from "../../components/footer/Footer";
@@ -8,7 +7,7 @@ import efacc from "./assests/efac/efacc.png";
 import leader from "./assests/efac/efacLeader.jpg";
 
 export default function Efac() {
-  const [details, setDetails] = useState({
+  const details = {
     title: "Evangelical Fellowship in the Anglican Communion",
     slogan: "We evangelize",
     description:
@@ -23,9 +22,9 @@ export default function Efac() {
       image: leader,
       name: "Bro Nwamike Emeka",
       position: "President",
-      contact: "08039422283",
+      contact: "+2348039422283",
     },
-  });
+  };
 
   return (
     <div className="bg-gray-100">

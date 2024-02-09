@@ -5,6 +5,9 @@ import planning from "./assests/news/building.jpg";
 import christain from "./assests/blogs/christainWomen.jpg";
 import prayerless from "./assests/blogs/prayerless.jpg";
 import youth from "./assests/blogs/youth.jpg";
+import blessing from "./assests/blogs/blessing.jpg";
+import happy from "./assests/blogs/happiness.jpg";
+import emirael from "./assests/blogs/emirael.jpg";
 const data = [
   [
     {
@@ -22,21 +25,22 @@ const data = [
       detailTwo:
         "By including these groups in the planning committee they will play an important role in guiding strategic initiatives and fostering a spirit of unity and collaboration by engaging in open dialogue and transparent decision making.",
       detailThree:
-        "Each groups were allocated slots to nominate capable hands. The men were allocated ten slots of which six will be elected, the women were allocated six slots of which four will be and the youth two slots to elect one.",
+        "Each group was assigned a slot to nominate capable hands. Ten slots were allotted to the men, six of which will be elected, six to the women, four of which will be elected, and two to the youth and EFAC, one of which will be elected from each group.",
       listHeader: "Nominated Names",
       lists: [
         {
           listHeader: "Men",
           list: [
             "Mr Isaac Ogamanya",
-            "Mr Ikechukwu Chukwuagwu",
+            "Mr Ik Chukwuagwu",
             "Mr Cyprain Okorie",
             "Mr Mattias Agbo",
             "Barr MC Egbo",
             "Mr Sunday Onovo",
             "Mr Ben Okoro",
-            "Bro Ikechukwu  Christian",
-            "Bro Emmanuel Ifejika",
+            "Mr Julius Nwachukwu",
+            "Mr Matthew Ezeukoma",
+            "Mr Obi Nweke",
           ],
         },
         {
@@ -49,10 +53,17 @@ const data = [
         },
         {
           listHeader: "Youth",
-          list: ["Bro Owunezi Fineboy", "Bro SmartGoodMan"],
+          list: [
+            "Bro Owunezi Uzochukwu Fineboy",
+            "Bro Obiajunwa T. SmartGoodMan ",
+          ],
+        },
+        {
+          listHeader: "Efac",
+          list: ["Mr Ikechukwu Christian", "Mr Emmanuel Ifejika"],
         },
       ],
-      end: "Election is scheduled to hold on the 18th of February, 2024 at the church premises and all members are advised to participate",
+      end: "Elections are scheduled to hold on the 18th of february, 2024 at the church premises.",
     },
 
     {
@@ -173,7 +184,7 @@ const data = [
         "Jeremiah 29:12",
       ],
       author: "Ifezue Happiness Nneamaka",
-      "author-image": "",
+      "author-image": happy,
     },
     {
       id: "2",
@@ -221,7 +232,7 @@ const data = [
         "Although they are difficult, youth battles are not insurmountable.  Wisdom at this stage of your journey is essential and cannot be overstated. As youth embrace the call to wisdom, they embark on a transformative journey full of purpose, fulfillment, and divine guidance.",
       conclusionPassages: null,
       author: "Edwin Emmanuel Chukwunonso",
-      "author-image": "",
+      "author-image": emirael,
     },
     {
       id: "3",
@@ -271,7 +282,7 @@ const data = [
         "In summary, women are the cornerstones of society because they exemplify the qualities of grace, strength, and compassion that support families and communities. As they navigate the complexities of their responsibilities, may they find strength and inspiration in Scripture's timeless truths, knowing that their contributions are invaluable and their impact immeasurable. As women persist in their role as the cornerstones of society, may they be enabled to embrace their divine calling and leave enduring testaments to love, faith, and morality for future generations.",
       conclusionPassages: null,
       author: "Umenze Blessing Chinonye",
-      "author-image": "",
+      "author-image": blessing,
     },
   ],
 ];

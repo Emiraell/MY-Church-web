@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import men from "./assests/men/men.png";
 import menC from "./assests/men/menC.jpg";
@@ -8,7 +7,7 @@ import leader from "./assests/men/menLeader.jpg";
 import Template from "./Template";
 
 export default function MenFellowship() {
-  const [details, setDetails] = useState({
+  const details = {
     title: "CHRISTIAN MEN FELOWSHIP",
     slogan: "in undertanding . . . . ",
     description:
@@ -24,9 +23,9 @@ export default function MenFellowship() {
       image: leader,
       name: "Mr Emeka Uba",
       position: "President",
-      contact: "08035891861",
+      contact: "+2348035891861",
     },
-  });
+  };
   return (
     <div>
       <div>

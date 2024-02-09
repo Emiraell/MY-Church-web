@@ -1,5 +1,4 @@
 import Header from "../../components/Header/Header";
-import { useState } from "react";
 import girls from "./assests/girls/girls.png";
 import girlsguid from "./assests/girls/girlsguid.png";
 import girlsguild from "./assests/girls/girlsguild.png";
@@ -8,7 +7,7 @@ import Template from "./Template";
 import Footer from "../../components/footer/Footer";
 
 export default function GirlsGuild() {
-  const [details, setDetails] = useState({
+  const details = {
     title: "GIRL'S GUILD",
     slogan: "Future mothers . . . . ",
     description:
@@ -24,9 +23,9 @@ export default function GirlsGuild() {
       image: leader,
       name: "Sister Atuba Purity",
       position: "President",
-      contact: "08147317408",
+      contact: "+2348147317408",
     },
-  });
+  };
 
   return (
     <div className="bg-gray-100">

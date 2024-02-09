@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "../../components/Header/Header";
 import youthOne from "./assests/youth/youth1.png";
 import youthTwo from "./assests/youth/youth2.png";
@@ -10,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function YouthFellowship() {
-  const [details, setDetails] = useState({
+  const details = {
     title: "ANGLICAN YOUTH FELLOWSHIP (AYF)",
     slogan: "And fellowship . . . . ",
     description:
@@ -28,9 +27,9 @@ export default function YouthFellowship() {
       image: leader,
       name: "Bro Onyemachi Ngozi",
       position: "President",
-      contact: "08160179071",
+      contact: "+2348160179071",
     },
-  });
+  };
 
   return (
     <div className="bg-gray-100">

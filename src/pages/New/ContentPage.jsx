@@ -14,9 +14,9 @@ export default function ContentPage() {
       <>
         <Header page={data[0][index].title} pageName={"News"} />
       </>
-      <div className="m-auto w-[100%] lg:w-[60%] text-center text-gray-900">
+      <div className="m-auto w-full text-xl lg:w-[60%] text-textCol-primary">
         <div className="mt-10">
-          <div className="p-5  lg:tracking-wider font-light f text-lg">
+          <div className="p-5  lg:tracking-wider ">
             {data[0][index].details !== null && (
               <p className="mt-5">{data[0][index].details}</p>
             )}
@@ -61,8 +61,8 @@ export default function ContentPage() {
               <p className="pt-4">{data[0][index].end}</p>
             )}
           </div>
-          <div className="flex mb-6 justify-around py-2 tracking-wide border-2 w-[90%] m-auto px-3">
-            <p className=" ">By: {data[0][index].author}</p>
+          <div className="flex mb-6 justify-around text-lg py-2 tracking-wide border-2 w-[90%] m-auto px-3">
+            <p className="text-green-600 ">By: {data[0][index].author}</p>
             <span className="px-2">|</span>
             <p className="">
               {data[0][index].date.day} <span>{data[0][index].date.month}</span>{" "}

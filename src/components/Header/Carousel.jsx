@@ -80,20 +80,20 @@ export default function Carousel({
       {/*header content to display on blogs page */}
       {!isHomePage && blogs && (
         <div
-          className={`background bg-greeny-100  ${styles.imageOne} h-[75vh] md:h-[85vh]`}
+          className={`background bg-greeny-100 relative ${styles.imageOne} h-[75vh] md:h-[85vh]`}
         >
-          <p className="font-bold font-lato text-2xl md:text-4xl pt-[35vh] text-gray-200 tracking-wider">
+          <p className="font-bold font-lato text-2xl md:text-4xl absolute w-full bottom-1/2 text-gray-200 tracking-wider">
             {page}
           </p>
-          <div className="text-gray-200  pt-36 relative">
-            <div className="absolute right-[45%]">
+          <div className="text-gray-200 absolute w-full bottom-16 ">
+            <div className="absolute md:left-[46%] left-[37%] -top-16 md:-top-20">
               <img
                 src={image}
                 alt="author"
-                className="rounded-full h-16 object-cover"
+                className="rounded-full h-20 md:h-24 object-cover"
               />
             </div>
-            <p className=" text-blue-100 text-lg lg:text-2xl font-poppins pt-16">
+            <p className=" text-blue-100 text-lg lg:text-2xl font-poppins pt-5">
               {author}
             </p>
           </div>

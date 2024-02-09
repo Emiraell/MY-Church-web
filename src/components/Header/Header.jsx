@@ -63,7 +63,11 @@ export default function Header({
         <div className="flex justify-between m-6 items-center">
           {/* logo and menu bar container */}
           <Link to="/">
-            <img src={logo} alt="" className="rounded-full h-16 md:h-20" />
+            <img
+              src={logo}
+              alt=""
+              className="rounded-full h-16 md:h-20 cursor-pointer"
+            />
           </Link>
           <div className=" text-textCol-primary lg:hidden">
             <FontAwesomeIcon
@@ -87,7 +91,11 @@ export default function Header({
             } flex justify-between mb-5 text-orange-400 `}
           >
             <p className="font-bold text-xl">Menu</p>
-            <FontAwesomeIcon icon={faX} className="h-6" onClick={clickMenu} />
+            <FontAwesomeIcon
+              icon={faX}
+              className="h-6 cursor-pointer"
+              onClick={clickMenu}
+            />
           </div>
 
           {/* menu bar content */}

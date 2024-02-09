@@ -1,4 +1,3 @@
-import { useState } from "react";
 import acm from "./assests/children/acm.png";
 import acmm from "./assests/children/acmm.png";
 import children from "./assests/children/children.png";
@@ -8,7 +7,7 @@ import Template from "./Template";
 import Footer from "../../components/footer/Footer";
 
 export default function Acm() {
-  const [details, setDetails] = useState({
+  const details = {
     title: "ANGLICAN CHILDREN MINISTRY",
     slogan: "Catch them young for Christ",
     description:
@@ -25,9 +24,9 @@ export default function Acm() {
       image: leader,
       name: "Mr Eric Onu",
       position: "Cordinator",
-      contact: "07035356151",
+      contact: "+2348065318560",
     },
-  });
+  };
 
   return (
     <div className="bg-gray-100">

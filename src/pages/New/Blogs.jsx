@@ -7,7 +7,7 @@ export default function Blogs() {
   const { id } = useParams();
   const index = Number(id) - 1;
   return (
-    <div className="bg-gray-50">
+    <div>
       <>
         <Header
           page={data[1][index].title}
@@ -18,11 +18,11 @@ export default function Blogs() {
         />
       </>
       <div
-        className="w-[90%] text-lg bg-gray-100 p-4 lg:p-7 shadow-md lg:text-xl 
-      text-textCol-secondary font- m-auto lg:w-[60%] my-16"
+        className="w-[90%] text-xl p-4 lg:p-7 shadow-md md:text-3xl 
+      text-textCol-secondary m-auto lg:w-[60%] my-16 "
       >
         {data[1][index].subtittle && (
-          <h3 className="font-bold text-center text-orange-700 text-xl my-5">
+          <h3 className="font-bold  text-orange-700  my-5">
             {data[1][index].subtittle}
           </h3>
         )}
@@ -41,7 +41,7 @@ export default function Blogs() {
           <p>{data[1][index]["sub-description"]}</p>
         )}
         {data[1][index].subContentTittle && (
-          <h4 className="font-semibold my-7 text-orange-700 text-xl lg:text-2xl">
+          <h4 className="font-semibold my-7 text-orange-700">
             {data[1][index].subContentTittle}
           </h4>
         )}
@@ -73,7 +73,7 @@ export default function Blogs() {
               <li>{list}</li>
             </div>
           ))}{" "}
-        <div className="my-10 p-2 bg-gray-50">
+        <div className="my-10 p-2 bg-gray-200">
           {data[1][index].moreContentPassages &&
             data[1][index].moreContentPassages.map((list, index) => (
               <div className="my-3 italic text-blue-600" key={index}>
@@ -91,24 +91,24 @@ export default function Blogs() {
         )}
         {data[1][index].finalList &&
           data[1][index].finalList.map((list, index) => (
-            <div className="my-4 shadow-sm p-3 bg-gray-100" key={index}>
+            <div className="my-4 shadow-sm p-3 bg-gray-200" key={index}>
               <h2 className="text-blue-600 italic my-3">{list.title}</h2>
               <p>{list.details}</p>
             </div>
           ))}
         {data[1][index].conclusion && (
-          <p className="my-10 font-semibold text-orange-700">
+          <p className="mt-16 font-semibold text-orange-700">
             {data[1][index].conclusion}
           </p>
         )}
         {data[1][index].conclusionTittle && (
-          <p className="my-5 italic font-light">
+          <p className="my-5 italic font-light ">
             {data[1][index].conclusionTittle}
           </p>
         )}
         {data[1][index].conclusionPassages &&
           data[1][index].conclusionPassages.map((list, index) => (
-            <div className="my-3 italic text-blue-600" key={index}>
+            <div className="my-2 italic text-blue-600" key={index}>
               <li>{list}</li>
             </div>
           ))}
