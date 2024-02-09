@@ -79,6 +79,21 @@ export default {
         7: "7s",
         10: "10s",
       },
+
+      keyframes: {
+        "move-right": {
+          "0%, 100%": { transform: "translateX(-10rem)" },
+          "50%": { transform: "translateX(10rem)" },
+        },
+        "move-left": {
+          "0%, 100%": { transform: "translateX(10rem)" },
+          "50%": { transform: "translateX(-10rem)" },
+        },
+      },
+      animation: {
+        "move-right": "move-right 5s linear infinite",
+        "move-left": "move-left 5s linear infinite",
+      },
     },
   },
   plugins: [],

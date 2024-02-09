@@ -20,7 +20,7 @@ export default function Bible({ prayerPassages }) {
   return (
     <Slider
       {...settings}
-      className="text-gray-800 p-10"
+      className="text-gray-800 p-10 overflow-hidden"
       style={{ backgroundColor: "#d5d1c3" }}
     >
       {prayerPassages.map((passage, index) => (
@@ -34,7 +34,7 @@ export default function Bible({ prayerPassages }) {
               <FontAwesomeIcon icon={faBible} className="h-7 md:h-10 " />
             </div>
 
-            <p className="text-lg font-montserrat text-orange-950">
+            <p className="text-xl md:text-2xl font-montserrat text-orange-950">
               {passage.passageContent}
             </p>
           </div>

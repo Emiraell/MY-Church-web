@@ -23,7 +23,7 @@ export default function WomenFellowship() {
       image: leader,
       name: "Mrs Luka Allu",
       position: "President",
-      contact: null,
+      contact: "+2349038328795",
     },
   };
 

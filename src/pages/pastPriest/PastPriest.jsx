@@ -4,6 +4,8 @@ import kephas from "./assests/kephas.jpg";
 import bishopHenry from "./assests/bishopHenry.png";
 import steven from "./assests/steven.jpg";
 import luka from "./assests/luka.jpg";
+import kyoms from "./assests/kyoms.jpg";
+import chuks from "./assests/chuks.jpg";
 import pastors from "./assests/users.svg";
 import { faCalendar, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
@@ -18,7 +20,7 @@ export default function PastPriest() {
     {
       name: "Ven. Stephen kyoms",
       duration: "2001 - 2005",
-      image: pastors,
+      image: kyoms,
     },
     {
       name: "Rt. Ven. Joshua Aiyejoto",
@@ -29,7 +31,7 @@ export default function PastPriest() {
     {
       name: "Late Ven. Chuks Moronu",
       duration: "2009 - 2012",
-      image: pastors,
+      image: chuks,
     },
     {
       name: "Ven. Innocent Nnamdi Azubuike",

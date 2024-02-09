@@ -42,7 +42,7 @@ export default function Carousel({
       subTittle: "Theme of the year",
       image: styles.imageTwo,
       passage:
-        "The LORD makes firm the steps of the one who delights in him; though he may stumble, he will not fall, for the LORD upholds him with his hand.",
+        "The Lord makes firm the steps of the one who delights in him; though he may stumble, he will not fall, for the Lord upholds him with his hand.",
 
       buttons: [{ name: "Join Us", path: "contact" }],
     },

@@ -40,7 +40,7 @@ export default function ContentPage() {
               </p>
             )}
             {id === "1" && (
-              <p className="pt-4">
+              <div className="pt-4">
                 {data[0][index].lists.map((list, index) => (
                   <div key={index} className="text-start ml-6 ">
                     <p className=" italic font-bold text-lg">
@@ -55,7 +55,7 @@ export default function ContentPage() {
                     </div>
                   </div>
                 ))}
-              </p>
+              </div>
             )}
             {data[0][index].end !== null && (
               <p className="pt-4">{data[0][index].end}</p>

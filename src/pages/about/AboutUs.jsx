@@ -5,10 +5,28 @@ import {
   faCalendar,
   faChurch,
   faClock,
+  faSoccerBall,
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
+import Bible from "../../components/Bible.jsx";
 
 export default function AboutUs() {
+  const passages = [
+    {
+      passage: "Psalms 23 vs 1",
+      passageContent: "The Lord is my shepherd, I shall not be in want.",
+    },
+    {
+      passage: "Psalms 23 vs 2",
+      passageContent:
+        "He makes me to lie down in green pastures; He leads me beside the still waters.",
+    },
+    {
+      passage: "Psalms 23 vs 3",
+      passageContent:
+        "He restores my soul; He leads me in the paths of righteousness For His name’s sake.",
+    },
+  ];
   return (
     <div className=" text-textCol-secondary">
       <Header page={"About Us"} pageName={"About Us"} />
@@ -41,6 +59,23 @@ export default function AboutUs() {
               its members. Regardless of where you are in your spiritual
               journey, this is a place where you can belong.
             </p>
+          </div>
+        </div>
+
+        <div className="my-16">
+          <div>
+            <p className="text-3xl md:text-4xl font-rochester text-orang-200 mb-10">
+              Moving in God's direction
+            </p>
+            <FontAwesomeIcon
+              icon={faSoccerBall}
+              className=" h-6 text-orange-700 animate-move-right"
+            />
+            <Bible prayerPassages={passages} />{" "}
+            <FontAwesomeIcon
+              icon={faSoccerBall}
+              className=" h-6 text-blue-700 animate-move-left py-2"
+            />
           </div>
         </div>
 
