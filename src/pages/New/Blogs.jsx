@@ -18,7 +18,7 @@ export default function Blogs() {
         />
       </>
       <div
-        className="w-[90%] text-xl p-4 lg:p-7 shadow-md md:text-3xl 
+        className="w-[90%]text-lg  md:text-xl p-4 lg:p-7 shadow-md 
       text-textCol-secondary m-auto lg:w-[60%] my-16 "
       >
         {data[1][index].subtittle && (
@@ -102,9 +102,7 @@ export default function Blogs() {
           </p>
         )}
         {data[1][index].conclusionTittle && (
-          <p className="my-5 italic font-light ">
-            {data[1][index].conclusionTittle}
-          </p>
+          <p className="my-5 italic  ">{data[1][index].conclusionTittle}</p>
         )}
         {data[1][index].conclusionPassages &&
           data[1][index].conclusionPassages.map((list, index) => (

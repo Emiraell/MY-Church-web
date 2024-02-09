@@ -39,7 +39,7 @@ export default function Prayer_Donate() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
-        className={`flex-col justify-between h-[50vh] relative m-auto background bg-gray-700`}
+        className={` justify-between h-[50vh] relative m-auto background bg-gray-700 w-full`}
         style={{ backgroundImage: `url(${churchOutside})` }}
       >
         <div className=""></div>

@@ -57,7 +57,7 @@ export default function PastPriest() {
   return (
     <div className=" text-gray-100 text-lg">
       <Header page={"Our Past Priests"} pageName={"Past Priest"} />
-      <div className="text-textCol-secondary w-[90%] lg:w-[80%] m-auto mt-32 lg:grid gap-6 lg:grid-cols-2">
+      <div className="text-textCol-secondary w-[90%] lg:w-[60%] md:w-[75] m-auto mt-32 lg:grid gap-6 lg:grid-cols-2">
         {priests.map((priest) => (
           <div className=" shadow-2xl bg-gray-600 rounded-t-2xl mb-16 col-span-1">
             <img

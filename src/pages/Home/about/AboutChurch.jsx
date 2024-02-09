@@ -26,14 +26,14 @@ export default function AboutChurch() {
       name: "History",
       image: history,
       description:
-        "In the ancient city of keffi, Nasarawa State, st peter's anglican church is one of the oldest churches. The igwe ndi igbo of keffi (Igwe Nwachinemerum) and..",
+        "In the ancient city of keffi, Nasarawa State, st peter's anglican church is one of the oldest churches. The igwe ndi igbo of keffi (Igwe Nwachinemerum) ..",
       path: "history",
     },
     {
       name: "Ministries and Fellowship",
       image: fellowship,
       description:
-        "Just as no Church or establishment will stand strong without several wings, the same can be said of St peter's Anglican  Keffi. Get to see our several wings of strength",
+        "Just as no establishment will stand strong without several wings, the same can be said of St peter's Anglican  Keffi. Get to see our several wings of strength..",
       path: "organizations",
     },
   ];

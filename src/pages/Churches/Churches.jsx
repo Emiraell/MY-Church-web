@@ -79,11 +79,11 @@ export default function Churches() {
   return (
     <div className=" font-lato text-lg">
       <Header page={"Our Churches"} pageName={"churches"} />
-      <div className=" text-textCol-primary mt-24 lg:grid lg:grid-cols-2 w-[90%] gap-8 m-auto">
+      <div className=" text-textCol-primary mt-24 lg:grid lg:grid-cols-2 md:w-[80%] w-[90%] gap-8 m-auto">
         {churches.map((church, index) => (
           <div
             key={index}
-            className=" border col-span-1 border-lime-900 rounded-t-xl bg-gray-200 mb-20 shadow-lg"
+            className=" border col-span-1 border-lime-900 rounded-t-xl bg-gray-200 mb-10 shadow-lg"
           >
             <div
               className="h-[40vh] md:h-[40vh] rounded-t-xl bg-gray-300 background"

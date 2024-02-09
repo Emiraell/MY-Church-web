@@ -54,7 +54,7 @@ export default function TeamOfLeaders() {
               ></div>
 
               <div className="py-5 -mt-2">
-                <p className=" text-gray-700 font-semibold text-2xl">
+                <p className=" text-gray-700 font-semibold text">
                   {leader.name}
                 </p>
                 <span className="block text-lg py-1">{leader.position}</span>

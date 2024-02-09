@@ -10,7 +10,7 @@ export default function History() {
     <div className="text-gray-200 bg-gray-100">
       <Header page={"History"} pageName={"History"} />
       <div className=" text-textCol-primary ">
-        <div className="w-[90%] m-auto shadow-lg rounded-t-xl bg-gray-300 my-20">
+        <div className="w-[90%] md:w-[80%] lg:w-[65%] m-auto shadow-lg rounded-t-xl bg-gray-300 my-20">
           <div
             className="relative background rounded-xl font-lato font-bold text-emerald-200 pt-5 md:h-[30vh] h-[20vh] bg-orange-500"
             style={{
@@ -24,7 +24,7 @@ export default function History() {
               <FontAwesomeIcon icon={faHistory} spin />
             </p>
           </div>
-          <p className="p-5 text-xl leading-9 font-lato tracking-widest md:text-2xl lg:text-3xl lg:w-[80%] m-auto pt-16">
+          <p className="p-5 leading-9 tracking-widest text  lg:w-[80%] m-auto pt-16">
             <span className="italic text-red-700 text-5xl font-light">I</span>n
             the ancient city of Keffi, Nasarawa State, St. Peter's is one of the
             oldest churches. The igwe ndi igbo keffi (Igwe Nwachinemeruim) and

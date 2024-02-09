@@ -21,7 +21,7 @@ export default function HeadPageTem({ contents }) {
               } relative rounded-md background hover:bg-gray-700 cursor-pointer bg-gray-500`}
             >
               <p
-                className={`absolute  w-[100%] top-1/2 font-bold text-2xl md:text-3xl text-orange-300 hover:underline`}
+                className={`absolute  w-[100%] top-1/2 font-bold text-xl md:text-2xl text-orange-300 hover:underline`}
               >
                 {content.title}
               </p>

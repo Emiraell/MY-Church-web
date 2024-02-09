@@ -57,7 +57,7 @@ export default function ContactUs() {
   return (
     <div className=" text-center font-roboto">
       <Header page={"CONTACT US"} pageName={"Contact"} />
-      <div className="mt-24 text-textCol-primary w-[90%] m-auto text-xl md:text-2xl lg:text-3xl ">
+      <div className="mt-24 text-textCol-primary w-[90%] m-auto text-lg ">
         <div className="">
           <h2 className="font-bold text-red-700 pb-7">Get In Touch With Us</h2>
           <span>
@@ -70,7 +70,7 @@ export default function ContactUs() {
 
         <div className=" mt-11 lg:grid lg:grid-cols-2 gap-3">
           <div>
-            <p className=" text-start pl-5 my-5 font-bold text-2xl md:text-3xl text-red-700">
+            <p className=" text-start pl-5 my-5 font-bold text-lg md:text-xl text-red-700">
               Contact Details
             </p>
             {details.map((detail) => (

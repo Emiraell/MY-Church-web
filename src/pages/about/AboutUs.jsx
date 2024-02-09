@@ -30,8 +30,8 @@ export default function AboutUs() {
   return (
     <div className=" text-textCol-secondary">
       <Header page={"About Us"} pageName={"About Us"} />
-      <div className="mt-14 ">
-        <div className="lg:w-[70%] m-auto w-[90%] shadow-lg rounded-t-xl ">
+      <div className="mt-14 text">
+        <div className="lg:w-[60%] md:w-[70%] m-auto w-[90%] shadow-lg rounded-t-xl ">
           <div
             className=" rounded-xl font-lato font-bold text-emerald-200 pt-5 background md:h-[30vh] h-[23vh] bg-orange-500"
             style={{
@@ -44,8 +44,8 @@ export default function AboutUs() {
               <FontAwesomeIcon icon={faChurch} />
             </p>
           </div>
-          <div className="px-5 leading-8 lg:tracking-wider bg-gray-200 py-10 text-lg lg:text-2xl">
-            <p className=" text-xl  lg:text-3xl md:text-2xl">
+          <div className="px-5 leading-8 lg:tracking-wider bg-gray-100 py-10 text">
+            <p>
               <span className="italic text-red-700 text-5xl font-light">S</span>
               t. Peter's Anglican Church Keffi, Nasarawa State, is one of 20
               archdeaconries in the Diocese of Lafia, which is overseen by Rt.

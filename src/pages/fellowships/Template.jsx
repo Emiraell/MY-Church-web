@@ -15,7 +15,7 @@ export default function Template({ details }) {
       </div>
       <div className="w-[90%] lg:w-[90%] m-auto mt-16 text-xl md:text-3xl">
         <div>
-          <p className="md:text-2xl lg:w-[70%] m-auto">{details.description}</p>
+          <p className="text lg:w-[70%] m-auto">{details.description}</p>
           <div className="lg:flex lg:justify-center lg:w-[70%] w-[90%] m-auto pt-10">
             <img
               src={details.images.imageOne}
@@ -33,12 +33,12 @@ export default function Template({ details }) {
               className="h-[22vh] md:h-[30vh] w-full object-cover object-center"
             />
           </div>
-          <p className=" py-7 text-2xl italic text-blue-500">
+          <p className=" py-7 text italic text-blue-500">
             some of the aims of the this body is:
           </p>
           {details.aims.map((aim, index) => (
             <ul key={index} className="lg:w-[80%] m-auto">
-              <li className="shadow-md p-2 bg-gray-200 my-7 rounded-md">
+              <li className="shadow-md p-4 bg-gray-200 my-7 rounded-md text">
                 {aim}
               </li>
             </ul>

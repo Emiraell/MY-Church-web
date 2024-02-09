@@ -29,9 +29,9 @@ export default function MessageUs({ database }) {
     e.target.reset();
   };
   return (
-    <div className="mt-5 rounded-md text-center tracking-wider font-poppins justify-center">
+    <div className="mt-5 text-lg rounded-md tracking-wider font-poppins justify-center">
       {/* send a message */}
-      <p className="md:text-3xl text-2xl font-bold text-red-700 pb-12 pl-4">
+      <p className="text-lg text-start md:text-xl font-bold text-red-700 pb-12 pl-20">
         Message Us
       </p>
       <form

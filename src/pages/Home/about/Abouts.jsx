@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
   return (
     <motion.div
-      className=" lg:border-r  text-lg md:text-xl lg:text-2xl"
+      className=" lg:border-r  text"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5, duration: 0.5 }}

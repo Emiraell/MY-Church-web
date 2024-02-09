@@ -15,3 +15,6 @@
 .input {
   @apply block mt-1 rounded-sm outline-none w-[100%] m-auto shadow-lg p-5;
 }
+.text {
+  @apply text-lg md:text-xl;
+}

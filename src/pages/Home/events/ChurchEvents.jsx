@@ -16,7 +16,7 @@ export default function ChurchEvents() {
       </div>
       <div className="lg:grid grid-cols-3 lg:w-[80%] m-auto">
         <div className="col-span-2">
-          <p className="text-xl my-4 px-4  lg:tracking-widest lg:font-semibold lg:leading-10 lg:mt-16">
+          <p className="text my-4 px-4  lg:tracking-widest lg:font-semibold lg:leading-10 lg:mt-16">
             God of all impossibilities experieneced it first outing in october
             17, 2017 and it has since then maintain it status as a yearly event.
             First tittled God of Hannah, the program....

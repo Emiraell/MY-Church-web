@@ -14,7 +14,7 @@ export default function ContentPage() {
       <>
         <Header page={data[0][index].title} pageName={"News"} />
       </>
-      <div className="m-auto w-full text-xl lg:w-[60%] text-textCol-primary">
+      <div className="m-auto w-full text-lg md:text-xl lg:w-[60%] text-textCol-primary">
         <div className="mt-10">
           <div className="p-5  lg:tracking-wider ">
             {data[0][index].details !== null && (

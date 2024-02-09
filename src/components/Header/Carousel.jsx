@@ -102,14 +102,14 @@ export default function Carousel({
 
       {/* header content to slide when on homepage */}
       {isHomePage && (
-        <Slider {...settings} className="overflow-hidden ">
+        <Slider {...settings} className="overflow-hidden">
           {carouselDetails.map((detail, index) => (
             <div
               key={index}
               className={`relative bg-greeny-100 background ${detail.image} h-[77vh] lg:h-[85vh]`}
             >
-              <div className="font-semibold absolute left-0 right-0 bottom-2/3">
-                <p className="text-xl md:text-3xl px-3 font-lato ">
+              <div className="font-semibold absolute left-0 right-0 bottom-2/3 lg:bottom-1/2 ">
+                <p className="text-xl md:text-3xl px-3 font-lato mt-16 ">
                   {detail.tittle}
                   <span className="block text-blue-300 font-light font-rochester">
                     {detail.subTittle}

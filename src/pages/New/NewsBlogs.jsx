@@ -14,12 +14,12 @@ export default function NewsBlogs() {
   return (
     <div>
       <Header page={"Church News & Blogs"} pageName={"Blogs & News"} />
-      <div className="my-16 w-[95%] lg:[70%] m-auto text-textCol-secondary text-lg md:text-2xl">
-        <div className="text-start  font-bold font-lato tracking-wide">
+      <div className="my-16 w-[90%] md:[70%] m-auto text-textCol-secondary text">
+        <div className="text-start font-bold font-lato tracking-wide px-20">
           <span
             className={`${
               showing.news && "bg-greeny-600 text-gray-100"
-            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out`}
+            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out cursor-pointer`}
             onClick={() => setShowing({ news: true, blogs: false })}
           >
             Church News
@@ -28,7 +28,7 @@ export default function NewsBlogs() {
             onClick={() => setShowing({ news: false, blogs: true })}
             className={`${
               showing.blogs && "bg-greeny-600 text-gray-100"
-            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out`}
+            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out cursor-pointer`}
           >
             Blogs
           </span>
@@ -38,7 +38,7 @@ export default function NewsBlogs() {
             <span className=" text-orang-200 text-2xl font-montserrat">
               NEWS UPDATE
             </span>
-            <div className={`w-[90%] m-auto  my-10 lg:grid grid-cols-2 gap-7`}>
+            <div className={`w-[90%] m-auto  my-10 lg:grid grid-cols-2 gap-12`}>
               {data[0].map((info, index) => (
                 <motion.div
                   initial={{ opacity: 0, y: 250 }}
@@ -84,7 +84,7 @@ export default function NewsBlogs() {
             <span className=" text-orange-700 text-2xl font-montserrat">
               BLOGS
             </span>
-            <div className={`w-[90%] m-auto my-5 lg:grid grid-cols-2 gap-7`}>
+            <div className={`w-[90%] m-auto my-5 lg:grid grid-cols-2 gap-12`}>
               {data[1].map((blog, index) => (
                 <motion.div
                   initial={{ opacity: 0, y: 250 }}

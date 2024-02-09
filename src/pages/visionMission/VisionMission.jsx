@@ -25,8 +25,8 @@ export default function VisionMission() {
         page={"Vision and Mission Statement"}
         pageName={"Vision & Mission"}
       />
-      <div className="text-textCol-primary pt-16">
-        <div className="bg-gray-200 w-[90%] m-auto shadow-sm shadow-emerald-200 rounded-t-xl">
+      <div className="text-textCol-primary pt-16 w-[90%] m-auto text md:w-[80%] lg:w-[60%]">
+        <div className="bg-gray-200 shadow-sm shadow-emerald-200 rounded-t-xl">
           <div
             className="relative rounded-xl font-lato font-bold text-emerald-200 pt-5 background h-[25vh] bg-orange-500"
             style={{
@@ -35,7 +35,7 @@ export default function VisionMission() {
           >
             <p className=" absolute w-full bottom-1/3 text-2xl">OUR VISION</p>
           </div>
-          <p className="p-5 md:text-2xl lg:text-3xl tracking-wider text-xl lg:w-[80%] m-auto pt-8 leading-9">
+          <p className="p-5 tracking-wider lg:w-[80%] m-auto pt-8 leading-9">
             <span className="italic text-red-700 text-5xl font-light">A</span>s
             a church to be a true signpost of the kingdom of God in this last
             days, reach to people with the gospel of salvation and in love and
@@ -56,7 +56,7 @@ export default function VisionMission() {
           {missions.map((mission, index) => (
             <ul
               key={index}
-              className="p-5 md:text-2xl lg:text-3xl tracking-wider lg:w-[80%] m-auto pt-8"
+              className="p-5  tracking-wider lg:w-[80%] m-auto pt-8"
             >
               <li className="bg-gray-200 p-3 shadow-md rounded-lg">
                 {mission}
@@ -64,8 +64,8 @@ export default function VisionMission() {
             </ul>
           ))}
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

@@ -113,7 +113,7 @@ export default function BlogsNews() {
               </p>
               <p className="p-3 italic">
                 St barnabas anglican church, keffi has started the building of a
-                new vicarage project that's aimed at the impro....
+                new vicarage project that's...
               </p>
               <div className="flex justify-between items-center p-3 border border-green-300 mx-5 mt-4">
                 <p>
@@ -131,11 +131,14 @@ export default function BlogsNews() {
           </motion.div>
         </div>
         <Link to="/library">
-          <span className="text-greeny-500 animate-pulse bg-gray-200 p-2 rounded cursor-pointer">
+          <span
+            className="text-greeny-500  border border-greeny-500 p-2 
+          rounded-full px-7 cursor-pointer"
+          >
             See more stories{" "}
             <FontAwesomeIcon
               icon={faArrowRight}
-              className=" text-red-800 text-lg"
+              className=" text-red-800 text-lg animate-pulse"
             />
           </span>
         </Link>
