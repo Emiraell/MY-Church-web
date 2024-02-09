@@ -15,11 +15,11 @@ export default function NewsBlogs() {
     <div>
       <Header page={"Church News & Blogs"} pageName={"Blogs & News"} />
       <div className="my-16 w-[90%] md:[70%] m-auto text-textCol-secondary text">
-        <div className="text-start font-bold font-lato tracking-wide px-20">
+        <div className=" font-bold font-lato tracking-wide">
           <span
             className={`${
               showing.news && "bg-greeny-600 text-gray-100"
-            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out cursor-pointer`}
+            } p-2 rounded-md mr-4 transition-all duration-0.5 ease-in-out cursor-pointer text-sm`}
             onClick={() => setShowing({ news: true, blogs: false })}
           >
             Church News

@@ -23,6 +23,7 @@ export default function YouthFellowship() {
       "To give due recognition to the importance of fitness of body and mind, and the provision of suitable varied forms of recreation in all Christian Youth organization and groups",
       "To help inculcate the spirit of love, peace and unity as enshrined in the Bible.",
     ],
+    meeting: { days: "tuesday", time: "6:00pm" },
     president: {
       image: leader,
       name: "Bro Onyemachi Ngozi",

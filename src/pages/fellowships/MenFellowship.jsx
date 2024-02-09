@@ -19,6 +19,7 @@ export default function MenFellowship() {
       "To support church projects and generally encourage the growth and development of the church",
       "To be the leading pillar in which the instruction of Christ towards men are been seen",
     ],
+    meeting: null,
     president: {
       image: leader,
       name: "Mr Emeka Uba",

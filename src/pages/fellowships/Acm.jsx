@@ -20,6 +20,7 @@ export default function Acm() {
       "Helping children and young people in the Anglican faith to become disciplined and growing Christian.",
       " In several other acceptable ways to help them to deepen their spiritual life through worship.",
     ],
+    meeting: { days: "sunday", time: "8:00am" },
     president: {
       image: leader,
       name: "Mr Eric Onu",

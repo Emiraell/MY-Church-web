@@ -112,7 +112,7 @@ export default function Header({
             ))}
             <p
               onClick={() => navigate("/donate")}
-              className={`my-10 hover:border-2 w-[90%] overflow-hidden m-auto hover:border-blood-400 hover:text-blood-500 rounded-full ${
+              className={`my-10 hover:border-2 w-full overflow-hidden m-auto hover:border-blood-400 hover:text-blood-500 rounded-full ${
                 !menuClicked && "hidden"
               } transition-all duration-0.5 ease-in-out cursor-pointer hover:bg-gray-200 p-3 w-56 bg-blood-700 hover:border-blood-700 text-gray-100`}
             >

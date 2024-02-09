@@ -4,6 +4,7 @@ import mothers2 from "./assests/women/mothers2.png";
 import mothers1 from "./assests/women/mothers1.png";
 import leader from "./assests/women/womenLeader.jpg";
 import Template from "./Template";
+import Footer from "../../components/footer/Footer";
 
 export default function WomenFellowship() {
   const details = {
@@ -19,6 +20,7 @@ export default function WomenFellowship() {
       "To promote conditions in the society favourable to family life and the protection of children",
       "To help those whose family life has met with adversity",
     ],
+    meeting: null,
     president: {
       image: leader,
       name: "Mrs Luka Allu",
@@ -35,6 +37,7 @@ export default function WomenFellowship() {
       <div>
         <Template details={details} />
       </div>
+      <Footer />
     </div>
   );
 }

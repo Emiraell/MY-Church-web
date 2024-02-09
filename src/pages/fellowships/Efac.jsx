@@ -18,6 +18,7 @@ export default function Efac() {
       "To enable it's members to learn together the meaning of evenaglism and it's relevance to the life of the church",
       "To see that the church is on track on folllowing the guideline of Christ in spreading the gospel",
     ],
+    meeting: { days: "thursday", time: "6:00pm" },
     president: {
       image: leader,
       name: "Bro Nwamike Emeka",

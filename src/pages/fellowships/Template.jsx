@@ -43,7 +43,13 @@ export default function Template({ details }) {
               </li>
             </ul>
           ))}
-        </div>
+        </div>{" "}
+        {details.meeting && (
+          <p className="italic font-montserrat">
+            Fellowship is held at the church every {details.meeting.days} at
+            {details.meeting.time}
+          </p>
+        )}
         <div className="flex mt-10 items-center text-start">
           <div className="md:px-10 px-3">
             <img

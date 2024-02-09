@@ -38,7 +38,7 @@ export default function BlogsNews() {
                 community involvement, Ven. Dr Luka Allu JP led the
                 nomination.....
               </p>
-              <div className="flex justify-between items-center p-3 border border-green-300 mx-5 mt-4">
+              <div className="flex justify-between items-center p-2 border border-green-300 mx-3 my-4">
                 <p>
                   <span>By:</span> Edwin Emmanuel
                 </p>
@@ -75,7 +75,7 @@ export default function BlogsNews() {
                 The church bids a fond farewell to its annual 21-day fast and
                 prayer of beginning the year with Christ, St...
               </p>
-              <div className="flex justify-between items-center p-3 border border-green-300 mx-5 mt-4">
+              <div className="flex justify-between items-center p-2 border border-green-300 mx-3 my-4">
                 <p>
                   <span>By:</span> Edwin Emmanuel
                 </p>
@@ -115,7 +115,7 @@ export default function BlogsNews() {
                 St barnabas anglican church, keffi has started the building of a
                 new vicarage project that's...
               </p>
-              <div className="flex justify-between items-center p-3 border border-green-300 mx-5 mt-4">
+              <div className="flex justify-between items-center p-2 border border-green-300 mx-3 my-4">
                 <p>
                   <span>By:</span> Edwin Emmanuel
                 </p>

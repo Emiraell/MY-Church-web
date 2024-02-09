@@ -32,7 +32,7 @@ const menuContents = [
     path: "organizations",
   },
   {
-    name: "Library",
+    name: "Church Updates",
     infos: [],
     clicked: false,
     path: "library",

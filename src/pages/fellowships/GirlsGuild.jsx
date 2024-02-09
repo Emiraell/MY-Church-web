@@ -19,6 +19,7 @@ export default function GirlsGuild() {
       "To lead young girls to offer their work and leisure to God as members of this Church, in local, national and international levels.",
       "To give due recognition to the importance of fitness of body and mind, and provide adeqaute support for young girls",
     ],
+    meeting: { days: "monday", time: "6:30pm" },
     president: {
       image: leader,
       name: "Sister Atuba Purity",
