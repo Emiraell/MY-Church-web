@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../../components/Header/Header";
-import bishop from "./assests/bishop.jpg";
+import bishop from "./assests/bishop.png";
 import ali from "./assests/evangAli.png";
 import okafor from "./assests/okafor.png";
 import daniel from "./assests/ordDaniel.png";

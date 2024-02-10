@@ -6,6 +6,7 @@ import steven from "./assests/steven.jpg";
 import luka from "./assests/luka.jpg";
 import kyoms from "./assests/kyoms.jpg";
 import chuks from "./assests/chuks.jpg";
+import tula from "./assests/tula.jpg";
 import pastors from "./assests/users.svg";
 import { faCalendar, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
@@ -13,18 +14,38 @@ import Footer from "../../components/footer/Footer";
 export default function PastPriest() {
   const priests = [
     {
-      name: "Rt. Rev Henry Okeke Samuel",
-      duration: "late 90s - 2001",
+      name: "Rtd Canon Yerima",
+      duration: "1989 - 1992",
+      image: pastors,
+    },
+    {
+      name: "Rtd Ven. S.T Adamu",
+      duration: "1992 - 1995",
+      image: pastors,
+    },
+    {
+      name: "Rt. Rev'd Henry Okeke Samuel",
+      duration: "1995 - 1998",
       image: bishopHenry,
     },
     {
+      name: "Rt. Rev'd Musa Mwin Tula",
+      duration: "1998 - 2001",
+      image: tula,
+    },
+    {
+      name: "Late. Canon Onuegbu",
+      duration: "2001 - 2003",
+      image: pastors,
+    },
+    {
       name: "Ven. Stephen kyoms",
-      duration: "2001 - 2005",
+      duration: "2003 - 2006",
       image: kyoms,
     },
     {
-      name: "Rt. Ven. Joshua Aiyejoto",
-      duration: "2005 - 2009",
+      name: "Rtd. Ven. Joshua Aiyejoto",
+      duration: "2006 - 2009",
       image: pastors,
     },
 

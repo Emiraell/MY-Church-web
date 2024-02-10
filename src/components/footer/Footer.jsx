@@ -155,7 +155,7 @@ export default function Footer() {
             <span className="block">
               Designed by and maintained by{" "}
               <a href="https://wa.me/08136553986" className="italic">
-                emiraelDev
+                emiraelDev{" "}
               </a>
               | the media department
             </span>

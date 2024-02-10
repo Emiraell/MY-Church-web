@@ -1,10 +1,7 @@
 import luka from "./assests/luka.jpg";
 import okafor from "./assests/okafor.jpg";
-import bishop from "./assests/bishop.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import bishop from "./assests/bishop.png";
 import { motion } from "framer-motion";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function TeamOfLeaders() {
