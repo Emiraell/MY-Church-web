@@ -63,13 +63,13 @@ export default function Header({
       >
         <div className="flex justify-between m-6 items-center">
           {/* logo and menu bar container */}
-          <Link to="/">
+          <div onClick={() => navigate("/my-church-web")}>
             <img
               src={logo}
               alt=""
               className="rounded-full h-16 md:h-20 cursor-pointer"
             />
-          </Link>
+          </div>
           <div className=" text-textCol-primary lg:hidden">
             <FontAwesomeIcon
               icon={faBars}

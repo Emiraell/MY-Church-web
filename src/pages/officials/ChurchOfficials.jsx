@@ -28,7 +28,7 @@ export default function ChurchOfficials() {
       image: luka,
       name: "Ven. Dr. Luka B. Allu J.P",
       church: "St. Peter's Anglican Church, Keffi",
-      position: "Vicar",
+      position: "Vicar/Supervising Priest",
     },
     {
       image: okafor,
@@ -58,27 +58,27 @@ export default function ChurchOfficials() {
       image: <FontAwesomeIcon icon={faUserTie} />,
       name: "Ord. Bayo Ajayi",
       church: "All soul's Anglican Church, Sabon Gari",
-      position: "vicar",
+      position: "Priest",
     },
     {
       image: <FontAwesomeIcon icon={faUserTie} />,
       name: "Ord. Abednego Ibrahim",
       church: "Zion Anglican Church, Shamake",
-      position: "vicar",
+      position: "Priest",
     },
 
     {
       image: daniel,
       name: "Ord. Daniel Onyekachi",
       church: "Church of Epiphany, GRA keffi",
-      position: "Vicar",
+      position: "Priest",
     },
 
     {
       image: ali,
       name: "Evang. Onyeka Ali",
       church: "Church of Advent, Jigwada",
-      position: "vicar",
+      position: "Priest",
     },
   ];
 

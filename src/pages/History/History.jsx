@@ -37,7 +37,7 @@ export default function History() {
             today, St Peter has become the home of many priests from both the
             Anglican Communion and the body of Christ in general. When he served
             as a Venerable at the church from the late 90s to early 20s, the
-            Lord Bishop of Mabmili Diocese, Rt Rev Henry S Okeke, also
+            Lord Bishop of Mbammili Diocese, Rt Rev Henry S Okeke, also
             contributed to the development of the church and the lives of its
             members. The church was finally inaugurated by the former bishop of
             the Lafia diocese, Rt Rev Milla K. Maza, in the early 2000s, and
