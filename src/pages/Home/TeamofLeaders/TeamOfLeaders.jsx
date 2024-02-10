@@ -63,7 +63,7 @@ export default function TeamOfLeaders() {
             </motion.div>
           ))}
         </div>
-        <Link to="officials">
+        <Link to="/officials">
           <button
             className="my-5 bg-greeny-300 hover:text-greeny-300 hover:border 
           hover:bg-gray-100 rounded w-64 duration-0.5 transition-all ease-in text-gray-200 py-3 text-xl border-greeny-300"

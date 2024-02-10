@@ -79,7 +79,7 @@ export default function Abouts({ oneIsVisible, toggleVisibilty, about }) {
           className=" border border-orange-500 text-orange-500 rounded-md py-3 drop-shadow-xl
        hover:bg-orange-500 hover:border-transparent transition-all ease-linear duration-0.5 hover:text-gray-50  w-52 mb-5"
         >
-          <Link to={about.path}>Read More</Link>
+          <Link to={`/${about.path}`}>Read More</Link>
         </button>
       </div>
     </motion.div>
