@@ -38,7 +38,7 @@ function App() {
       {/* A router for easy navigation of all the pages */}
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="my-church-web/" element={<Home />} />
           <Route path="/about" element={<MainAbout />} />
           <Route path="/about_church" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
