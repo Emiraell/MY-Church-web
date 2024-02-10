@@ -2,7 +2,7 @@
   "name": "my-church-web",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://emiraell.github.io/my-church-web",
+  "homepage": "https://emiraell.github.io/My-Church-web",
   "type": "module",
   "scripts": {
     "dev": "vite",
