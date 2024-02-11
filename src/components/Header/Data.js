@@ -4,7 +4,7 @@ const menuContents = [
     name: "Home",
     infos: [],
     clicked: false,
-    path: "",
+    path: "my-church-web/",
   },
   {
     name: "About Us",
