@@ -26,6 +26,8 @@ import Gallery from "./pages/gallery/Gallery";
 import Blogs from "./pages/New/Blogs";
 import { useEffect } from "react";
 import Picture from "./pages/gallery/Picture";
+import Error from "./pages/error/Error";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   // setting the document tittle for the webpage
@@ -37,6 +39,7 @@ function App() {
     <div className="tracking-wide bg-gray-100 font-roboto text-center">
       {/* A router for easy navigation of all the pages */}
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="my-church-web/" element={<Home />} />
           <Route path="/about" element={<MainAbout />} />
@@ -62,6 +65,7 @@ function App() {
           <Route path="/blogs/:id" element={<Blogs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/gallery/:id" element={<Picture />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </Router>
     </div>

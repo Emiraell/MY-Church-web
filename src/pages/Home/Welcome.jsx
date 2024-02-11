@@ -31,8 +31,8 @@ export default function Welcome() {
             <span className="text-6xl font-bold text-red-600 font-rochester">
               P
             </span>
-            leasurable greetings and welcome to the official website of st
-            peter's anglican church keffi, nasarawa state, a place were Jesus
+            leasurable greetings and welcome to the official website of St
+            Peter's Anglican Church Keffi, Nasarawa State, a place were Jesus
             lives. We do hope this website serves your need during this visit
             and as you encounter our Archdeaconry via this medium, we pray and
             hope you also encounter it with your physical presence.

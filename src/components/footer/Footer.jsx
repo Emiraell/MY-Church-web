@@ -111,7 +111,9 @@ export default function Footer() {
 
                     {/* infomation */}
                     <a href="www.stpeters">
-                      <p className="text-purple-400">www.stpeter.com</p>
+                      <p className="text-purple-400">
+                        st.petersanglicanchurch.keffi@gmail.com
+                      </p>
                     </a>
                   </div>
                 </div>

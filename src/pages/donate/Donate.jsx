@@ -30,7 +30,7 @@ export default function Donate() {
     },
     {
       title: "GOD OF ALL IMPOSSIBILITIES",
-      name: "St Peter's Anglocan Church(programmes)",
+      name: "St Peter's Anglican Church(programmes)",
       number: "2002357965",
       bank: "FCMB",
       image: donate,
