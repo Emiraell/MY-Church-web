@@ -47,17 +47,18 @@ export default function AboutUs() {
           <div className="px-5 leading-8 lg:tracking-wider bg-gray-100 py-10 text">
             <p>
               <span className="italic text-red-700 text-5xl font-light">S</span>
-              t. Peter's Anglican Church Keffi, Nasarawa State, is one of 20
-              archdeaconries in the Diocese of Lafia, which is overseen by Rt.
-              Rev. Robinson Adeyemi. Within the Keffi archdecaonry, St. Peter's
-              Anglican Church serves as the administrative hub for all parishes
-              and churches. St. peter's anglican church, an achdeaconry, is home
-              to two Parishes and roughly eight churches where the ministry and
-              teachings of Christ are fervently and fully attended to. As an
-              archdeaconry, we enjoy praying in faith and worshipping together
-              in fellowship. As a family, we are concerned about the church and
-              its members. Regardless of where you are in your spiritual
-              journey, this is a place where you can belong.
+              t. Peter's Anglican Church Keffi, Nasarawa State, is one of 24
+              archdeaconries and deaneries in the Diocese of Lafia, which is
+              overseen by Rt. Rev. Robinson Adeyemi. Within the Keffi
+              archdecaonry, St. Peter's Anglican Church serves as the
+              administrative hub for all parishes and churches. St. peter's
+              anglican church, an achdeaconry, is home to two Parishes and
+              roughly eight churches where the ministry and teachings of Christ
+              are fervently and fully attended to. As an archdeaconry, we enjoy
+              praying in faith and worshipping together in fellowship. As a
+              family, we are concerned about the church and its members.
+              Regardless of where you are in your spiritual journey, this is a
+              place where you can belong.
             </p>
           </div>
         </div>

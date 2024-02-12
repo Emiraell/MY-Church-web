@@ -89,7 +89,7 @@ export default function Footer() {
                     </p>
                     <p>
                       {/* infomation */}
-                      stPeters@gmail.com
+                      st.petersanglicanchurch.keffi@gmail.com
                     </p>
                   </div>
                 </div>
@@ -111,9 +111,7 @@ export default function Footer() {
 
                     {/* infomation */}
                     <a href="www.stpeters">
-                      <p className="text-purple-400">
-                        st.petersanglicanchurch.keffi@gmail.com
-                      </p>
+                      <p className="text-purple-400">www.stPeters.com</p>
                     </a>
                   </div>
                 </div>
