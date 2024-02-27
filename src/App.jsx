@@ -41,31 +41,49 @@ function App() {
       <Router>
         <ScrollToTop />
         <Routes>
-          <Route path="my-church-web/" element={<Home />} />
-          <Route path="/about" element={<MainAbout />} />
-          <Route path="/about_church" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/prayer" element={<PrayerRequest />} />
-          <Route path="/vision_mission" element={<VisionMission />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/churches" element={<Churches />} />
-          <Route path="/past_priest" element={<PastPriest />} />
-          <Route path="/organizations" element={<Main />} />
-          <Route path="/men_fellowship" element={<MenFellowship />} />
-          <Route path="/women_fellowship" element={<WomenFellowship />} />
-          <Route path="/youth_fellowship" element={<YouthFellowship />} />
-          <Route path="/children_ministry" element={<Acm />} />
-          <Route path="/girls_guild" element={<GirlsGuild />} />
-          <Route path="/efac" element={<Efac />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/officials" element={<ChurchOfficials />} />
-          <Route path="/god_of_impossibilities" element={<Goai />} />
-          <Route path="/library" element={<NewsBlogs />} />
-          <Route path="/news/:id" element={<ContentPage />} />
-          <Route path="/blogs/:id" element={<Blogs />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/gallery/:id" element={<Picture />} />
-          <Route path="/*" element={<Error />} />
+          <Route path="/my-church-web" element={<Home />} />
+          <Route path="/my-church-web/about" element={<MainAbout />} />
+          <Route path="/my-church-web/about_church" element={<AboutUs />} />
+          <Route path="/my-church-web/contact" element={<ContactUs />} />
+          <Route path="/my-church-web/prayer" element={<PrayerRequest />} />
+          <Route
+            path="/my-church-web/vision_mission"
+            element={<VisionMission />}
+          />
+          <Route path="/my-church-web/history" element={<History />} />
+          <Route path="/my-church-web/churches" element={<Churches />} />
+          <Route path="/my-church-web/past_priest" element={<PastPriest />} />
+          <Route path="/my-church-web/organizations" element={<Main />} />
+          <Route
+            path="/my-church-web/men_fellowship"
+            element={<MenFellowship />}
+          />
+          <Route
+            path="/my-church-web/women_fellowship"
+            element={<WomenFellowship />}
+          />
+          <Route
+            path="/my-church-web/youth_fellowship"
+            element={<YouthFellowship />}
+          />
+          <Route path="/my-church-web/children_ministry" element={<Acm />} />
+          <Route path="/my-church-web/girls_guild" element={<GirlsGuild />} />
+          <Route path="/my-church-web/efac" element={<Efac />} />
+          <Route path="/my-church-web/donate" element={<Donate />} />
+          <Route
+            path="/my-church-web/officials"
+            element={<ChurchOfficials />}
+          />
+          <Route
+            path="/my-church-web/god_of_impossibilities"
+            element={<Goai />}
+          />
+          <Route path="/my-church-web/library" element={<NewsBlogs />} />
+          <Route path="/my-church-web/news/:id" element={<ContentPage />} />
+          <Route path="/my-church-web/blogs/:id" element={<Blogs />} />
+          <Route path="/my-church-web/gallery" element={<Gallery />} />
+          <Route path="/my-church-web/gallery/:id" element={<Picture />} />
+          <Route path="/my-church-web/*" element={<Error />} />
         </Routes>
       </Router>
     </div>

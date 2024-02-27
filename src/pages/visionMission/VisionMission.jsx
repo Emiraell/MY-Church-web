@@ -2,7 +2,6 @@ import { useState } from "react";
 import Header from "../../components/Header/Header";
 import vision from "./assests/vision.png";
 import mission from "./assests/mission.png";
-import UsefulLinks from "../../components/UsefulLinks";
 import Footer from "../../components/footer/Footer";
 
 export default function VisionMission() {

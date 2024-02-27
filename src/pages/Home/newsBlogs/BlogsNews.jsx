@@ -42,7 +42,10 @@ export default function BlogsNews() {
                 <p>
                   <span>By:</span> Edwin Emmanuel
                 </p>
-                <Link to="/news/1" className=" cursor-pointer px-2">
+                <Link
+                  to="/my-church-web/news/1"
+                  className=" cursor-pointer px-2"
+                >
                   Read More
                   <FontAwesomeIcon
                     icon={faArrowRight}
@@ -79,7 +82,7 @@ export default function BlogsNews() {
                 <p>
                   <span>By:</span> Edwin Emmanuel
                 </p>
-                <Link to="news/2" className=" cursor-pointer">
+                <Link to="/my-church-web/news/2" className=" cursor-pointer">
                   Read More
                   <FontAwesomeIcon
                     icon={faArrowRight}
@@ -119,7 +122,7 @@ export default function BlogsNews() {
                 <p>
                   <span>By:</span> Edwin Emmanuel
                 </p>
-                <Link to="news/3" className=" cursor-pointer">
+                <Link to="/my-church-web/news/3" className=" cursor-pointer">
                   Read More
                   <FontAwesomeIcon
                     icon={faArrowRight}
@@ -130,7 +133,7 @@ export default function BlogsNews() {
             </div>
           </motion.div>
         </div>
-        <Link to="/library">
+        <Link to="/my-church-web/library">
           <span
             className="text-greeny-500  border border-greeny-500 p-2 
           rounded-full px-7 cursor-pointer"

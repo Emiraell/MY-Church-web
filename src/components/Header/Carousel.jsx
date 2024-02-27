@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles/Header.module.css";
 
@@ -124,7 +123,7 @@ export default function Carousel({
 
               <div className="absolute w-[100%] bottom-20">
                 {detail.buttons.map((button, index) => (
-                  <Link to={`/${button.path}`} key={index}>
+                  <Link to={`/my-church-web/${button.path}`} key={index}>
                     <button
                       className={`w-56 text-orange-200 border py-5 tracking-wider text-xl rounded-full hover:opacity-90 mx-2
                       border-orange-400 hover:scale-75 hover:text-gray-100 hover:bg-orang-200 transition-all duration-0.5 ease-in`}

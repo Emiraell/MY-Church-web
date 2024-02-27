@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import HeadPageTem from "../../components/HeadPageTem";
 import Header from "../../components/Header/Header";
 import { useState } from "react";
@@ -10,7 +9,6 @@ import vision from "./assests/vision.png";
 import churches from "./assests/churchess.png";
 
 export default function MainAbout() {
-  const navigate = useNavigate();
   const [contents, setContents] = useState([
     {
       image: church,

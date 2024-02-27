@@ -5,7 +5,7 @@ import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 import menuContents from "./Data";
 import { useState } from "react";
 import NavContent from "./NavContent";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Carousel from "./Carousel";
 
 export default function Header({
@@ -111,7 +111,7 @@ export default function Header({
               />
             ))}
             <p
-              onClick={() => navigate("/donate")}
+              onClick={() => navigate("/my-church-web/donate")}
               className={`my-10 hover:border-2 w-full overflow-hidden m-auto hover:border-blood-400 hover:text-blood-500 rounded-full ${
                 !menuClicked && "hidden"
               } transition-all duration-0.5 ease-in-out cursor-pointer hover:bg-gray-200 p-3 w-56 bg-blood-700 hover:border-blood-700 text-gray-100`}

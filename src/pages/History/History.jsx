@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../../components/Header/Header";
 import history from "./assest/history1.png";
-import { useState } from "react";
 import { faHistory } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
 

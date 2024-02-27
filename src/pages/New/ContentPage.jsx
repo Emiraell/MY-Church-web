@@ -2,7 +2,6 @@ import Header from "../../components/Header/Header";
 import { useParams } from "react-router-dom";
 import data from "./Data";
 import Footer from "../../components/footer/Footer";
-import { list } from "postcss";
 
 export default function ContentPage() {
   const { id } = useParams();

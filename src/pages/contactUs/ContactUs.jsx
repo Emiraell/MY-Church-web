@@ -6,11 +6,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import {
-  faFacebook,
-  faInstagram,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import ChurchMap from "../../components/ChurchMap";
 import MessageUs from "./MessageUs";
 import { database } from "../../configuration/Firebase";

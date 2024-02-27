@@ -8,14 +8,9 @@ import ejike from "./assests/revEjike.png";
 import ernest from "./assests/revErnest.png";
 import luka from "./assests/luka.jpg";
 import curate from "./assests/curate.jpg";
-import {
-  faBank,
-  faChurch,
-  faDonate,
-  faStar,
-  faUserTie,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChurch, faStar, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/footer/Footer";
+
 export default function ChurchOfficials() {
   const leaderDetails = [
     {

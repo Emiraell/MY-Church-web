@@ -25,7 +25,7 @@ export default function Prayer_Donate() {
         </div>
         <div className="absolute bottom-10 w-full">
           <Link
-            to="/prayer"
+            to="/my-church-web/prayer"
             className="mx-3 border-greeny-50 text-greeny-50 rounded-full border-2 py-4 px-7
             hover:border-none cursor-pointer hover:bg-greeny-50 hover:text-orange-50 transition-all ease-in-out duration-1"
           >
@@ -50,7 +50,7 @@ export default function Prayer_Donate() {
         </div>
         <div className="absolute bottom-10 w-full">
           <Link
-            to="/donate"
+            to="/my-church-web/donate"
             className="mx-3 border-orange-400 text-orange-400 rounded-full cursor-pointer  border-2 py-4 px-12
            hover:border-none hover:bg-orange-400 hover:text-orange-50 transition-all ease-in-out duration-1"
           >

@@ -49,7 +49,7 @@ export default function NewsBlogs() {
                   className={` bg-gray-200 shadow-md col-span-1 mb-10 lg:mb-0 
                     `}
                 >
-                  <Link to={`/news/${info.id}`}>
+                  <Link to={`/my-church-web/news/${info.id}`}>
                     <div className="relative">
                       <img
                         src={info.image}
@@ -95,7 +95,7 @@ export default function NewsBlogs() {
                   className={` bg-gray-100 shadow-md col-span-1 mb-10 lg:mb-0 `}
                 >
                   <Link
-                    to={`/blogs/${blog.id}`}
+                    to={`/my-church-web/blogs/${blog.id}`}
                     className="w-[95%] m-auto shadow-lg my-10 bg-slate-100 p-3"
                   >
                     <div

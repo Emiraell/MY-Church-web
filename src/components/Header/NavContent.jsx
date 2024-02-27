@@ -11,7 +11,7 @@ export default function NavContent({
   // navigation function to navigate to various link in the menu content
   const nav = useNavigate();
   const navigate = (path) => {
-    nav(`/${path}`);
+    nav(`/my-church-web/${path}`);
   };
 
   return (

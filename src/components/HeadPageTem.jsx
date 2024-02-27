@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function HeadPageTem({ contents }) {
   const navigate = useNavigate();
-  const goTo = (link) => navigate(`/${link}`);
+  const goTo = (link) => navigate(`/my-church-web/${link}`);
 
   return (
     <div>

@@ -4,7 +4,6 @@ import Bible from "../assets/backgrounds/bible.png";
 import history from "../assets/backgrounds/History.png";
 import aboutUs from "../assets/backgrounds/churchFull.jpg";
 import Abouts from "./Abouts";
-import { useNavigate } from "react-router-dom";
 
 export default function AboutChurch() {
   // about contents

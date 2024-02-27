@@ -20,7 +20,7 @@ export default function ChurchEvents() {
             God of all impossibilities experieneced it first outing in october
             17, 2017 and it has since then maintain it status as a yearly event.
             First tittled God of Hannah, the program....
-            <Link to="/god_of_impossibilities">
+            <Link to="/my-church-web/god_of_impossibilities">
               <span className="text-lg italic text-blue-600 hover:underline cursor-pointer">
                 More info & sermons
               </span>
