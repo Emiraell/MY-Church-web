@@ -5,6 +5,7 @@ import bishopHenry from "./assests/bishopHenry.png";
 import steven from "./assests/steven.jpg";
 import luka from "./assests/luka.jpg";
 import kyoms from "./assests/kyoms.jpg";
+import azubuike from "./assests/azubuike.jpg";
 import chuks from "./assests/chuks.jpg";
 import tula from "./assests/tula.jpg";
 import pastors from "./assests/users.svg";
@@ -55,9 +56,9 @@ export default function PastPriest() {
       image: chuks,
     },
     {
-      name: "Ven. Innocent Nnamdi Azubuike",
+      name: "Late Ven. Innocent Nnamdi Azubuike",
       duration: "2012 - 2018",
-      image: pastors,
+      image: azubuike,
     },
     {
       name: "Ven. Kefas Jatua",

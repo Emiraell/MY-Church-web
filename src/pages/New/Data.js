@@ -26,6 +26,7 @@ const data = [
         "By including these groups in the planning committee they will play an important role in guiding strategic initiatives and fostering a spirit of unity and collaboration by engaging in open dialogue and transparent decision making.",
       detailThree:
         "Each group was assigned a slot to nominate capable hands. Ten slots were allotted to the men, six of which will be elected, six to the women, four of which will be elected, and two to the youth and EFAC, one of which will be elected from each group.",
+      detailFour: null,
       listHeader: "Nominated Names",
       lists: [
         {
@@ -82,6 +83,9 @@ const data = [
         "The church welcomed Bro. Okafor Nnebolisa as a guest speaker following this year's 21-day fast and prayer period. During his charge, he urged the church not to be like a horse riding with anything on its back in 2024, but to listen to what God has to say about them and move in that direction.",
       detailFour:
         "We celebrate not only the end of this year's 21-day fast and prayer, but also the lasting legacy of love, faith, and community that it has left behind. As we embark on new chapters with courage and conviction, let us cherish the memories, celebrate the accomplishments, and embrace the promise of tomorrow.",
+      listHeader: null,
+      lists: null,
+      end: null,
     },
     {
       id: 3,
@@ -98,6 +102,10 @@ const data = [
         "As construction is ongoing, the new church project reflects the church's  enduring spirit of faith and unity. It further shows that the church and it's members have the well-being of all it's serving priest at hand and will always look for means to ensure the message of Christ is carried out with ease",
       detailThree:
         "In a video, Rev'd. Canon Dr. Josiah C. Okafor appreciated his members and all those who made the project progress possible and unleashed God's blessings on them",
+      detailFour: null,
+      listHeader: null,
+      lists: null,
+      end: null,
     },
     {
       id: 4,
@@ -116,6 +124,9 @@ const data = [
         "In a statement, Rev. Ejike Arinze conveyed his sincere gratitude to the members of the congregation for their kindness and commitment to enhancing worshippers' spiritual experiences.",
       detailFour:
         "As congregants gather to worship and commune, the new church instrument and bishop's throne serve as enduring symbols of faith, unity, and reverence, inviting all to encounter the transformative power of divine grace in their midst.",
+      listHeader: null,
+      lists: null,
+      end: null,
     },
   ],
   [

@@ -67,7 +67,7 @@ export default function Footer() {
                     </p>
                     <p className="">
                       {/* infomation */}
-                      +2348136553986
+                      +2348035913155, +2348166768811
                     </p>
                   </div>
                 </div>
@@ -154,7 +154,10 @@ export default function Footer() {
             2024 | All right reserved
             <span className="block">
               Designed by and maintained by{" "}
-              <a href="https://wa.me/08136553986" className="italic">
+              <a
+                href="https://emiraell.github.io/my_portfolio/"
+                className="italic text-blue-400 cursor-pointer"
+              >
                 emiraelDev{" "}
               </a>
               | the media department

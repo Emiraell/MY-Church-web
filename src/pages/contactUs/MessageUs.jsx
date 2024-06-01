@@ -109,26 +109,28 @@ export default function MessageUs({ database }) {
         </div>
         <div className="pl-6">
           <label htmlFor="">Are you a member</label>
-          <div className="pt-4 flex">
-            <div className="px-3">
-              <p>yes</p>
-              <input
-                type="radio"
-                value={"Yes"}
-                name="yes"
-                {...register("YesMem")}
-              />
-            </div>
 
-            <div>
-              <p>No</p>
-              <input
-                type="radio"
-                value={"No"}
-                name="yes"
-                {...register("NoMem")}
-              />
-            </div>
+          <div className="px-3">
+            <input
+              id="member"
+              type="radio"
+              value="Yes"
+              name="yes"
+              {...register("mem")}
+            />
+            <label htmlFor="member" className="mr-2 ml-1">
+              Yes
+            </label>
+            <input
+              id="not_member"
+              type="radio"
+              value="No"
+              name="yes"
+              {...register("mem")}
+            />
+            <label htmlFor="not_member" className="ml-1">
+              No
+            </label>
           </div>
         </div>
         <button
